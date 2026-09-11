@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>B-Lås AS — Lås, adgangskontroll og brannvern i Enebakk</title>
+<meta name="description" content="B-Lås AS er en familiebedrift i Ytre Enebakk med fagfolk innen lås og beslag, adgangskontroll, låsesystemer og brannvern. Vi leverer til privat, næring og borettslag i Oslo og omegn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#000000;color:#ffffff;-webkit-font-smoothing:antialiased}
+  img{max-width:100%}
+  a{color:#FFC20E}
+  a:hover{color:#ffffff}
+  @media (max-width:640px){.forsidehero{min-height:66vh !important;background-position:center 78% !important}}
+  @keyframes kundemarkise{from{transform:translateX(0)}to{transform:translateX(calc(-50% - clamp(24px,3vw,44px)))}}
+  .kundespor{animation:kundemarkise 34s linear infinite}
+  @media (max-width:640px){.kundespor{animation-duration:22s}}
+  .kundemaske:hover .kundespor{animation-play-state:paused}
+  @media (prefers-reduced-motion: reduce){.kundespor{animation:none}}
+</style>
+</helmet>
+<div style="background:#000000;font-family:Jost, system-ui, sans-serif;color:#ffffff">
+  <section class="forsidehero" style="position:relative;min-height:clamp(500px,88vh,820px);display:flex;flex-direction:column;background-image:linear-gradient(to bottom, rgba(0,0,0,.5) 0%, rgba(0,0,0,.15) 26%, rgba(0,0,0,.42) 56%, rgba(0,0,0,.9) 100%), url('assets/w-forside-hero.jpg');background-size:cover;background-position:center 92%">
+    <dc-import name="SiteNav" active="hjem" hint-size="100%,90px" style="position:relative;z-index:20"></dc-import>
+    <div style="flex:1 1 auto;display:flex;align-items:flex-end;justify-content:center;padding:clamp(44px,6vw,90px) clamp(20px,5vw,44px) clamp(32px,4vw,54px)">
+      <div style="max-width:900px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:clamp(18px,2.2vw,26px)">
+        <h1 style="margin:0;font-family:Anton, Impact, sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(38px,6.8vw,84px);line-height:.95;letter-spacing:.005em;text-wrap:balance">
+          <span style="color:#FFC20E">Lokal sikkerhet</span><br>
+          <span style="color:#ffffff">med motor.</span>
+        </h1>
+        <p style="margin:0;font-size:clamp(17px,1.7vw,21px);line-height:1.55;max-width:44ch;color:#ffffff;text-wrap:pretty">Fagfolk med fartstid innen lås &amp; beslag, adgangskontroll, låsesystemer og sikkerhet. Ruller ut fra Enebakk til Oslo og omegn.</p>
+        <a href="kontakt.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 40px;background:#FFC20E;color:#000000;text-decoration:none;border-radius:999px;font-size:17px;font-weight:500;letter-spacing:.02em" style-hover="background:#ffffff;color:#000000">Snakk med oss!</a>
+      </div>
+    </div>
+  </section>
+
+  <div style="background:#000000;display:flex;justify-content:center;padding:clamp(18px,2vw,26px) clamp(20px,4vw,44px)">
+    <img src="assets/merker.png" alt="FG-godkjent, Norske Låsesmeder, Mesterbrev" style="display:block;height:clamp(72px,10vw,158px);width:auto;object-fit:contain">
+  </div>
+
+  <section style="background:#000000;padding:clamp(28px,3.5vw,52px) clamp(20px,4vw,44px) clamp(52px,6vw,96px)">
+    <div style="max-width:1240px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,1.6vw,22px)">
+        <a href="privat.html" style="position:relative;display:flex;align-items:flex-end;min-height:clamp(230px,32vw,420px);padding:clamp(20px,3vw,28px);text-decoration:none;background-image:linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.25) 55%, rgba(0,0,0,.35) 100%), url('assets/w-tile-privat.jpg');background-size:cover;background-position:center" style-hover="filter:brightness(1.12)">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:Anton, Impact, sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(30px,3.4vw,44px);line-height:1;color:#FFC20E">Privat</span>
+            <span style="font-size:15px;color:#ffffff;letter-spacing:.02em">Se tjenester →</span>
+          </div>
+        </a>
+        <a href="naering.html" style="position:relative;display:flex;align-items:flex-end;min-height:clamp(230px,32vw,420px);padding:clamp(20px,3vw,28px);text-decoration:none;background-image:linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.25) 55%, rgba(0,0,0,.35) 100%), url('assets/w-tile-naering.jpg');background-size:cover;background-position:center" style-hover="filter:brightness(1.12)">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:Anton, Impact, sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(30px,3.4vw,44px);line-height:1;color:#FFC20E">Næringsbygg<br>&amp; borettslag</span>
+            <span style="font-size:15px;color:#ffffff;letter-spacing:.02em">Se tjenester →</span>
+          </div>
+        </a>
+        <a href="brannvern.html" style="position:relative;display:flex;align-items:flex-end;min-height:clamp(230px,32vw,420px);padding:clamp(20px,3vw,28px);text-decoration:none;background-image:linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.25) 55%, rgba(0,0,0,.35) 100%), url('assets/w-hero-brannvern.jpg');background-size:cover;background-position:center" style-hover="filter:brightness(1.12)">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:Anton, Impact, sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(30px,3.4vw,44px);line-height:1;color:#FFC20E">Brannvern</span>
+            <span style="font-size:15px;color:#ffffff;letter-spacing:.02em">Se tjenester →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#000000;padding:0 clamp(20px,4vw,44px) clamp(56px,7vw,100px)">
+    <div style="max-width:1240px;margin:0 auto;border-top:1px solid rgba(255,255,255,.14);padding-top:clamp(40px,5vw,72px)">
+      <h2 style="margin:0 0 clamp(28px,3.5vw,48px);font-family:Anton, Impact, sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(22px,2.4vw,30px);letter-spacing:.06em;line-height:1;color:#ffffff">Noen av kundene våre</h2>
+      <div class="kundemaske" style="position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);mask-image:linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%)">
+        <div class="kundespor" style="display:flex;align-items:center;gap:clamp(48px,6vw,88px);width:max-content">
+          <img src="assets/kunde-lilleborg.png" alt="Lilleborg" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-ygt.png" alt="YGT" style="display:block;width:clamp(96px,10vw,130px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-lilletorget.png" alt="Lilletorget 1" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-mitsubishi.png" alt="Mitsubishi Electric" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-greenmountain.png" alt="Green Mountain" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-frogner.png" alt="Frogner Idrettspark" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-lilleborg.png" alt="" aria-hidden="true" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-ygt.png" alt="" aria-hidden="true" style="display:block;width:clamp(96px,10vw,130px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-lilletorget.png" alt="" aria-hidden="true" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-mitsubishi.png" alt="" aria-hidden="true" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-greenmountain.png" alt="" aria-hidden="true" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+          <img src="assets/kunde-frogner.png" alt="" aria-hidden="true" style="display:block;width:clamp(120px,13vw,170px);height:auto;flex:0 0 auto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#000000;padding:0 clamp(20px,4vw,44px) clamp(56px,7vw,104px)">
+    <div style="max-width:1240px;margin:0 auto;border-top:1px solid rgba(255,255,255,.14);padding-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,56px);align-items:center">
+      <div>
+        <h2 style="margin:0 0 18px;font-family:Anton, Impact, sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(28px,3.4vw,46px);line-height:1;color:#ffffff">Lokal sikkerhet <span style="color:#FFC20E">i 10 år</span></h2>
+        <p style="margin:0 0 26px;font-size:clamp(16px,1.5vw,19px);line-height:1.6;color:rgba(255,255,255,.82);max-width:52ch;text-wrap:pretty">B-Lås er en familiebedrift i Ytre Enebakk som har levert lås, adgangskontroll og dørautomatikk siden 2016. Vi leverer solide sikkerhetsløsninger til private, bedrifter, borettslag og offentlige bygg.</p>
+        <a href="om-oss.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;border:1px solid rgba(255,255,255,.4);color:#ffffff;text-decoration:none;font-size:16px;border-radius:999px" style-hover="border-color:#FFC20E;color:#FFC20E">Bli kjent med oss</a>
+      </div>
+      <img src="assets/w-gjengen-bred.jpg" alt="Gjengen i B-Lås AS i butikken i Ytre Enebakk" style="display:block;width:100%;height:clamp(260px,28vw,400px);object-fit:cover">
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>B-Lås — feed-mockup</title>
+<meta name="ext-resource-dependency" content="assets/w-some-hero-lys.jpg">
+<meta name="ext-resource-dependency" content="assets/w-ansatt-ingar.jpg">
+<meta name="ext-resource-dependency" content="assets/w-ansatt-runar.jpg">
+<meta name="ext-resource-dependency" content="assets/w-ansatt-robin.jpg">
+<meta name="ext-resource-dependency" content="assets/w-ansatt-remi.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:#141414;-webkit-font-smoothing:antialiased}
+  img{max-width:100%}
+  a{color:#FFC20E}
+  a:hover{color:#fff}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;justify-content:center;padding:48px 20px;font-family:Jost, system-ui, sans-serif;background:#141414">
+  <div id="feedkort" style="width:100%;max-width:430px;background:#000000;border:1px solid rgba(255,255,255,.12);border-radius:26px;overflow:hidden;color:#ffffff">
+
+    <div style="display:flex;align-items:center;gap:14px;padding:22px 20px 16px">
+      <div style="width:78px;height:78px;border-radius:50%;background:#000;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;flex:0 0 auto;overflow:hidden">
+        <img src="assets/logo-white.png" alt="B-Lås AS" style="width:60px;height:auto;display:block">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0">
+        <span style="font-size:16px;font-weight:500;letter-spacing:.01em">blaas_as</span>
+        <div style="display:flex;gap:18px;font-size:13px;color:rgba(255,255,255,.72)">
+          <span><strong style="color:#fff;font-weight:600">7</strong> innlegg</span>
+          <span><strong style="color:#fff;font-weight:600">412</strong> følgere</span>
+          <span><strong style="color:#fff;font-weight:600">88</strong> følger</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding:0 20px 18px;display:flex;flex-direction:column;gap:3px">
+      <span style="font-size:14px;font-weight:500">B-Lås AS · Låsesmed i Ytre Enebakk</span>
+      <span style="font-size:14px;color:rgba(255,255,255,.72);line-height:1.45">Lås, adgangskontroll og brannvern. Familiebedrift siden 2016.</span>
+      <span style="font-size:14px;color:#FFC20E">b-las.no</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.12)">
+      <sc-for list="{{ posts }}" as="p" hint-placeholder-count="7">
+        <div style="position:relative;aspect-ratio:1/1;overflow:hidden;background:#000">
+          <img src="{{ p.img }}" alt="{{ p.name }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{{ p.pos }};filter:{{ p.filter }}">
+          <div style="position:absolute;inset:0;background:{{ p.scrim }}"></div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:{{ p.justify }};padding:9px">
+            <div style="display:flex;flex-direction:column;align-items:flex-start;gap:3px">
+              <span style="font-size:5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#FFC20E">{{ p.role }}</span>
+              <span style="font-family:Anton, Impact, sans-serif;text-transform:uppercase;font-size:{{ p.size }};line-height:.9;color:{{ p.namecolor }}">{{ p.name }}</span>
+              <sc-if value="{{ p.hasName2 }}" hint-placeholder-val="{{ false }}">
+                <span style="font-family:Anton, Impact, sans-serif;text-transform:uppercase;font-size:19px;line-height:.9;color:#ffffff">{{ p.name2 }}</span>
+              </sc-if>
+              <span style="font-size:5px;color:#FFC20E;letter-spacing:.02em">{{ p.tel }}</span>
+            </div>
+          </div>
+          <div style="position:absolute;left:0;bottom:0;width:100%;height:3px;background:#FFC20E"></div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="padding:16px 20px 24px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42)">Mockup — slik ser rutenettet ut</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const scrimUp = 'linear-gradient(to bottom, rgba(0,0,0,.28) 0%, rgba(0,0,0,.02) 32%, rgba(0,0,0,.62) 62%, rgba(0,0,0,.95) 100%)';
+    const scrimDown = 'linear-gradient(to top, rgba(0,0,0,.28) 0%, rgba(0,0,0,.02) 32%, rgba(0,0,0,.62) 62%, rgba(0,0,0,.95) 100%)';
+    const person = (img, role, name, tel, top) => ({
+      img, role, name, tel, namecolor: '#ffffff', name2: '', hasName2: false,
+      pos: '50% 50%', filter: 'contrast(1.04)', size: '30px',
+      scrim: top ? scrimDown : scrimUp,
+      justify: top ? 'flex-start' : 'flex-end',
+      baredge: top ? 'top' : 'bottom'
+    });
+    return {
+      posts: [
+        { img: 'assets/w-some-hero-lys.jpg', role: '', name: 'Lokal sikkerhet', name2: 'med motor.', hasName2: true, tel: 'b-las.no',
+          pos: '50% 62%', filter: 'none', size: '19px', namecolor: '#FFC20E',
+          scrim: 'linear-gradient(to bottom, rgba(0,0,0,.82) 0%, rgba(0,0,0,.62) 30%, rgba(0,0,0,.12) 54%, rgba(0,0,0,.30) 100%)',
+          justify: 'flex-start', baredge: 'bottom' },
+        person('assets/w-ansatt-ingar.jpg', 'Sjefen', 'Ingar', '48 03 99 18', false),
+        person('assets/w-ansatt-runar.jpg', 'Montør', 'Runar', '90 36 12 06', false),
+        person('assets/w-ansatt-robin.jpg', 'Montør', 'Robin', '95 16 11 48', false),
+        person('assets/w-ansatt-remi.jpg', 'Support', 'Remi', '95 14 94 32', false)
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
