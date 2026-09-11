@@ -287,21 +287,6 @@
   </section>
   </sc-if>
 
-  <!-- tre spor -->
-  <section style="border-top: 1px solid #e2dacb;">
-    <div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,6vw,84px) clamp(20px,5vw,56px);">
-      <h2 style="margin: 0 0 clamp(32px,4vw,52px); font-size: clamp(26px,3.4vw,42px); font-weight: 200; letter-spacing: -0.025em; line-height: 1.08; max-width: 24ch;">Strategi, produksjon og publisering.</h2>
-      <div>
-        <sc-for list="{{ tjenester }}" as="t" hint-placeholder-count="4">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 6px clamp(24px,4vw,56px); align-items: baseline; padding: clamp(20px,2.6vw,30px) 0; border-top: 1px solid #ded7c9;">
-            <h3 style="margin: 0; font-size: clamp(24px,3.2vw,40px); font-weight: 300; letter-spacing: -0.025em; line-height: 1.1;">{{ t.tittel }}</h3>
-            <p style="margin: 0; color: #5c5f59; font-size: 16px; line-height: 1.6; max-width: 38ch;">{{ t.kort }}</p>
-          </div>
-        </sc-for>
-      </div>
-    </div>
-  </section>
-
   <!-- utvalgte jobber -->
   <section style="border-top: 1px solid #e2dacb;">
     <div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,6vw,84px) clamp(20px,5vw,56px) clamp(56px,7vw,100px);">
@@ -310,7 +295,7 @@
         <a href="#" onClick="{{ goJobber }}" style="font-size: 15px;">Alle jobber →</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(24px,3vw,40px);">
-        <sc-for list="{{ utvalgte }}" as="c" hint-placeholder-count="7">
+        <sc-for list="{{ utvalgte }}" as="c" hint-placeholder-count="10">
           <a href="#" onClick="{{ c.go }}" style="display: block; grid-column: {{ c.span }};">
             <div style="position: relative; overflow: hidden; background: #e8e2d6; aspect-ratio: {{ c.ratio }};">
               <sc-if value="{{ c.dekkGronn }}" hint-placeholder-val="{{ false }}">
@@ -339,6 +324,21 @@
             <h3 style="margin: 18px 0 5px; font-size: clamp(20px,2vw,25px); font-weight: 300; letter-spacing: -0.015em; color: #17181a;">{{ c.tittel }}</h3>
             <p style="margin: 0; font-size: 15px; color: #6d706a;">{{ c.leveranse }}</p>
           </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- tre spor -->
+  <section style="border-top: 1px solid #e2dacb;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,6vw,84px) clamp(20px,5vw,56px);">
+      <h2 style="margin: 0 0 clamp(32px,4vw,52px); font-size: clamp(26px,3.4vw,42px); font-weight: 200; letter-spacing: -0.025em; line-height: 1.08; max-width: 24ch;">Strategi, produksjon og publisering.</h2>
+      <div>
+        <sc-for list="{{ tjenester }}" as="t" hint-placeholder-count="4">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 6px clamp(24px,4vw,56px); align-items: baseline; padding: clamp(20px,2.6vw,30px) 0; border-top: 1px solid #ded7c9;">
+            <h3 style="margin: 0; font-size: clamp(24px,3.2vw,40px); font-weight: 300; letter-spacing: -0.025em; line-height: 1.1;">{{ t.tittel }}</h3>
+            <p style="margin: 0; color: #5c5f59; font-size: 16px; line-height: 1.6; max-width: 38ch;">{{ t.kort }}</p>
+          </div>
         </sc-for>
       </div>
     </div>
@@ -819,24 +819,31 @@ const TJENESTER = [
   },
   {
     nr: "02",
+    tittel: "Nettside",
+    kort: "Nye nettsider og oppdatering av eksisterende, bygget på innholdet kunden faktisk har.",
+    lang: "Jeg lager nettsider fra struktur og innhold til ferdig publisert side, og oppdaterer sider som allerede finnes. Jeg kan bygge sider fra bunn eller jeg kan jobbe i deres egne CMS-løsninger. Tekst, foto og design henger sammen med resten av profilen, og siden settes opp slik at kunden klarer å drifte den videre selv.",
+    punkter: ["Struktur og innhold", "Design og oppsett", "Bygg fra bunn eller i eget CMS", "Tekst og foto", "Publisering og drift"]
+  },
+  {
+    nr: "03",
     tittel: "Maler du kan bruke selv",
     kort: "Jeg kan produsere for deg, eller du kan få maler og produsere selv internt.",
     lang: "Annonser, menyer, plakater og nyhetsbrev. Du velger om jeg produserer det løpende for deg, eller om du får maler og gjør det selv internt. Malene er låst der de må være låst og åpne der du trenger å endre noe, slik at uttrykket holder selv når andre bruker det.",
     punkter: ["Annonsemaler", "Menyer", "Plakater", "Nyhetsbrev", "Sosiale medier"]
   },
   {
-    nr: "03",
+    nr: "04",
     tittel: "Foto og innholdsproduksjon",
     kort: "Foto, video og tekst produsert for de flatene innholdet faktisk skal brukes i.",
     lang: "Jeg produserer selv. Det gjør at kampanjer blir levert, og at bildene passer formatene de skal brukes i fra første stund. Fra enkeltbilder til storskala produksjoner for mange lokasjoner samtidig.",
     punkter: ["Foto", "Video", "Tekst", "Magasin", "Storskala produksjon"]
   },
   {
-    nr: "04",
+    nr: "05",
     tittel: "Annonsering og publisering",
     kort: "Annonser, nyhetsbrev og nettsider satt opp, publisert og holdt i gang.",
     lang: "Siste ledd er det som oftest stopper: at innholdet faktisk kommer ut. Jeg setter opp annonsering, nyhetsbrev og nettsider, publiserer, og lager en struktur kunden klarer å drifte videre selv.",
-    punkter: ["Annonsering", "Sosiale medier", "Nyhetsbrev", "Nettside", "Menyer og bestilling"]
+    punkter: ["Annonsering", "Sosiale medier", "Nyhetsbrev", "Menyer og bestilling"]
   }
 ];
 
@@ -1777,7 +1784,7 @@ class Component extends DCLogic {
       ? medGo.filter((c) => c.tagger.indexOf(valgtTag) >= 0)
       : medGo;
 
-    const utvalgteSlugs = ["gastro", "construction-city", "cc-drikker", "los-tacos", "video", "obos", "b-las", "pals-hostkaffe", "citycon"];
+    const utvalgteSlugs = ["gastro", "construction-city", "cc-drikker", "los-tacos", "video", "obos", "b-las", "pals-hostkaffe", "citycon", "bystasjonen"];
     const utvalgte = utvalgteSlugs
       .map((s) => medGo.find((c) => c.slug === s))
       .filter(Boolean)
