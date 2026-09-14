@@ -210,6 +210,7 @@
   @keyframes bkrise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
   @keyframes bkappscroll { from { transform: translateY(0); } to { transform: translateY(var(--bk-slutt, -85%)); } }
   @keyframes bkbytt { 0% { opacity: 0; } 5% { opacity: 1; } 28% { opacity: 1; } 33% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes bkkryss { 0%, 42% { opacity: 1; } 50%, 92% { opacity: 0; } 100% { opacity: 1; } }
   @keyframes bkrammerull { 0%, 8% { transform: translateY(0); } 92%, 100% { transform: translateY(calc(-1 * var(--bk-reise, 0px))); } }
   @media (prefers-reduced-motion: reduce) { [data-ramme-rull] > div { animation: none !important; } }
 </style>
@@ -303,6 +304,14 @@
                   <sc-for list="{{ c.emblemer }}" as="e" hint-placeholder-count="3">
                     <img src="{{ e.src }}" alt="" loading="lazy" style="position: absolute; top: 50%; left: 50%; width: {{ e.bredde }}; max-width: 230px; transform: translate(-50%, -50%); opacity: 0; animation: bkbytt 9s linear infinite; animation-delay: {{ e.delay }};">
                   </sc-for>
+                </div>
+              </sc-if>
+              <sc-if value="{{ c.kortDelt }}" hint-placeholder-val="{{ false }}">
+                <div style="position: absolute; inset: 0; overflow: hidden;">
+                  <img src="{{ c.kortDeltHoyre }}" alt="{{ c.tittel }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{ engX }}% {{ engY }}%; transform: scale({{ engSkala }});">
+                  <div style="position: absolute; inset: 0; background: #bdd8eb; animation: bkkryss 9s ease-in-out infinite;">
+                    <img src="{{ c.kortDeltVenstre }}" alt="{{ c.tittel }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% {{ poseY }}%; transform: scale({{ poseSkala }});">
+                  </div>
                 </div>
               </sc-if>
               <sc-if value="{{ c.bilde }}" hint-placeholder-val="{{ true }}">
@@ -679,6 +688,11 @@
               <p style="margin: 0; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;">{{ b.flateLiten }}</p>
             </div>
           </sc-if>
+          <sc-if value="{{ b.bilderSett }}" hint-placeholder-val="{{ false }}">
+            <sc-for list="{{ b.bilderSett }}" as="bi" hint-placeholder-count="3">
+              <img src="{{ bi.src }}" alt="{{ b.alt }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: {{ bi.fit }}; object-position: {{ bi.pos }}; background: {{ bi.bakgrunn }}; opacity: 0; animation: bkbytt 12s linear infinite; animation-delay: {{ bi.delay }};">
+            </sc-for>
+          </sc-if>
           <sc-if value="{{ b.bildeSrc }}" hint-placeholder-val="{{ true }}">
             <img src="{{ b.bildeSrc }}" alt="{{ b.alt }}" loading="lazy" style="width: 100%; height: 100%; padding: {{ b.polstring }}; object-fit: {{ b.fit }}; object-position: {{ b.pos }};">
           </sc-if>
@@ -825,6 +839,56 @@
     &quot;default&quot;: false,
     &quot;tsType&quot;: &quot;boolean&quot;,
     &quot;section&quot;: &quot;Forside&quot;
+  },
+  &quot;poseZoom&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 100,
+    &quot;min&quot;: 60,
+    &quot;max&quot;: 160,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
+  },
+  &quot;poseY&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 50,
+    &quot;min&quot;: 0,
+    &quot;max&quot;: 100,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
+  },
+  &quot;engZoom&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 100,
+    &quot;min&quot;: 100,
+    &quot;max&quot;: 200,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
+  },
+  &quot;engX&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 50,
+    &quot;min&quot;: 0,
+    &quot;max&quot;: 100,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
+  },
+  &quot;engY&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 58,
+    &quot;min&quot;: 0,
+    &quot;max&quot;: 100,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
   }
 }">
 const TJENESTER = [
@@ -890,7 +954,11 @@ const CASER = [
       { label: "Periode", verdi: "2026 –" }
     ],
     blokker: [
-      { src: "assets/gastro-topp.jpg", alt: "Forrett, hovedrett og dessert fra høstmenyen", span: "1 / -1", ratio: "16 / 9", pos: "50% 62%", tekst: "", overlayLogo: "assets/gastro-logo-hvit.png", overlayLogoAlt: "Gastro Catering", overlayTittel: "Ny profil, ny meny, ny nettside" },
+      { bilder: [
+          { src: "assets/gastro-topp.jpg", pos: "50% 62%" },
+          { src: "assets/gastro-styling.jpg", pos: "center" },
+          { src: "assets/gastro-hovedrett.jpg", pos: "center" }
+        ], alt: "Forrett, hovedrett og dessert fra høstmenyen", span: "1 / -1", ratio: "16 / 9", pos: "50% 62%", tekst: "", overlayLogo: "assets/gastro-logo-hvit.png", overlayLogoAlt: "Gastro Catering", overlayTittel: "Ny profil, ny meny, ny nettside" },
       { kunTittel: true, tittel: "Logo", span: "1 / -1" },
       { src: "assets/gastro-logo-sort.png", alt: "Gastro Catering-logoen i sort", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#f1ece2", polstring: "clamp(34px,6vw,74px)", tekst: "" },
       { src: "assets/gastro-logo-hvit.png", alt: "Gastro Catering-logoen i hvitt", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#1f2a24", polstring: "clamp(34px,6vw,74px)", tekst: "" },
@@ -904,7 +972,7 @@ const CASER = [
         alt: "Nettsiden til Gastro Catering", span: "1 / -1", ratio: "16 / 10", tekst: ""
       },
       { kunTittel: true, tittel: "Høstfoto", span: "1 / -1" },
-      { src: "assets/gastro-styling.jpg", alt: "Råvarer og styling fra fotoserien", span: "1 / -1", ratio: "16 / 10", pos: "center", tekst: "" },
+      { src: "assets/gastro-styling.jpg", alt: "Råvarer og styling fra fotoserien", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       { src: "assets/gastro-forrett.jpg", alt: "Forrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       { src: "assets/gastro-forrett-2.jpg", alt: "Gravet laks", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       { src: "assets/gastro-forrett-3.jpg", alt: "Terrin med sprøstekt crumble", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
@@ -916,9 +984,7 @@ const CASER = [
       { src: "assets/gastro-dessert-4.jpg", alt: "Panna cotta med mango", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       { src: "assets/gastro-fingermat-1.jpg", alt: "Fingermat med laks", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       { src: "assets/gastro-fingermat-2.jpg", alt: "Fingermat med fennikel og sitrus", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-kjokken.jpg", alt: "Kokk som anretter fingermat", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { kunTittel: true, tittel: "Annonsering", span: "1 / -1" },
-      { mangler: true, plassholder: "Annonser – sosiale medier", span: "1 / -1", ratio: "16 / 9", tekst: "" }
+      { src: "assets/gastro-kjokken.jpg", alt: "Kokk som anretter fingermat", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
     ]
   },
   {
@@ -1103,11 +1169,12 @@ const CASER = [
   {
     slug: "pals-hostkaffe",
     tagger: ["Emballasje", "Design"],
-    tittel: "Pals Høstkaffe",
+    tittel: "Pals Høstkaffe for Amanda",
     kicker: "Emballasje",
     leveranse: "Design av etiketten",
     periode: "2026",
-    bilde: "assets/pals-pose-kort.jpg",
+    bilde: "assets/pals-eng.jpg",
+    kortDelt: ["assets/pals-pose-kvadrat.jpg", "assets/pals-eng.jpg"],
     intro: "Pals Kaffe har brent en høstkaffe for Amanda Iversen Orlich, en venninne av oss som gikk bort alt for tidlig. Kaffen er et samarbeid med Nadia, brennemester hos Pals og en god venninne av meg. Etiketten er designet av Eilin, Amanda og Nadia.",
     introTillegg: "Bildet på etiketten er Amandas eget, og «takk» er hennes egen håndskrift, hentet fra notatene hennes på Instagram. Kaffen er en vasket Guatemala, mellombrent, og 20 kroner fra hver pose går til Kreftforeningen.",
     fakta: [
@@ -1117,7 +1184,11 @@ const CASER = [
       { label: "Periode", verdi: "2026" }
     ],
     blokker: [
-      { src: "assets/pals-eng.jpg", alt: "Høstkaffen holdt opp i en blomstereng i solnedgang", span: "1 / -1", ratio: "16 / 9", pos: "50% 58%", tekst: "", overlayKicker: "Pals Kaffe · Høstkaffe", overlayTittel: "Inspirert av Amanda" },
+      { bilder: [
+          { src: "assets/pals-eng.jpg", pos: "50% 58%" },
+          { src: "assets/pals-pose-kvadrat.jpg", pos: "center", fit: "contain", bakgrunn: "#bdd8eb" },
+          { src: "assets/pals-amanda-1.jpg", pos: "center" }
+        ], alt: "Høstkaffen holdt opp i en blomstereng i solnedgang", span: "1 / -1", ratio: "16 / 9", pos: "50% 58%", tekst: "", overlayKicker: "Pals Kaffe · Høstkaffe", overlayTittel: "Inspirert av Amanda" },
       { kunTittel: true, tittel: "Etiketten", span: "1 / -1", lenke: "https://palskaffe.no/hostkaffe-inspirert-av-amanda/", lenkeTekst: "Historien bak, hos Pals" },
       {
         kunTittel: true, tittel: "Bestilling", span: "1 / -1",
@@ -1783,6 +1854,10 @@ class Component extends DCLogic {
             )
           )
         : null,
+      bilde: c.kortDelt ? null : c.bilde,
+      kortDelt: !!c.kortDelt,
+      kortDeltVenstre: c.kortDelt ? c.kortDelt[0] : null,
+      kortDeltHoyre: c.kortDelt ? c.kortDelt[1] : null,
       kortPos: c.kortPos || "center",
       kortOverlayKicker: c.kortOverlayKicker || "",
       kortOverlayTittel: c.kortOverlayTittel || "",
@@ -1815,7 +1890,13 @@ class Component extends DCLogic {
       ? medGo.filter((c) => c.tagger.indexOf(valgtTag) >= 0)
       : medGo;
 
-    const utvalgteSlugs = ["gastro", "construction-city", "pals-hostkaffe", "cc-drikker", "los-tacos", "video", "obos", "b-las", "citycon", "bystasjonen"];
+    const poseY = this.props.poseY ?? 50;
+    const engX = this.props.engX ?? 50;
+    const engY = this.props.engY ?? 58;
+    const poseSkala = (this.props.poseZoom ?? 100) / 100;
+    const engSkala = (this.props.engZoom ?? 100) / 100;
+
+    const utvalgteSlugs = ["pals-hostkaffe", "gastro", "construction-city", "cc-drikker", "los-tacos", "video", "obos", "b-las", "citycon", "bystasjonen"];
     const utvalgte = utvalgteSlugs
       .map((s) => medGo.find((c) => c.slug === s))
       .filter(Boolean)
@@ -1832,7 +1913,16 @@ class Component extends DCLogic {
       ? Object.assign({}, aktiv, {
           tagger: aktiv.tagger || [],
           blokker: aktiv.blokker.map((b) => Object.assign({}, b, {
-            bildeSrc: b.src && !b.rull && !b.anim ? b.src : null,
+            bildeSrc: b.src && !b.rull && !b.anim && !b.bilder ? b.src : null,
+            bilderSett: b.bilder
+              ? b.bilder.map((bi, i) => ({
+                  src: bi.src,
+                  pos: bi.pos || "center",
+                  fit: bi.fit || "cover",
+                  bakgrunn: bi.bakgrunn || "transparent",
+                  delay: (i * (12 / b.bilder.length)).toFixed(2) + "s"
+                }))
+              : null,
             rullSrc: b.rull ? b.src : null,
             animSrc: b.anim ? b.src : null,
             slutt: b.slutt || "-85%",
@@ -1931,6 +2021,11 @@ class Component extends DCLogic {
       tjenester: TJENESTER,
       arbeidsform: ARBEIDSFORM,
       utvalgte: utvalgte,
+      poseY: poseY,
+      engX: engX,
+      engY: engY,
+      poseSkala: poseSkala,
+      engSkala: engSkala,
       alleCaser: filtrerte,
       taggFilter: [{ label: "Alle", active: !valgtTag, go: this.settTag(null) }].concat(
         ALLE_TAGGER.map((t) => ({ label: t, active: valgtTag === t, go: this.settTag(t) }))
