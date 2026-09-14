@@ -656,6 +656,13 @@
             <p style="margin: 14px 0 0; max-width: 62ch; font-size: clamp(16px,1.4vw,18px); line-height: 1.65; color: #4e514c; text-wrap: pretty;">{{ b.avsnitt }}</p>
           </sc-if>
         </sc-if>
+        <sc-if value="{{ b.knapper }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 0;">
+            <sc-for list="{{ b.knapper }}" as="k" hint-placeholder-count="2">
+              <a href="{{ k.url }}" target="_blank" rel="noopener" style="display: inline-block; padding: 13px 26px; border: 1px solid #1f4d3f; border-radius: 999px; font-size: 15px; letter-spacing: 0.01em; color: #1f4d3f; text-decoration: none;" style-hover="background: #1f4d3f; color: #ffffff;">{{ k.tekst }}</a>
+            </sc-for>
+          </div>
+        </sc-if>
         <sc-if value="{{ b.harMedie }}" hint-placeholder-val="{{ true }}">
         <sc-if value="{{ b.rammeEtikett }}" hint-placeholder-val="{{ false }}">
           <div style="display: flex; align-items: center; gap: 8px; background: #17181a; padding: 10px 14px;">
@@ -1112,6 +1119,13 @@ const CASER = [
     blokker: [
       { src: "assets/pals-eng.jpg", alt: "Høstkaffen holdt opp i en blomstereng i solnedgang", span: "1 / -1", ratio: "16 / 9", pos: "50% 58%", tekst: "", overlayKicker: "Pals Kaffe · Høstkaffe", overlayTittel: "Inspirert av Amanda" },
       { kunTittel: true, tittel: "Etiketten", span: "1 / -1", lenke: "https://palskaffe.no/hostkaffe-inspirert-av-amanda/", lenkeTekst: "Historien bak, hos Pals" },
+      {
+        kunTittel: true, tittel: "Bestilling", span: "1 / -1",
+        avsnitt: "En pose koster 86,-. Send en mail med hvor mange du vil ha til Nadia. 20 kroner fra hver pose går til Kreftforeningen.",
+        knapper: [
+          { tekst: "Bestill kaffe her", url: "mailto:nadia.durdova@palskaffe.no" }
+        ]
+      },
       { src: "assets/pals-amanda-1.jpg", alt: "Kaffekanne holdt opp mot himmelen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "Foto: Amanda Iversen Orlich" },
       { src: "assets/pals-pose-kvadrat.jpg", alt: "Høstkaffe-posen fra Pals Kaffe", span: "auto", ratio: "1 / 1", pos: "center", bakgrunn: "#bdd8eb", tekst: "" },
       { src: "assets/pals-amanda-2.jpg", alt: "To som klemmer i en eng", span: "auto", ratio: "1 / 1", pos: "center", tekst: "Foto: Amanda Iversen Orlich" }
@@ -1801,7 +1815,7 @@ class Component extends DCLogic {
       ? medGo.filter((c) => c.tagger.indexOf(valgtTag) >= 0)
       : medGo;
 
-    const utvalgteSlugs = ["gastro", "construction-city", "cc-drikker", "los-tacos", "video", "obos", "b-las", "pals-hostkaffe", "citycon", "bystasjonen"];
+    const utvalgteSlugs = ["gastro", "construction-city", "pals-hostkaffe", "cc-drikker", "los-tacos", "video", "obos", "b-las", "citycon", "bystasjonen"];
     const utvalgte = utvalgteSlugs
       .map((s) => medGo.find((c) => c.slug === s))
       .filter(Boolean)
@@ -1864,6 +1878,7 @@ class Component extends DCLogic {
             rammeRull: b.rammeRull ? "1" : null,
             gulStrek: !!b.gulStrek,
             harMedie: !b.kunTittel,
+            knapper: b.knapper && b.knapper.length ? b.knapper : null,
             magFilm: !!b.magFilm,
             instaElement: b.instagram
               ? React.createElement("iframe", {
