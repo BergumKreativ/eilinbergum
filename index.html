@@ -69,6 +69,7 @@
 <meta name="ext-resource-dependency" content="assets/blas-bilene.jpg">
 <meta name="ext-resource-dependency" content="assets/logo-via.png">
 <meta name="ext-resource-dependency" content="assets/logo-los-tacos.png">
+<meta name="ext-resource-dependency" content="assets/kunde-inc-works.png">
 <meta name="ext-resource-dependency" content="assets/kunde-obos.png">
 <meta name="ext-resource-dependency" content="assets/logo-scala.png">
 <meta name="ext-resource-dependency" content="assets/logo-kongssenteret.png">
@@ -226,13 +227,13 @@
 <div style="min-height: 100vh; display: flex; flex-direction: column;">
 
 <header style="position: sticky; top: 0; z-index: 60; background: rgba(247,244,238,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #e2dacb;">
-  <div style="max-width: 1180px; margin: 0 auto; padding: 18px clamp(20px,5vw,56px); display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(12px,2.4vw,18px) clamp(20px,5vw,56px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px;">
     <a href="{{ hjemHref }}" onClick="{{ goHome }}" style="display: block; flex: none;" aria-label="Bergum Kreativ, til forsiden">
-      <img src="assets/logo-bergum-sort.png" alt="Bergum Kreativ" style="width: 118px; height: auto;">
+      <img src="assets/logo-bergum-sort.png" alt="Bergum Kreativ" style="width: clamp(96px,26vw,118px); height: auto;">
     </a>
-    <nav style="display: flex; align-items: center; gap: clamp(14px,2.4vw,34px);">
+    <nav style="display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 2px clamp(10px,2.4vw,34px); min-width: 0;">
       <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="4">
-        <a href="{{ item.href }}" onClick="{{ item.go }}" style="font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; color: #17181a; display: flex; align-items: center; gap: 7px; padding: 4px 0;" style-hover="color: #1f4d3f;">
+        <a href="{{ item.href }}" onClick="{{ item.go }}" style="font-size: clamp(12px,3.2vw,14px); letter-spacing: 0.04em; text-transform: uppercase; color: #17181a; display: flex; align-items: center; gap: 7px; padding: 12px 0;" style-hover="color: #1f4d3f;">
           <sc-if value="{{ item.active }}" hint-placeholder-val="{{ false }}">
             <span style="width: 5px; height: 5px; border-radius: 50%; background: #1f4d3f; display: block;"></span>
           </sc-if>
@@ -248,10 +249,10 @@
 <!-- ============ FORSIDE ============ -->
 <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
 <div>
-  <section style="position: relative; overflow: hidden; background: #17181a; min-height: clamp(520px, 82vh, 880px); display: flex; align-items: flex-end;">
+  <section style="position: relative; overflow: hidden; background: #17181a; min-height: clamp(420px, 66vh, 680px); display: flex; align-items: flex-end;">
     <img src="assets/topp-arbeidsbord.jpg" alt="Arbeidsbord med laptop, telefon, blyanter og grønne planter" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center;">
     <div style="position: absolute; inset: 0; background: linear-gradient(190deg, rgba(15,16,17,0.42) 0%, rgba(15,16,17,0.58) 42%, rgba(15,16,17,0.86) 100%);"></div>
-    <div style="position: relative; width: 100%; max-width: 1180px; margin: 0 auto; padding: clamp(72px,12vw,150px) clamp(20px,5vw,56px) clamp(44px,6vw,80px); color: #ffffff;">
+    <div style="position: relative; width: 100%; max-width: 1180px; margin: 0 auto; padding: clamp(56px,9vw,110px) clamp(20px,5vw,56px) clamp(36px,5vw,64px); color: #ffffff;">
       <sc-if value="{{ visTilgjengelighet }}" hint-placeholder-val="{{ false }}">
         <p style="margin: 0 0 28px; display: inline-flex; align-items: center; gap: 9px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #ffffff; border: 1px solid rgba(255,255,255,0.55); border-radius: 999px; padding: 7px 14px;">
           <span style="width: 6px; height: 6px; border-radius: 50%; background: #ffffff; display: block;"></span>
@@ -278,6 +279,9 @@
           </sc-if>
           <sc-if value="{{ l.manglerLogo }}" hint-placeholder-val="{{ true }}">
             <span style="font-size: clamp(20px,2vw,27px); font-weight: 300; letter-spacing: -0.015em; color: #17181a; text-align: center; line-height: 1.2; white-space: nowrap;">{{ l.navn }}</span>
+          </sc-if>
+          <sc-if value="{{ l.undernavn }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #5c5f59; white-space: nowrap;">{{ l.undernavn }}</span>
           </sc-if>
           <sc-if value="{{ l.via }}" hint-placeholder-val="{{ false }}">
             <span style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6d706a; border: 1px solid #d8d2c6; border-radius: 999px; padding: 3px 9px; white-space: nowrap;">Via Agency</span>
@@ -598,7 +602,7 @@
   </div>
 
   <sc-if value="{{ toppHero }}" hint-placeholder-val="{{ false }}">
-  <div style="max-width: 1180px; margin: clamp(16px,2.4vw,28px) auto 0; padding: 0 clamp(20px,5vw,56px);">
+  <div style="max-width: 1440px; margin: clamp(16px,2.4vw,28px) auto 0; padding: 0 clamp(12px,2.6vw,32px);">
   <div style="position: relative; width: 100%; aspect-ratio: {{ toppHero.ratio }}; overflow: hidden; background: {{ toppHero.bakgrunn }};">
     <sc-if value="{{ toppHero.bilderSett }}" hint-placeholder-val="{{ false }}">
       <sc-for list="{{ toppHero.bilderSett }}" as="bi" hint-placeholder-count="3">
@@ -1521,7 +1525,9 @@ const LOGOER_NA = [
   { navn: "B-Lås", src: "assets/logo-b-las.svg", h: hoyde(2.37, AREAL_NA) },
   { navn: "Via Agency", src: "assets/logo-via.png", h: hoyde(1.00, AREAL_NA) },
   { navn: "Los Tacos", src: "assets/logo-los-tacos.png", h: hoyde(5.49, AREAL_NA) },
-  { navn: "OBOS Eiendom", src: "assets/kunde-obos.png", h: hoyde(4.57, AREAL_NA) },
+  { navn: "INC Works", src: "assets/kunde-inc-works.png", h: hoyde(1.74, AREAL_NA) },
+  { navn: "OBOS Kjøpesenter", undernavn: "Kjøpesenter", src: "assets/kunde-obos.png", h: hoyde(4.57, AREAL_NA) },
+  { navn: "OBOS Eiendom", undernavn: "Eiendom", src: "assets/kunde-obos.png", h: hoyde(4.57, AREAL_NA) },
   { navn: "Scala Eiendom", src: "assets/logo-scala.png", h: hoyde(3.12, AREAL_NA) },
   { navn: "Bystasjonen", src: "assets/byst-logo-svart.png", h: hoyde(5.04, AREAL_NA) },
   { navn: "Kongssenteret", src: "assets/logo-kongssenteret.png", h: hoyde(4.27, AREAL_NA) }
@@ -1537,16 +1543,19 @@ const LOGOER_FOR = [
 
 const TIDLIGERE_UTEN_LOGO = ["Destinasjon Sandvika", "CC Vest", "Xhibition", "Kløverhuset", "Abilica", "DOGA", "Volcom Europe", "Voice Gruppen"];
 
-const KUNDER_EGNE = ["Compass Group", "Construction City", "Gastro Catering", "Søtt + Salt", "B-Lås"];
+const KUNDER_EGNE = ["Compass Group", "Construction City", "Gastro Catering", "Søtt + Salt", "B-Lås", "OBOS Eiendom", "INC Works"];
 
-const KUNDER_VIA = ["Bystasjonen", "Kongssenteret", "Scala Eiendom", "OBOS Eiendom", "Los Tacos"];
+const KUNDER_VIA = ["Bystasjonen", "Kongssenteret", "Scala Eiendom", "OBOS Kjøpesenter", "Los Tacos"];
 
 const KUNDER_FOR = ["Citycon", "Destinasjon Sandvika", "CC Vest", "Xhibition", "Kløverhuset", "Nille", "Vita", "Abilica", "DOGA", "Varner", "Volcom Europe", "Voice Gruppen", "Egmont Publishing"];
 
 const ALLE_TAGGER = (() => {
-  const ut = [];
-  CASER.forEach((c) => (c.tagger || []).forEach((t) => { if (ut.indexOf(t) < 0) ut.push(t); }));
-  return ut.sort((a, b) => a.localeCompare(b, "nb"));
+  const antall = {};
+  CASER.forEach((c) => (c.tagger || []).forEach((t) => { antall[t] = (antall[t] || 0) + 1; }));
+  return Object.keys(antall)
+    .filter((t) => antall[t] >= 3)
+    .sort((a, b) => antall[b] - antall[a] || a.localeCompare(b, "nb"))
+    .slice(0, 6);
 })();
 
 const SIDER = [
@@ -2122,12 +2131,13 @@ class Component extends DCLogic {
       engSkala: engSkala,
       alleCaser: filtrerte,
       taggFilter: [{ label: "Alle", active: !valgtTag, go: this.settTag(null) }].concat(
-        ALLE_TAGGER.map((t) => ({ label: t, active: valgtTag === t, go: this.settTag(t) }))
+        (valgtTag && ALLE_TAGGER.indexOf(valgtTag) < 0 ? ALLE_TAGGER.concat([valgtTag]) : ALLE_TAGGER)
+          .map((t) => ({ label: t, active: valgtTag === t, go: this.settTag(t) }))
       ),
       antallVist: filtrerte.length === CASER.length
         ? CASER.length + " jobber"
         : filtrerte.length + " av " + CASER.length + " jobber",
-      logoerNa: LOGOER_NA.concat(LOGOER_NA).map((l) => ({ navn: l.navn, src: l.src, h: l.h, harLogo: !!l.src, manglerLogo: !l.src, via: KUNDER_VIA.indexOf(l.navn) >= 0 })),
+      logoerNa: LOGOER_NA.concat(LOGOER_NA).map((l) => ({ navn: l.navn, undernavn: l.undernavn || null, src: l.src, h: l.h, harLogo: !!l.src, manglerLogo: !l.src, via: KUNDER_VIA.indexOf(l.navn) >= 0 })),
       logoRad: LOGOER_FOR.concat(LOGOER_FOR, LOGOER_FOR, LOGOER_FOR),
       tidligereUtenLogo: TIDLIGERE_UTEN_LOGO,
       kunderEgne: KUNDER_EGNE,
