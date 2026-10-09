@@ -117,6 +117,7 @@
 <meta name="ext-resource-dependency" content="assets/obos-manglerud-skjerm.mp4">
 <meta name="ext-resource-dependency" content="assets/obos-tveita-skjerm.mp4">
 <meta name="ext-resource-dependency" content="assets/gastro-forside.png">
+<meta name="ext-resource-dependency" content="assets/gastro-hostmeny-story.mp4">
 <meta name="ext-resource-dependency" content="assets/gastro-topp.jpg">
 <meta name="ext-resource-dependency" content="assets/gastro-styling.jpg">
 <meta name="ext-resource-dependency" content="assets/gastro-meny-topp.jpg">
@@ -1007,8 +1008,9 @@ const CASER = [
           { url: "https://gastrocatering.no/meny/", etikett: "gastrocatering.no/meny" }
         ],
         rammeBredde: 1440, rammeHoyde: 3400, rammeRull: true,
-        alt: "Nettsiden til Gastro Catering", span: "1 / -1", ratio: "16 / 10", tekst: ""
+        alt: "Nettsiden til Gastro Catering", span: "span 2", ratio: "16 / 10", tekst: ""
       },
+      { video: "assets/gastro-hostmeny-story.mp4", telefon: true, alt: "Animert some-annonse for høstmenyen", span: "auto", ratio: "10 / 13", tekst: "Some-annonsering, høstmenyen." },
       { kunTittel: true, tittel: "Høstfoto", span: "1 / -1" },
       { src: "assets/gastro-styling.jpg", alt: "Råvarer og styling fra fotoserien", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       { src: "assets/gastro-forrett.jpg", alt: "Forrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
@@ -2012,7 +2014,16 @@ class Component extends DCLogic {
             rullSrc: b.rull ? b.src : null,
             animSrc: b.anim ? b.src : null,
             slutt: b.slutt || "-85%",
-            videoElement: b.video
+            videoElement: b.video && b.telefon
+              ? React.createElement("div", {
+                  style: { width: "100%", height: "100%", background: "#f1ece2", display: "flex", alignItems: "center", justifyContent: "center" }
+                }, React.createElement("div", {
+                  style: { height: "90%", aspectRatio: "9 / 19", background: "#17181a", borderRadius: "clamp(22px,3vw,40px)", padding: "clamp(5px,0.7vw,9px)", boxShadow: "0 24px 48px rgba(23,24,26,0.18)" }
+                }, React.createElement("video", {
+                  src: b.video, muted: true, loop: true, autoPlay: true, playsInline: true, preload: "auto",
+                  style: { width: "100%", height: "100%", objectFit: "cover", borderRadius: "clamp(17px,2.4vw,32px)", display: "block", background: "#17181a" }
+                })))
+              : b.video
               ? React.createElement("video", {
                   src: b.video, controls: true, muted: true, loop: true,
                   autoPlay: true, playsInline: true, preload: "auto",
