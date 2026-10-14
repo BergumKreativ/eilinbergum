@@ -1,0 +1,2303 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function () {
+  var GA = 'G-MGFP5K6RY6', KEY = 'bk-samtykke';
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  var valg = null;
+  try { valg = localStorage.getItem(KEY); } catch (e) {}
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: valg === 'ja' ? 'granted' : 'denied' });
+  gtag('js', new Date());
+  gtag('config', GA, { anonymize_ip: true });
+  var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
+  document.head.appendChild(s);
+  function lagre(v) {
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+    gtag('consent', 'update', { analytics_storage: v === 'ja' ? 'granted' : 'denied' });
+    var b = document.getElementById('bk-samtykke'); if (b) b.remove();
+  }
+  function vis() {
+    if (document.getElementById('bk-samtykke')) return;
+    var b = document.createElement('div');
+    b.id = 'bk-samtykke';
+    b.setAttribute('role', 'dialog');
+    b.setAttribute('aria-label', 'Informasjonskapsler');
+    b.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:440px;margin-left:auto;background:#f7f4ee;color:#17181a;border:1px solid #dcd6ca;padding:24px 26px;font:300 16px/1.6 "Hanken Grotesk",system-ui,sans-serif;box-shadow:0 18px 40px rgba(23,24,26,0.12);display:flex;flex-direction:column;gap:18px;';
+    b.innerHTML = '<p style="margin:0;font-size:13px;font-weight:400;letter-spacing:0.05em;text-transform:uppercase;color:#6d706a">Informasjonskapsler</p>' +
+      '<p style="margin:-8px 0 0;color:#4e514c">Jeg bruker Google Analytics for å se hvordan siden brukes. Er det greit?</p>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+      '<button type="button" data-v="ja" style="font-family:inherit;font-size:15px;letter-spacing:0.02em;cursor:pointer;border:0;border-radius:999px;background:#1f4d3f;color:#f7f4ee;padding:12px 26px;min-height:44px">Godta</button>' +
+      '<button type="button" data-v="nei" style="font-family:inherit;font-size:15px;letter-spacing:0.02em;cursor:pointer;border:1px solid #c9d3cb;border-radius:999px;background:transparent;color:#1f4d3f;padding:12px 26px;min-height:44px">Avslå</button></div>';
+    b.addEventListener('click', function (e) { var v = e.target.getAttribute && e.target.getAttribute('data-v'); if (v) lagre(v); });
+    document.body.appendChild(b);
+  }
+  window.bkSamtykke = vis;
+  if (!valg) { if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', vis); else vis(); }
+})();
+</script>
+<title>Tjenester – profil, foto, innhold og nettside | Eilin Bergum</title>
+<meta name="description" content="Profil og designsystem, maler du kan bruke selv, foto og innholdsproduksjon, annonsering og nettside. Se hva Bergum Kreativ kan hjelpe deg med.">
+<link rel="canonical" href="https://eilinbergum.com/tjenester">
+<meta property="og:title" content="Tjenester – profil, foto, innhold og nettside | Eilin Bergum">
+<meta property="og:description" content="Profil og designsystem, maler du kan bruke selv, foto og innholdsproduksjon, annonsering og nettside. Se hva Bergum Kreativ kan hjelpe deg med.">
+<meta property="og:url" content="https://eilinbergum.com/tjenester">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Bergum Kreativ">
+<meta property="og:image" content="https://eilinbergum.com/assets/og/forside.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script>window.BK_ROUTE = "/tjenester";</script>
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<meta name="ext-resource-dependency" content="/assets/logo-compass.png">
+<meta name="ext-resource-dependency" content="/assets/logo-construction-city.png">
+<meta name="ext-resource-dependency" content="/assets/logo-gastro.png">
+<meta name="ext-resource-dependency" content="/assets/logo-sott-salt.png">
+<meta name="ext-resource-dependency" content="/assets/logo-b-las.svg">
+<meta name="ext-resource-dependency" content="/assets/blas-gjengen.jpg">
+<meta name="ext-resource-dependency" content="/assets/blas-hero.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-skilt.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-hoyden-inngang.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-glass.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-hoyden-meny.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-takterrasse.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-buffet.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-buffet-dj.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-garderobe.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-lounge.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-resepsjon.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-centralen.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-mag-vifte-hel.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-drikker.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-01.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-02.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-03.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-04.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-05.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-06.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-07.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-08.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-09.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-10.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-11.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-12.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-13.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-14.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-15.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-16.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-17.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-18.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-19.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-20.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-21.jpg">
+<meta name="ext-resource-dependency" content="/assets/blas-innlegg-ingar.png">
+<meta name="ext-resource-dependency" content="/assets/blas-innlegg-runar.png">
+<meta name="ext-resource-dependency" content="/assets/blas-innlegg-robin.png">
+<meta name="ext-resource-dependency" content="/assets/blas-innlegg-remi.png">
+<meta name="ext-resource-dependency" content="/assets/blas-nokkelsliping.jpg">
+<meta name="ext-resource-dependency" content="/assets/blas-disken.jpg">
+<meta name="ext-resource-dependency" content="/assets/blas-nokkelemner.jpg">
+<meta name="ext-resource-dependency" content="/blas-nettside/index.html">
+<meta name="ext-resource-dependency" content="/blas-nettside/Feed-mockup.dc.html">
+<meta name="ext-resource-dependency" content="/assets/blas-animasjon-feed.mp4">
+<meta name="ext-resource-dependency" content="/assets/blas-bilene.jpg">
+<meta name="ext-resource-dependency" content="/assets/logo-via.png">
+<meta name="ext-resource-dependency" content="/assets/logo-los-tacos.png">
+<meta name="ext-resource-dependency" content="/assets/kunde-inc-works.png">
+<meta name="ext-resource-dependency" content="/assets/kunde-obos.png">
+<meta name="ext-resource-dependency" content="/assets/logo-scala.png">
+<meta name="ext-resource-dependency" content="/assets/logo-kongssenteret.png">
+<meta name="ext-resource-dependency" content="/assets/byst-logo-svart.png">
+<meta name="ext-resource-dependency" content="/assets/byst-emblem-gronn.png">
+<meta name="ext-resource-dependency" content="/assets/bryn-katrine-3.jpg">
+<meta name="ext-resource-dependency" content="/assets/bryn-katrine-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/bryn-katrine-1.jpg">
+<meta name="ext-resource-dependency" content="/assets/bryn-katrine-4.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-emblem-gull.png">
+<meta name="ext-resource-dependency" content="/assets/byst-liv.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-app.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-skilting.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-id.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-senteret.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-logo-beige.png">
+<meta name="ext-resource-dependency" content="/assets/byst-logo-gronn.png">
+<meta name="ext-resource-dependency" content="/assets/byst-logo-hvit.png">
+<meta name="ext-resource-dependency" content="/assets/logo-citycon.png">
+<meta name="ext-resource-dependency" content="/assets/logo-varner.png">
+<meta name="ext-resource-dependency" content="/assets/logo-vita.png">
+<meta name="ext-resource-dependency" content="/assets/logo-nille-utstanset.png">
+<meta name="ext-resource-dependency" content="/assets/logo-egmont.png">
+<meta name="ext-resource-dependency" content="/assets/obos-cover.png">
+<meta name="ext-resource-dependency" content="/assets/obos-hjem-lambertseter.png">
+<meta name="ext-resource-dependency" content="/assets/obos-hjem-manglerud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-hjem-tveita.png">
+<meta name="ext-resource-dependency" content="/assets/obos-lambertseter-splash.png">
+<meta name="ext-resource-dependency" content="/assets/obos-manglerud-splash.png">
+<meta name="ext-resource-dependency" content="/assets/obos-tveita-splash.png">
+<meta name="ext-resource-dependency" content="/assets/obos-lambertseter-tilbud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-manglerud-tilbud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-tveita-tilbud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-lambertseter-gulvfolie.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-tveita-some.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-manglerud-plakat.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-manglerud-gulvfolie.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-manglerud-some.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-lambertseter-plakat.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-tveita-plakat.png">
+<meta name="ext-resource-dependency" content="/assets/obos-emblem-lambertseter.png">
+<meta name="ext-resource-dependency" content="/assets/obos-emblem-manglerud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-emblem-tveita.png">
+<meta name="ext-resource-dependency" content="/assets/obos-lambertseter-skjerm.mp4">
+<meta name="ext-resource-dependency" content="/assets/obos-manglerud-skjerm.mp4">
+<meta name="ext-resource-dependency" content="/assets/obos-tveita-skjerm.mp4">
+<meta name="ext-resource-dependency" content="/assets/gastro-forside.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-hostmeny-story.mp4">
+<meta name="ext-resource-dependency" content="/assets/gastro-topp.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-styling.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-meny-topp.jpg">
+<meta name="ext-resource-dependency" content="/assets/citycon-gronnere-1.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gd-plakat-diy.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gd-plakat-byttedag.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gd-plakat-plante.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gd-nettside.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gronnere-2.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gronnere-3.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gronnere-4.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-1.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-plakater.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-materiell.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-nett.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-tidligere.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-tidligere.mp4">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-2.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-3.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-4.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-5.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-6.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-7.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-8.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-9.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-trekanten-1.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-trekanten-2.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-trekanten-3.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-forrett.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-hovedrett.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-dessert.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-fingermat-1.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-fingermat-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-kjokken.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-forrett-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-forrett-3.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-hovedrett-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-dessert-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-dessert-3.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-dessert-4.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-logo-sort.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-logo-hvit.png">
+<meta name="ext-resource-dependency" content="/assets/pals-pose-kvadrat.jpg">
+<meta name="ext-resource-dependency" content="/assets/pals-eng.jpg">
+<meta name="ext-resource-dependency" content="/assets/pals-amanda-1.jpg">
+<meta name="ext-resource-dependency" content="/assets/pals-amanda-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-gjengen.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-julestromper.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-kalender.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-gavekort.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-strompe-bar.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-vinterland.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-ill-truck.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-ill-emballasje.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-ill-jul.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-truck.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-festival.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-lykkehjul.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-merch.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-gaveposer.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-tskjorter.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-landstreff.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-afterwork.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-nattapent.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-combodeal.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-nc-truck.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-festival-gjester.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-dooh.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-dooh-akerbrygge.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-apning-akerbrygge.jpg">
+
+
+<meta name="ext-resource-dependency" content="/assets/lostacos-bjorvika.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-paaske-bryn.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-valentines-vaerstetorvet.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-gaveguide-familien.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-gaveguide-trend.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-partyvesken.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-1.jpg">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-3.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-menyer.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-lunsj.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-detalj.png">
+<style>
+  body { margin: 0; background: #f7f4ee; color: #17181a; font-family: "Hanken Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #1f4d3f; text-decoration: none; }
+  a:hover { color: #17181a; }
+  img { display: block; max-width: 100%; }
+  @keyframes bkmarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes bkrise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes bkappscroll { from { transform: translateY(0); } to { transform: translateY(var(--bk-slutt, -85%)); } }
+  @keyframes bkbytt { 0% { opacity: 0; } 5% { opacity: 1; } 28% { opacity: 1; } 33% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes bkkryss { 0%, 42% { opacity: 1; } 50%, 92% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes bkrammerull { 0%, 8% { transform: translateY(0); } 92%, 100% { transform: translateY(calc(-1 * var(--bk-reise, 0px))); } }
+  @media (prefers-reduced-motion: reduce) { [data-ramme-rull] > div { animation: none !important; } }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="200" height="200" fill="#1f4d3f"></rect>
+    <text x="100" y="100" text-anchor="middle" dominant-baseline="central" font-family="Hanken Grotesk, system-ui, sans-serif" font-size="62" font-weight="200" fill="#f7f4ee" letter-spacing="-2">bk</text>
+  </svg>
+</template>
+
+<div style="min-height: 100vh; display: flex; flex-direction: column;">
+
+<header style="position: sticky; top: 0; z-index: 60; background: rgba(247,244,238,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #e2dacb;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(12px,2.4vw,18px) clamp(20px,5vw,56px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px;">
+    <a href="{{ hjemHref }}" onClick="{{ goHome }}" style="display: block; flex: none;" aria-label="Bergum Kreativ, til forsiden">
+      <img src="/assets/logo-bergum-sort.png" alt="Bergum Kreativ" style="width: clamp(96px,26vw,118px); height: auto;">
+    </a>
+    <nav style="display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 2px clamp(10px,2.4vw,34px); min-width: 0;">
+      <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="4">
+        <a href="{{ item.href }}" onClick="{{ item.go }}" style="font-size: clamp(12px,3.2vw,14px); letter-spacing: 0.04em; text-transform: uppercase; color: #17181a; display: flex; align-items: center; gap: 7px; padding: 12px 0;" style-hover="color: #1f4d3f;">
+          <sc-if value="{{ item.active }}" hint-placeholder-val="{{ false }}">
+            <span style="width: 5px; height: 5px; border-radius: 50%; background: #1f4d3f; display: block;"></span>
+          </sc-if>
+          {{ item.label }}
+        </a>
+      </sc-for>
+    </nav>
+  </div>
+</header>
+
+<main style="flex: 1;">
+
+<!-- ============ FORSIDE ============ -->
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div>
+  <section style="position: relative; overflow: hidden; background: #17181a; min-height: clamp(420px, 66vh, 680px); display: flex; align-items: flex-end;">
+    <img src="/assets/topp-arbeidsbord.jpg" alt="Arbeidsbord med laptop, telefon, blyanter og grønne planter" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(190deg, rgba(15,16,17,0.42) 0%, rgba(15,16,17,0.58) 42%, rgba(15,16,17,0.86) 100%);"></div>
+    <div style="position: relative; width: 100%; max-width: 1180px; margin: 0 auto; padding: clamp(56px,9vw,110px) clamp(20px,5vw,56px) clamp(36px,5vw,64px); color: #ffffff;">
+      <sc-if value="{{ visTilgjengelighet }}" hint-placeholder-val="{{ false }}">
+        <p style="margin: 0 0 28px; display: inline-flex; align-items: center; gap: 9px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #ffffff; border: 1px solid rgba(255,255,255,0.55); border-radius: 999px; padding: 7px 14px;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #ffffff; display: block;"></span>
+          Ledig kapasitet fra oktober
+        </p>
+      </sc-if>
+      <h1 style="margin: 0; font-size: clamp(38px,6.6vw,88px); font-weight: 200; line-height: 1.03; letter-spacing: -0.03em; max-width: 18ch; text-wrap: balance; color: #ffffff;">Totalleverandør av markedstjenester.</h1>
+      <p style="margin: clamp(26px,3.4vw,40px) 0 0; max-width: 54ch; font-size: clamp(17px,1.5vw,21px); line-height: 1.6; color: #ffffff; text-wrap: pretty;">Markedsfører, innholdsprodusent og designer med over 10 års erfaring innen retail, eiendom og restaurant. Jeg tar merkevaren hele veien – fra idé og retning til plakaten i vinduet, bildene i annonsen og siden kunden faktisk handler på.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(30px,3.6vw,44px);">
+        <a href="{{ jobberHref }}" onClick="{{ goJobber }}" style="background: #f7f4ee; color: #17181a; padding: 14px 26px; border-radius: 999px; font-size: 15px; letter-spacing: 0.02em;" style-hover="background: #ffffff; color: #1f4d3f;">Se utvalgte jobber</a>
+        <a href="{{ kontaktHref }}" onClick="{{ goKontakt }}" style="border: 1px solid rgba(255,255,255,0.6); color: #ffffff; padding: 14px 26px; border-radius: 999px; font-size: 15px;" style-hover="border-color: #ffffff; background: rgba(255,255,255,0.12); color: #ffffff;">Ta kontakt</a>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ visKundelogoer }}" hint-placeholder-val="{{ true }}">
+  <section style="background: #f1ece2; padding: clamp(40px,5vw,64px) 0; overflow: hidden;">
+    <p style="max-width: 1180px; margin: 0 auto clamp(26px,3vw,40px); padding: 0 clamp(20px,5vw,56px); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1f4d3f;">Kunder og samarbeidspartnere 2026</p>
+    <div style="display: flex; width: max-content; animation: bkmarquee 44s linear infinite;">
+      <sc-for list="{{ logoerNa }}" as="l" hint-placeholder-count="14">
+        <div style="width: clamp(250px,23vw,330px); flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 0 clamp(10px,1.4vw,20px);">
+          <sc-if value="{{ l.harLogo }}" hint-placeholder-val="{{ false }}">
+            <img src="{{ l.src }}" alt="{{ l.navn }}" loading="lazy" style="height: {{ l.h }}px; width: auto; max-width: 100%; object-fit: contain; mix-blend-mode: multiply;">
+          </sc-if>
+          <sc-if value="{{ l.manglerLogo }}" hint-placeholder-val="{{ true }}">
+            <span style="font-size: clamp(20px,2vw,27px); font-weight: 300; letter-spacing: -0.015em; color: #17181a; text-align: center; line-height: 1.2; white-space: nowrap;">{{ l.navn }}</span>
+          </sc-if>
+          <sc-if value="{{ l.undernavn }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: #5c5f59; white-space: nowrap;">{{ l.undernavn }}</span>
+          </sc-if>
+          <sc-if value="{{ l.via }}" hint-placeholder-val="{{ false }}">
+            <span style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6d706a; border: 1px solid #d8d2c6; border-radius: 999px; padding: 3px 9px; white-space: nowrap;">Via Agency</span>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- utvalgte jobber -->
+  <section style="border-top: 1px solid #e2dacb;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,6vw,84px) clamp(20px,5vw,56px) clamp(56px,7vw,100px);">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(28px,3.5vw,44px);">
+        <h2 style="margin: 0; font-size: clamp(28px,4vw,46px); font-weight: 200; letter-spacing: -0.025em;">Utvalgte jobber</h2>
+        <a href="{{ jobberHref }}" onClick="{{ goJobber }}" style="font-size: 15px;">Alle jobber →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(24px,3vw,40px);">
+        <sc-for list="{{ utvalgte }}" as="c" hint-placeholder-count="10">
+          <a href="{{ c.href }}" onClick="{{ c.go }}" style="display: block; grid-column: {{ c.span }};">
+            <div style="position: relative; overflow: hidden; background: #e8e2d6; aspect-ratio: {{ c.ratio }};">
+              <sc-if value="{{ c.dekkGronn }}" hint-placeholder-val="{{ false }}">
+                <div style="width: 100%; height: 100%; background: #00524c; position: relative;">
+                  <sc-for list="{{ c.emblemer }}" as="e" hint-placeholder-count="3">
+                    <img src="{{ e.src }}" alt="" loading="lazy" style="position: absolute; top: 50%; left: 50%; width: {{ e.bredde }}; max-width: 230px; transform: translate(-50%, -50%); opacity: 0; animation: bkbytt 9s linear infinite; animation-delay: {{ e.delay }};">
+                  </sc-for>
+                </div>
+              </sc-if>
+              <sc-if value="{{ c.kortDelt }}" hint-placeholder-val="{{ false }}">
+                <div style="position: absolute; inset: 0; overflow: hidden;">
+                  <img src="{{ c.kortDeltHoyre }}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{ engX }}% {{ engY }}%; transform: scale({{ engSkala }});">
+                  <div style="position: absolute; inset: 0; background: #bdd8eb; animation: bkkryss 9s ease-in-out infinite;">
+                    <img src="{{ c.kortDeltVenstre }}" alt="{{ c.tittel }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% {{ poseY }}%; transform: scale({{ poseSkala }});">
+                  </div>
+                </div>
+              </sc-if>
+              <sc-if value="{{ c.bilde }}" hint-placeholder-val="{{ true }}">
+                <img src="{{ c.bilde }}" alt="{{ c.tittel }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: {{ c.kortPos }};">
+              </sc-if>
+              {{ c.kortVideoEl }}
+              {{ c.kortLogoEl }}
+              <sc-if value="{{ c.kortOverlayTittel }}" hint-placeholder-val="{{ false }}">
+                <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.72) 100%);"></div>
+                <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: clamp(18px,2.4vw,30px); display: flex; flex-direction: column; align-items: center; text-align: center;">
+                  <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-weight: 400; text-transform: uppercase; font-size: clamp(17px,2.2vw,27px); line-height: 1.1; letter-spacing: 0.005em; color: #FFC20E;">{{ c.kortOverlayKicker }}</p>
+                  <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-weight: 400; text-transform: uppercase; font-size: clamp(17px,2.2vw,27px); line-height: 1.1; letter-spacing: 0.005em; color: #ffffff;">{{ c.kortOverlayTittel }}</p>
+                </div>
+              </sc-if>
+              <sc-if value="{{ c.mangler }}" hint-placeholder-val="{{ false }}">
+                <span style="width: 100%; height: 100%; display: grid; place-items: center; font-size: 13px; color: #5c5f59;">Bilde kommer</span>
+              </sc-if>
+            </div>
+            <h3 style="margin: 18px 0 5px; font-size: clamp(20px,2vw,25px); font-weight: 300; letter-spacing: -0.015em; color: #17181a;">{{ c.tittel }}</h3>
+            <p style="margin: 0; font-size: 15px; color: #6d706a;">{{ c.leveranse }}</p>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- tre spor -->
+  <section style="border-top: 1px solid #e2dacb;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,6vw,84px) clamp(20px,5vw,56px);">
+      <h2 style="margin: 0 0 clamp(32px,4vw,52px); font-size: clamp(26px,3.4vw,42px); font-weight: 200; letter-spacing: -0.025em; line-height: 1.08; max-width: 24ch;">Strategi, produksjon og publisering.</h2>
+      <div>
+        <sc-for list="{{ tjenester }}" as="t" hint-placeholder-count="4">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 6px clamp(24px,4vw,56px); align-items: baseline; padding: clamp(20px,2.6vw,30px) 0; border-top: 1px solid #ded7c9;">
+            <h3 style="margin: 0; font-size: clamp(24px,3.2vw,40px); font-weight: 300; letter-spacing: -0.025em; line-height: 1.1;">{{ t.tittel }}</h3>
+            <p style="margin: 0; color: #5c5f59; font-size: 16px; line-height: 1.6; max-width: 38ch;">{{ t.kort }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- kundelogoer -->
+  <sc-if value="{{ visKundelogoer }}" hint-placeholder-val="{{ true }}">
+  <section style="border-top: 1px solid #e2dacb; background: #f1ece2;">
+    <div style="padding: clamp(36px,4.5vw,60px) 0 clamp(40px,5vw,68px); overflow: hidden;">
+      <p style="margin: 0 0 clamp(26px,3vw,38px); padding: 0 clamp(20px,5vw,56px); max-width: 1180px; margin-left: auto; margin-right: auto; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">Tidligere kunder</p>
+      <div style="display: flex; width: max-content; animation: bkmarquee 48s linear infinite;">
+        <sc-for list="{{ logoRad }}" as="l" hint-placeholder-count="18">
+          <div style="width: clamp(215px,19vw,270px); flex: none; display: grid; place-items: center; padding: 0 clamp(10px,1.4vw,18px);">
+            <sc-if value="{{ l.src }}" hint-placeholder-val="{{ true }}">
+              <img src="{{ l.src }}" alt="{{ l.navn }}" loading="lazy" style="height: {{ l.h }}px; width: auto; max-width: 100%; object-fit: contain; opacity: 0.6; mix-blend-mode: multiply;">
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <ul style="list-style: none; max-width: 1180px; margin: clamp(28px,3.5vw,44px) auto 0; padding: 0 clamp(20px,5vw,56px); display: flex; flex-wrap: wrap; gap: 8px 12px;">
+        <sc-for list="{{ tidligereUtenLogo }}" as="k" hint-placeholder-count="8">
+          <li style="font-size: 16px; font-weight: 300; color: #5c5f59; border: 1px solid #ded7c9; border-radius: 999px; padding: 6px 15px;">{{ k }}</li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+  </sc-if>
+
+  <!-- kontaktteaser -->
+  <section style="background: #1f4d3f; color: #f4f1ea;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: clamp(56px,8vw,110px) clamp(20px,5vw,56px);">
+      <div>
+        <h2 style="margin: 0; font-size: clamp(28px,3.8vw,44px); font-weight: 200; letter-spacing: -0.025em; line-height: 1.1; max-width: 24ch;">Har du et prosjekt, en idé eller behov for ekstra kapasitet?</h2>
+        <p style="margin: 26px 0 0; max-width: 46ch; font-size: 17px; line-height: 1.6; color: #dfe6df;">Jeg hjelper små og store kunder med visuell kommunikasjon, innhold, design og markedsføring. Ta gjerne kontakt for en uforpliktende prat.</p>
+        <p style="margin: 30px 0 0;"><a href="{{ kontaktHref }}" onClick="{{ goKontakt }}" style="background: #f7f4ee; color: #1f4d3f; padding: 14px 26px; border-radius: 999px; font-size: 15px; display: inline-block;" style-hover="background: #ffffff; color: #17181a;">Send en melding</a></p>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ============ TJENESTER ============ -->
+<sc-if value="{{ isTjenester }}" hint-placeholder-val="{{ false }}">
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,7vw,104px) clamp(20px,5vw,56px) clamp(56px,8vw,120px);">
+  <p style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">Tjenester</p>
+  <h1 style="margin: 0; font-size: clamp(34px,5.6vw,72px); font-weight: 200; line-height: 1.05; letter-spacing: -0.03em; max-width: 20ch;">Totalleverandør av markedstjenester.</h1>
+  <p style="margin: 28px 0 0; max-width: 58ch; font-size: clamp(17px,1.4vw,20px); line-height: 1.6; color: #4e514c;">Profil og designsystem, maler du kan bruke selv, foto og innholdsproduksjon, annonsering og publisering. Jeg gjør hele kundereisen.</p>
+
+  <div style="display: flex; flex-direction: column; gap: 0; margin-top: clamp(44px,6vw,80px); border-top: 1px solid #e2dacb;">
+    <sc-for list="{{ tjenester }}" as="t" hint-placeholder-count="3">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(20px,4vw,56px); padding: clamp(32px,4vw,52px) 0; border-bottom: 1px solid #e2dacb;">
+        <div>
+          <p style="margin: 0 0 12px; font-size: 13px; color: #5c5f59; font-variant-numeric: tabular-nums;">{{ t.nr }}</p>
+          <h2 style="margin: 0; font-size: clamp(24px,2.8vw,34px); font-weight: 300; letter-spacing: -0.02em; line-height: 1.15; max-width: 18ch;">{{ t.tittel }}</h2>
+        </div>
+        <div>
+          <p style="margin: 0 0 22px; font-size: 17px; line-height: 1.65; color: #4e514c; max-width: 44ch;">{{ t.lang }}</p>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px;">
+            <sc-for list="{{ t.punkter }}" as="p" hint-placeholder-count="5">
+              <li style="border: 1px solid #ded7c9; border-radius: 999px; padding: 6px 14px; font-size: 14px; color: #5c5f59;">{{ p }}</li>
+            </sc-for>
+          </ul>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="margin-top: clamp(44px,6vw,80px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: clamp(28px,4vw,56px);">
+    <sc-for list="{{ arbeidsform }}" as="a" hint-placeholder-count="3">
+      <div>
+        <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 500; letter-spacing: -0.01em;">{{ a.tittel }}</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5c5f59; max-width: 34ch;">{{ a.tekst }}</p>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+<!-- ============ JOBBER ============ -->
+<sc-if value="{{ isJobber }}" hint-placeholder-val="{{ false }}">
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,7vw,104px) clamp(20px,5vw,56px) clamp(56px,8vw,120px);">
+  <p style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">Jobber</p>
+  <h1 style="margin: 0 0 clamp(28px,3.5vw,48px); font-size: clamp(34px,5.6vw,72px); font-weight: 200; line-height: 1.05; letter-spacing: -0.03em; max-width: 20ch;">Utvalg fra de siste ti årene.</h1>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 8px 10px; margin-bottom: 14px;">
+    <sc-for list="{{ taggFilter }}" as="t" hint-placeholder-count="10">
+      <a href="#" onClick="{{ t.go }}" style="display: inline-flex; align-items: center; gap: 7px; font-size: 14px; color: #17181a; border: 1px solid #ded7c9; border-radius: 999px; padding: 7px 15px;" style-hover="border-color: #1f4d3f; color: #1f4d3f;">
+        <sc-if value="{{ t.active }}" hint-placeholder-val="{{ false }}">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #1f4d3f; display: block;"></span>
+        </sc-if>
+        {{ t.label }}
+      </a>
+    </sc-for>
+  </div>
+  <p style="margin: 0 0 clamp(32px,4vw,56px); font-size: 14px; color: #5c5f59;">{{ antallVist }}</p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(28px,3.5vw,48px);">
+    <sc-for list="{{ alleCaser }}" as="c" hint-placeholder-count="9">
+      <a href="{{ c.href }}" onClick="{{ c.go }}" style="display: block;">
+        <div style="position: relative; overflow: hidden; background: #e8e2d6; aspect-ratio: 4 / 3;">
+          <sc-if value="{{ c.dekkGronn }}" hint-placeholder-val="{{ false }}">
+            <div style="width: 100%; height: 100%; background: #00524c; position: relative;">
+              <sc-for list="{{ c.emblemer }}" as="e" hint-placeholder-count="3">
+                <img src="{{ e.src }}" alt="" loading="lazy" style="position: absolute; top: 50%; left: 50%; width: {{ e.bredde }}; max-width: 230px; transform: translate(-50%, -50%); opacity: 0; animation: bkbytt 9s linear infinite; animation-delay: {{ e.delay }};">
+              </sc-for>
+            </div>
+          </sc-if>
+          <sc-if value="{{ c.gridBilde }}" hint-placeholder-val="{{ true }}">
+            <img src="{{ c.gridBilde }}" alt="{{ c.tittel }}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: {{ c.kortPos }};">
+          </sc-if>
+          {{ c.kortVideoEl }}
+          {{ c.kortLogoEl }}
+          <sc-if value="{{ c.kortOverlayTittel }}" hint-placeholder-val="{{ false }}">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.72) 100%);"></div>
+            <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: clamp(18px,2.4vw,30px); display: flex; flex-direction: column; align-items: center; text-align: center;">
+              <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-weight: 400; text-transform: uppercase; font-size: clamp(17px,2.2vw,27px); line-height: 1.1; letter-spacing: 0.005em; color: #FFC20E;">{{ c.kortOverlayKicker }}</p>
+              <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-weight: 400; text-transform: uppercase; font-size: clamp(17px,2.2vw,27px); line-height: 1.1; letter-spacing: 0.005em; color: #ffffff;">{{ c.kortOverlayTittel }}</p>
+            </div>
+          </sc-if>
+          <sc-if value="{{ c.mangler }}" hint-placeholder-val="{{ false }}">
+            <span style="width: 100%; height: 100%; display: grid; place-items: center; font-size: 13px; color: #5c5f59;">Bilde kommer</span>
+          </sc-if>
+        </div>
+        <h3 style="margin: 18px 0 5px; font-size: clamp(20px,2vw,25px); font-weight: 300; letter-spacing: -0.015em; color: #17181a;">{{ c.tittel }}</h3>
+        <p style="margin: 0 0 4px; font-size: 15px; color: #6d706a;">{{ c.leveranse }}</p>
+        <p style="margin: 0 0 12px; font-size: 14px; color: #5c5f59;">{{ c.periode }}</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px;">
+          <sc-for list="{{ c.tagger }}" as="t" hint-placeholder-count="3">
+            <li style="font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: #5c5f59; border: 1px solid #ded7c9; border-radius: 999px; padding: 4px 10px;">{{ t }}</li>
+          </sc-for>
+        </ul>
+      </a>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+<!-- ============ OM MEG ============ -->
+<sc-if value="{{ isOm }}" hint-placeholder-val="{{ false }}">
+<div>
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,7vw,104px) clamp(20px,5vw,56px) 0;">
+    <p style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">Om meg</p>
+    <h1 style="margin: 0; font-size: clamp(34px,5.6vw,72px); font-weight: 200; line-height: 1.05; letter-spacing: -0.03em; max-width: 22ch;">Eilin Bergum</h1>
+  </div>
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px,5vw,64px) clamp(20px,5vw,56px) clamp(56px,8vw,110px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(32px,5vw,72px); align-items: start;">
+    <div style="aspect-ratio: 4 / 5; overflow: hidden;">
+      <img src="https://images.squarespace-cdn.com/content/v1/699ff80d9e47765296f869af/df7795c4-cdeb-421f-94ab-7577c75bd86b/tempImageqJ9Rju.jpg" alt="Eilin Bergum" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <p style="margin: 0; font-size: clamp(19px,1.7vw,23px); line-height: 1.55; letter-spacing: -0.01em; color: #17181a; max-width: 40ch;">Jeg har jobbet med kommersiell kommunikasjon i over ti år, hovedsakelig for kjøpesentre, restauranter og handelsvirksomheter.</p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4e514c; max-width: 46ch;">Jeg kombinerer markedsføring med produksjon. Det betyr at jeg både legger planen og lager innholdet – fra art direction og designsystemer til foto, film, tekst og trykkfiler. Færre ledd gir kortere vei fra beslutning til ferdig arbeid ute i markedet.</p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4e514c; max-width: 46ch;">Etter ti år i Via Agency driver jeg nå for meg selv igjen. Jeg har også erfaring fra store mediehus og reklamebyrå, både som art director og markedsfører.</p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4e514c; max-width: 46ch;">Derfor ser jeg sjelden en oppgave isolert. Jeg ser hele økosystemet rundt merkevaren og kan jobbe i alle ledd, fra strategi og retning til produksjon og publisering.</p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #4e514c; max-width: 46ch;">Etter ti år i bransjen har man også et godt kontaktnettverk og flere gode samarbeidspartnere, som gjør at jeg kan håndtere store jobber.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px; margin-top: 12px; padding-top: 28px; border-top: 1px solid #e2dacb;">
+        <sc-for list="{{ fakta }}" as="f" hint-placeholder-count="3">
+          <div>
+            <p style="margin: 0 0 4px; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: #5c5f59;">{{ f.label }}</p>
+            <p style="margin: 0; font-size: 16px; color: #17181a; line-height: 1.5;">{{ f.verdi }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <section style="border-top: 1px solid #e2dacb; background: #f1ece2;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: clamp(44px,6vw,80px) clamp(20px,5vw,56px);">
+      <h2 style="margin: 0 0 10px; font-size: clamp(24px,2.8vw,34px); font-weight: 200; letter-spacing: -0.02em;">Kunder og samarbeidspartnere</h2>
+      <p style="margin: 0 0 clamp(32px,4vw,48px); font-size: 16px; color: #6d706a;">Gjennom egen virksomhet og som samarbeidspartner for Via Agency.</p>
+
+      <p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1f4d3f;">Egne kunder</p>
+      <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px 14px;">
+        <sc-for list="{{ kunderEgne }}" as="k" hint-placeholder-count="5">
+          <li style="font-size: clamp(17px,1.6vw,21px); font-weight: 300; letter-spacing: -0.01em; color: #17181a; border: 1px solid #c9d3cb; border-radius: 999px; padding: 7px 16px; background: #f7f4ee;">{{ k }}</li>
+        </sc-for>
+      </ul>
+
+      <p style="margin: clamp(32px,4vw,48px) 0 16px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1f4d3f;">Kunder og jobber gjennom Via Agency</p>
+      <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px 14px;">
+        <sc-for list="{{ kunderVia }}" as="k" hint-placeholder-count="8">
+          <li style="font-size: clamp(17px,1.6vw,21px); font-weight: 300; letter-spacing: -0.01em; color: #17181a; border: 1px solid #c9d3cb; border-radius: 999px; padding: 7px 16px; background: #f7f4ee;">{{ k }}</li>
+        </sc-for>
+      </ul>
+
+      <p style="margin: clamp(32px,4vw,48px) 0 16px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">Tidligere kunder</p>
+      <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px 14px;">
+        <sc-for list="{{ kunderFor }}" as="k" hint-placeholder-count="12">
+          <li style="font-size: clamp(16px,1.4vw,19px); font-weight: 300; letter-spacing: -0.01em; color: #5c5f59; border: 1px solid #ded7c9; border-radius: 999px; padding: 6px 15px;">{{ k }}</li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ============ KONTAKT ============ -->
+<sc-if value="{{ isKontakt }}" hint-placeholder-val="{{ false }}">
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,7vw,104px) clamp(20px,5vw,56px) clamp(56px,8vw,120px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(36px,5vw,80px); align-items: start;">
+  <div>
+    <p style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">Kontakt</p>
+    <h1 style="margin: 0; font-size: clamp(32px,4.6vw,58px); font-weight: 200; line-height: 1.06; letter-spacing: -0.03em; max-width: 18ch;">Fortell meg hva du trenger.</h1>
+    <p style="margin: 26px 0 0; max-width: 42ch; font-size: 17px; line-height: 1.65; color: #4e514c;">Enten du trenger en tydelig retning, noen som tar tak i det praktiske, eller en stødig samarbeidspartner over tid. Jeg svarer vanligvis samme dag.</p>
+    <dl style="margin: clamp(32px,4vw,48px) 0 0; display: flex; flex-direction: column; gap: 20px;">
+      <div>
+        <dt style="font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: #5c5f59; margin-bottom: 5px;">E-post</dt>
+        <dd style="margin: 0; font-size: clamp(19px,2vw,25px); font-weight: 300;"><a href="mailto:eilin@eilinbergum.com">eilin@eilinbergum.com</a></dd>
+      </div>
+      <div>
+        <dt style="font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: #5c5f59; margin-bottom: 5px;">Sted</dt>
+        <dd style="margin: 0; font-size: 17px; color: #4e514c;">Oslo</dd>
+      </div>
+    </dl>
+  </div>
+
+  <div style="background: #f1ece2; border: 1px solid #e2dacb; padding: clamp(24px,3vw,40px);">
+    <sc-if value="{{ sendt }}" hint-placeholder-val="{{ false }}">
+      <div style="min-height: 300px; display: flex; flex-direction: column; justify-content: center; gap: 14px;">
+        <h2 style="margin: 0; font-size: clamp(24px,2.6vw,32px); font-weight: 200; letter-spacing: -0.02em;">Takk for meldingen.</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #4e514c; max-width: 34ch;">E-postprogrammet ditt åpner seg med meldingen klar. Får du den ikke opp, send den gjerne direkte til <a href="mailto:eilin@eilinbergum.com">eilin@eilinbergum.com</a>.</p>
+        <p style="margin: 8px 0 0;"><a href="#" onClick="{{ nullstillSkjema }}" style="font-size: 15px; border-bottom: 1px solid #c9d3cb; padding-bottom: 2px;">Skriv en ny melding</a></p>
+      </div>
+    </sc-if>
+    <sc-if value="{{ ikkeSendt }}" hint-placeholder-val="{{ true }}">
+    <form onSubmit="{{ sendSkjema }}" style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="display: flex; flex-direction: column; gap: 7px;">
+        <label for="bk-navn" style="font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: #6d706a;">Navn</label>
+        <input id="bk-navn" name="navn" type="text" required="required" value="{{ navn }}" onChange="{{ setNavn }}" style="font-family: inherit; font-size: 16px; color: #17181a; background: #f7f4ee; border: 1px solid #ded7c9; padding: 13px 14px; border-radius: 2px;" style-focus="outline: none; border-color: #1f4d3f;">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 7px;">
+        <label for="bk-epost" style="font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: #6d706a;">E-post</label>
+        <input id="bk-epost" name="epost" type="email" required="required" value="{{ epost }}" onChange="{{ setEpost }}" style="font-family: inherit; font-size: 16px; color: #17181a; background: #f7f4ee; border: 1px solid #ded7c9; padding: 13px 14px; border-radius: 2px;" style-focus="outline: none; border-color: #1f4d3f;">
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 7px;">
+        <label for="bk-melding" style="font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: #6d706a;">Melding</label>
+        <textarea id="bk-melding" name="melding" rows="6" required="required" value="{{ melding }}" onChange="{{ setMelding }}" style="font-family: inherit; font-size: 16px; color: #17181a; background: #f7f4ee; border: 1px solid #ded7c9; padding: 13px 14px; border-radius: 2px; resize: vertical;" style-focus="outline: none; border-color: #1f4d3f;"></textarea>
+      </div>
+      <button type="submit" style="font-family: inherit; background: #1f4d3f; color: #f7f4ee; border: none; padding: 15px 28px; border-radius: 999px; font-size: 15px; letter-spacing: 0.02em; cursor: pointer; align-self: start;" style-hover="background: #17181a;">Send melding</button>
+    </form>
+    </sc-if>
+  </div>
+</div>
+</sc-if>
+
+<!-- ============ 404 ============ -->
+<sc-if value="{{ isIkkeFunnet }}" hint-placeholder-val="{{ false }}">
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,7vw,104px) clamp(20px,5vw,56px) clamp(56px,8vw,120px);">
+  <p style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">404</p>
+  <h1 style="margin: 0; font-size: clamp(34px,5.6vw,72px); font-weight: 200; line-height: 1.05; letter-spacing: -0.03em; max-width: 20ch;">Siden finnes ikke.</h1>
+  <p style="margin: 28px 0 0; max-width: 58ch; font-size: clamp(17px,1.4vw,20px); line-height: 1.6; color: #4e514c;">Adressen kan være feil, eller siden er flyttet.</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(30px,3.6vw,44px);">
+    <a href="{{ hjemHref }}" onClick="{{ goHome }}" style="background: #1f4d3f; color: #f7f4ee; padding: 14px 26px; border-radius: 999px; font-size: 15px; letter-spacing: 0.02em;" style-hover="background: #17181a;">Til forsiden</a>
+    <a href="{{ jobberHref }}" onClick="{{ goJobber }}" style="border: 1px solid #c9d3cb; color: #1f4d3f; padding: 14px 26px; border-radius: 999px; font-size: 15px; letter-spacing: 0.02em;" style-hover="border-color: #1f4d3f;">Se jobber</a>
+  </div>
+</div>
+</sc-if>
+
+<!-- ============ CASESIDE ============ -->
+<sc-if value="{{ isCase }}" hint-placeholder-val="{{ false }}">
+<div>
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(20px,3vw,36px) clamp(20px,5vw,56px) 0;">
+    <p style="margin: 0;"><a href="{{ jobberHref }}" onClick="{{ goJobber }}" style="font-size: 15px; color: #6d706a;" style-hover="color: #1f4d3f;">← Alle jobber</a></p>
+  </div>
+
+  <sc-if value="{{ toppHero }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width: 1440px; margin: clamp(16px,2.4vw,28px) auto 0; padding: 0 clamp(12px,2.6vw,32px);">
+  <div style="position: relative; width: 100%; aspect-ratio: {{ toppHero.ratio }}; overflow: hidden; background: {{ toppHero.bakgrunn }};">
+    <sc-if value="{{ toppHero.bilderSett }}" hint-placeholder-val="{{ false }}">
+      <sc-for list="{{ toppHero.bilderSett }}" as="bi" hint-placeholder-count="3">
+        <img src="{{ bi.src }}" alt="{{ toppHero.alt }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: {{ bi.fit }}; object-position: {{ bi.pos }}; background: {{ bi.bakgrunn }}; opacity: 0; animation: bkbytt 12s linear infinite; animation-delay: {{ bi.delay }};">
+      </sc-for>
+    </sc-if>
+    <sc-if value="{{ toppHero.bildeSrc }}" hint-placeholder-val="{{ true }}">
+      <img src="{{ toppHero.bildeSrc }}" alt="{{ toppHero.alt }}" style="width: 100%; height: 100%; object-fit: {{ toppHero.fit }}; object-position: {{ toppHero.pos }};">
+    </sc-if>
+    <sc-if value="{{ toppHero.overlayTittel }}" hint-placeholder-val="{{ false }}">
+      <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.14) 42%, rgba(0,0,0,0) 66%); pointer-events: none;"></div>
+      <div style="position: absolute; left: 0; top: 0; right: 0; padding: clamp(24px,3.4vw,46px); display: flex; flex-direction: column; gap: 12px; pointer-events: none;">
+        {{ toppHero.overlayLogoEl }}
+        <sc-if value="{{ toppHero.overlayKicker }}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 0; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.86);">{{ toppHero.overlayKicker }}</p>
+        </sc-if>
+        <p style="margin: 0; max-width: 22ch; font-size: clamp(26px,3.4vw,46px); line-height: 1.08; font-weight: 300; letter-spacing: -0.02em; color: #ffffff; text-wrap: balance;">{{ toppHero.overlayTittel }}</p>
+      </div>
+    </sc-if>
+    <sc-if value="{{ toppHero.gulStrek }}" hint-placeholder-val="{{ false }}">
+      <div style="position: absolute; left: 0; bottom: 0; width: 100%; height: clamp(6px,0.7vw,10px); background: #FFC20E;"></div>
+    </sc-if>
+  </div>
+  <sc-if value="{{ toppHero.tekst }}" hint-placeholder-val="{{ false }}">
+    <p style="margin: 12px 0 0; font-size: 15px; line-height: 1.55; color: #6d706a; max-width: 52ch;">{{ toppHero.tekst }}</p>
+  </sc-if>
+  </div>
+  </sc-if>
+
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(28px,4vw,52px) clamp(20px,5vw,56px) 0;">
+    <ul style="margin: 0 0 20px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 7px;">
+      <sc-for list="{{ aktivCase.tagger }}" as="t" hint-placeholder-count="3">
+        <li style="font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: #1f4d3f; border: 1px solid #c9d3cb; border-radius: 999px; padding: 5px 12px;">{{ t }}</li>
+      </sc-for>
+    </ul>
+    <p style="margin: 0 0 18px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">{{ aktivCase.kicker }}</p>
+    <h1 style="margin: 0; font-size: clamp(34px,5.6vw,72px); font-weight: 200; line-height: 1.05; letter-spacing: -0.03em; max-width: 20ch;">{{ aktivCase.tittel }}</h1>
+    <p style="margin: 28px 0 0; max-width: 58ch; font-size: clamp(17px,1.5vw,20px); line-height: 1.65; color: #4e514c; text-wrap: pretty;">{{ aktivCase.intro }}</p>
+    <sc-if value="{{ aktivCase.introTillegg }}" hint-placeholder-val="{{ false }}">
+      <p style="margin: 20px 0 0; max-width: 58ch; font-size: clamp(16px,1.4vw,18px); line-height: 1.65; color: #4e514c; text-wrap: pretty;">{{ aktivCase.introTillegg }}</p>
+    </sc-if>
+    <dl style="margin: clamp(36px,5vw,64px) 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px 32px; padding: clamp(24px,3vw,32px) 0; border-top: 1px solid #e2dacb; border-bottom: 1px solid #e2dacb;">
+      <sc-for list="{{ aktivCase.fakta }}" as="f" hint-placeholder-count="3">
+        <div>
+          <dt style="font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; color: #5c5f59; margin-bottom: 6px;">{{ f.label }}</dt>
+          <dd style="margin: 0; font-size: 16px; line-height: 1.5; color: #17181a;">{{ f.verdi }}</dd>
+        </div>
+      </sc-for>
+    </dl>
+  </div>
+
+  <sc-if value="{{ harFlater }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px,5vw,64px) clamp(20px,5vw,56px) 0;">
+    <p style="margin: 0 0 clamp(18px,2.4vw,28px); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">{{ aktivCase.flaterTittel }}</p>
+    <ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 0 clamp(24px,4vw,56px);">
+      <sc-for list="{{ aktivCase.flater }}" as="f" hint-placeholder-count="9">
+        <li style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 13px 0; border-top: 1px solid #e2dacb;">
+          <span style="font-size: clamp(16px,1.5vw,19px); font-weight: 300; letter-spacing: -0.01em; color: #17181a;">{{ f.navn }}</span>
+          <span style="font-size: 14px; color: #6d706a; white-space: nowrap;">{{ f.format }}</span>
+        </li>
+      </sc-for>
+    </ul>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ harKarusell }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px,5vw,64px) clamp(20px,5vw,56px) 0;">
+    <div style="position: relative; background: #f1ece2; aspect-ratio: 16 / 9; overflow: hidden;">
+      {{ karusellBilde }}
+      <a href="#" onClick="{{ karusellForrige }}" aria-label="Forrige" style="position: absolute; top: 50%; left: clamp(10px,1.6vw,20px); transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(23,24,26,0.72); color: #ffffff; display: grid; place-items: center; font-size: 18px;" style-hover="background: #17181a; color: #ffffff;">←</a>
+      <a href="#" onClick="{{ karusellNeste }}" aria-label="Neste" style="position: absolute; top: 50%; right: clamp(10px,1.6vw,20px); transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(23,24,26,0.72); color: #ffffff; display: grid; place-items: center; font-size: 18px;" style-hover="background: #17181a; color: #ffffff;">→</a>
+    </div>
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap; margin-top: 14px;">
+      <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #6d706a; max-width: 60ch;">{{ karusellTekst }}</p>
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <sc-for list="{{ karusellPunkter }}" as="p" hint-placeholder-count="7">
+            <a href="#" onClick="{{ p.go }}" aria-label="{{ p.merke }}" style="width: 8px; height: 8px; border-radius: 50%; background: {{ p.farge }}; display: block;"></a>
+          </sc-for>
+        </div>
+        <span style="font-size: 14px; color: #5c5f59; font-variant-numeric: tabular-nums;">{{ karusellTeller }}</span>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px,5vw,64px) clamp(20px,5vw,56px) 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(24px,3vw,44px);">
+    <sc-for list="{{ aktivCase.blokker }}" as="b" hint-placeholder-count="4">
+      <figure style="margin: 0; grid-column: {{ b.span }};">
+        <sc-if value="{{ b.tittel }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap;">
+            <p style="margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">{{ b.tittel }}</p>
+            <sc-if value="{{ b.lenke }}" hint-placeholder-val="{{ false }}">
+              <a href="{{ b.lenke }}" target="_blank" rel="noopener" style="font-size: 15px; color: #1f4d3f; text-decoration: none;" style-hover="color: #17181a;">{{ b.lenkeTekst }} →</a>
+            </sc-if>
+          </div>
+          <sc-if value="{{ b.avsnitt }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 14px 0 0; max-width: 62ch; font-size: clamp(16px,1.4vw,18px); line-height: 1.65; color: #4e514c; text-wrap: pretty;">{{ b.avsnitt }}</p>
+          </sc-if>
+        </sc-if>
+        <sc-if value="{{ b.knapper }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 0;">
+            <sc-for list="{{ b.knapper }}" as="k" hint-placeholder-count="2">
+              <a href="{{ k.url }}" target="_blank" rel="noopener" style="display: inline-block; padding: 13px 26px; border: 1px solid #1f4d3f; border-radius: 999px; font-size: 15px; letter-spacing: 0.01em; color: #1f4d3f; text-decoration: none;" style-hover="background: #1f4d3f; color: #ffffff;">{{ k.tekst }}</a>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.harMedie }}" hint-placeholder-val="{{ true }}">
+        <sc-if value="{{ b.rammeEtikett }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; align-items: center; gap: 8px; background: #17181a; padding: 10px 14px;">
+            <span style="width: 9px; height: 9px; border-radius: 50%; background: #3d403c; display: block; flex: 0 0 auto;"></span>
+            <span style="width: 9px; height: 9px; border-radius: 50%; background: #3d403c; display: block; flex: 0 0 auto;"></span>
+            <span style="width: 9px; height: 9px; border-radius: 50%; background: #3d403c; display: block; flex: 0 0 auto; margin-right: 8px;"></span>
+            <span style="font-size: 12px; letter-spacing: 0.02em; color: #9a9d97; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ b.rammeEtikett }}</span>
+          </div>
+        </sc-if>
+        <div style="position: relative; overflow: hidden; background: {{ b.bakgrunn }}; aspect-ratio: {{ b.ratio }};">
+          <sc-if value="{{ b.flateStor }}" hint-placeholder-val="{{ false }}">
+            <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(20px,2.4vw,34px); color: {{ b.flateInk }};">
+              <p style="margin: 0; font-family: {{ b.flateFont }}; font-size: clamp(38px,5.6vw,74px); line-height: 1; letter-spacing: -0.01em;">{{ b.flateStor }}</p>
+              <p style="margin: 0; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;">{{ b.flateLiten }}</p>
+            </div>
+          </sc-if>
+          <sc-if value="{{ b.bilderSett }}" hint-placeholder-val="{{ false }}">
+            <sc-for list="{{ b.bilderSett }}" as="bi" hint-placeholder-count="3">
+              <img src="{{ bi.src }}" alt="{{ b.alt }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: {{ bi.fit }}; object-position: {{ bi.pos }}; background: {{ bi.bakgrunn }}; opacity: 0; animation: bkbytt 12s linear infinite; animation-delay: {{ bi.delay }};">
+            </sc-for>
+          </sc-if>
+          <sc-if value="{{ b.bildeSrc }}" hint-placeholder-val="{{ true }}">
+            <img src="{{ b.bildeSrc }}" alt="{{ b.alt }}" loading="lazy" style="width: 100%; height: 100%; padding: {{ b.polstring }}; object-fit: {{ b.fit }}; object-position: {{ b.pos }};">
+          </sc-if>
+          <sc-if value="{{ b.animSrc }}" hint-placeholder-val="{{ false }}">
+            <div style="width: 100%; height: 100%; overflow: hidden;">
+              <img src="{{ b.animSrc }}" alt="{{ b.alt }}" loading="lazy" style="width: 100%; height: auto; animation: bkappscroll 26s ease-in-out infinite alternate; --bk-slutt: {{ b.slutt }};">
+            </div>
+          </sc-if>
+          <sc-if value="{{ b.rullSrc }}" hint-placeholder-val="{{ false }}">
+            <div style="width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden;">
+              <img src="{{ b.rullSrc }}" alt="{{ b.alt }}" loading="lazy" style="width: 100%; height: auto;">
+            </div>
+          </sc-if>
+          {{ b.videoElement }}
+          {{ b.vimeoElement }}
+          {{ b.vimeoParEl }}
+          {{ b.instaElement }}
+          <sc-if value="{{ b.rammeSrc }}" hint-placeholder-val="{{ false }}">
+            <div data-ramme="{{ b.rammeBredde }}" data-ramme-hoyde="{{ b.rammeHoyde }}" data-ramme-rull="{{ b.rammeRull }}" data-ramme-takt="{{ b.rammeTakt }}" style="position: relative; width: 100%; height: 100%; overflow: hidden; background: #17181a;">
+              <div style="position: absolute; inset: 0;">
+                <iframe src="{{ b.rammeSrc }}" title="{{ b.alt }}" loading="lazy" scrolling="no" style="width: {{ b.rammeBredde }}px; height: {{ b.rammeHoyde }}px; border: 0; display: block; transform-origin: top left;"></iframe>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ b.mockupSrc }}" hint-placeholder-val="{{ false }}">
+            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: #efebe3; padding: clamp(18px,2.6vw,38px);">
+              <div style="position: relative; height: 100%; aspect-ratio: 10 / 16; max-width: 100%; background: #17181a; border-radius: clamp(12px,1.5vw,22px); padding: clamp(5px,0.7vw,9px); box-shadow: 0 20px 44px rgba(23,24,26,0.2);">
+                <div data-ramme="{{ b.rammeBredde }}" data-ramme-hoyde="{{ b.rammeHoyde }}" data-ramme-rull="{{ b.rammeRull }}" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: clamp(8px,1vw,15px); background: #ffffff;">
+                  <div style="position: absolute; inset: 0;">
+                    <iframe src="{{ b.mockupSrc }}" title="{{ b.alt }}" loading="lazy" scrolling="no" style="width: {{ b.rammeBredde }}px; height: {{ b.rammeHoyde }}px; border: 0; display: block; transform-origin: top left;"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ b.magFilm }}" hint-placeholder-val="{{ false }}">
+            <div style="position: absolute; inset: 0; display: flex; align-items: stretch; gap: clamp(10px,1.4vw,22px); background: #f1ece2; padding: clamp(10px,1.4vw,22px);">
+              <div style="position: relative; height: 100%; aspect-ratio: 3 / 4; flex: 0 0 auto;">
+                {{ magBilde }}
+                <div style="position: absolute; left: {{ magX }}; top: {{ magY }}; transition: left 820ms cubic-bezier(.4,0,.2,1), top 820ms cubic-bezier(.4,0,.2,1); pointer-events: none;">
+                  <div style="position: absolute; left: -15px; top: -15px; width: 34px; height: 34px; border-radius: 50%; border: 2px solid #1f4d3f; opacity: {{ magRingVis }}; transform: scale({{ magRing }}); transition: opacity 220ms ease, transform 220ms ease;"></div>
+                  <svg width="20" height="26" viewBox="0 0 20 26" fill="none" style="display: block; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.35));"><path d="M2 1.6 L2 21.4 L7.1 16.6 L10.3 23.7 L13.4 22.3 L10.2 15.4 L17 15.2 Z" fill="#ffffff" stroke="#17181a" stroke-width="1.4" stroke-linejoin="round"></path></svg>
+                </div>
+              </div>
+              <div style="flex: 1 1 0; min-width: 0; height: 100%;">
+                <img src="/assets/mag/side-01.jpg" alt="Forsiden av magasinet" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ b.film }}" hint-placeholder-val="{{ false }}">
+            {{ b.filmEl }}
+          </sc-if>
+          <sc-if value="{{ b.mangler }}" hint-placeholder-val="{{ false }}">
+            <span style="width: 100%; height: 100%; display: grid; place-items: center; text-align: center; padding: 20px; font-size: 13px; color: #5c5f59;">{{ b.plassholder }}</span>
+          </sc-if>
+          <sc-if value="{{ b.overlayTittel }}" hint-placeholder-val="{{ false }}">
+            <div style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.12) 38%, rgba(0,0,0,0) 62%); pointer-events: none;"></div>
+            <div style="position: absolute; left: 0; top: 0; right: 0; padding: clamp(24px,3.4vw,46px); display: flex; flex-direction: column; gap: 12px; pointer-events: none;">
+              {{ b.overlayLogoEl }}
+              <sc-if value="{{ b.overlayKicker }}" hint-placeholder-val="{{ false }}">
+                <p style="margin: 0; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.86);">{{ b.overlayKicker }}</p>
+              </sc-if>
+              <p style="margin: 0; max-width: 22ch; font-size: clamp(26px,3.4vw,46px); line-height: 1.08; font-weight: 300; letter-spacing: -0.02em; color: #ffffff; text-wrap: balance;">{{ b.overlayTittel }}</p>
+            </div>
+          </sc-if>
+          <sc-if value="{{ b.gulStrek }}" hint-placeholder-val="{{ false }}">
+            <div style="position: absolute; left: 0; bottom: 0; width: 100%; height: clamp(6px,0.7vw,10px); background: #FFC20E;"></div>
+          </sc-if>
+        </div>
+        <figcaption style="margin-top: 12px; font-size: 15px; line-height: 1.55; color: #6d706a; max-width: 52ch;">{{ b.tekst }}</figcaption>
+        <sc-if value="{{ b.kilde }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ b.kilde }}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 8px; font-size: 15px; color: #1f4d3f; text-decoration: none;" style-hover="color: #17181a;">Se mer på Instagram →</a>
+        </sc-if>
+        </sc-if>
+      </figure>
+    </sc-for>
+  </div>
+
+  <sc-if value="{{ harKampanje }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px,5vw,64px) clamp(20px,5vw,56px) 0;">
+    <p style="margin: 0 0 clamp(18px,2.4vw,28px); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">Fra kampanjen</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: clamp(12px,1.6vw,22px);">
+      <sc-for list="{{ aktivCase.kampanje.portretter }}" as="k" hint-placeholder-count="4">
+        <img src="{{ k.src }}" alt="{{ k.alt }}" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block;">
+      </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: clamp(12px,1.6vw,22px); margin-top: clamp(12px,1.6vw,22px);">
+      <sc-for list="{{ aktivCase.kampanje.bilder }}" as="k" hint-placeholder-count="4">
+        <img src="{{ k.src }}" alt="{{ k.alt }}" loading="lazy" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: {{ k.pos }}; display: block;">
+      </sc-for>
+    </div>
+  </div>
+  </sc-if>
+
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,6vw,96px) clamp(20px,5vw,56px) clamp(56px,8vw,110px);">
+    <div style="border-top: 1px solid #e2dacb; padding-top: clamp(24px,3vw,36px); display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+      <p style="margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">Neste jobb</p>
+      <a href="{{ nesteHref }}" onClick="{{ goNeste }}" style="font-size: clamp(22px,2.6vw,32px); font-weight: 200; letter-spacing: -0.02em; color: #17181a;" style-hover="color: #1f4d3f;">{{ nesteTittel }} →</a>
+    </div>
+  </div>
+</div>
+</sc-if>
+
+</main>
+
+<footer style="background: #17181a; color: #a9aaa4;">
+  <div style="max-width: 1180px; margin: 0 auto; padding: clamp(40px,5vw,64px) clamp(20px,5vw,56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 32px; align-items: start;">
+    <div>
+      <img src="/assets/logo-bergum-hvit.png" alt="Bergum Kreativ" style="width: 118px; height: auto; margin-bottom: 16px;">
+      <p style="margin: 0; font-size: 15px; line-height: 1.6; max-width: 30ch;">Merkevare, innhold og nettside for restaurant, catering og handel.</p>
+    </div>
+    <nav style="display: flex; flex-direction: column; gap: 10px;">
+      <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="4">
+        <a href="{{ item.href }}" onClick="{{ item.go }}" style="font-size: 15px; color: #d5d6d0;" style-hover="color: #ffffff;">{{ item.label }}</a>
+      </sc-for>
+    </nav>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <a href="mailto:eilin@eilinbergum.com" style="font-size: 15px; color: #d5d6d0;" style-hover="color: #ffffff;">eilin@eilinbergum.com</a>
+      <a href="https://www.eilinbergum.com" style="font-size: 15px; color: #d5d6d0;" style-hover="color: #ffffff;">eilinbergum.com</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <p style="margin: 0; font-size: 14px; color: #777873;">© 2026 Bergum Kreativ</p>
+      <a href="#" onClick="{{ visSamtykke }}" style="font-size: 14px; color: #a9aaa4;" style-hover="color: #ffffff;">Informasjonskapsler</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;caseUtvalg&quot;: {
+    &quot;editor&quot;: &quot;enum&quot;,
+    &quot;options&quot;: [&quot;Stor forside + rutenett&quot;, &quot;Jevnt rutenett&quot;],
+    &quot;default&quot;: &quot;Stor forside + rutenett&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;section&quot;: &quot;Forside&quot;
+  },
+  &quot;visKundelogoer&quot;: {
+    &quot;editor&quot;: &quot;boolean&quot;,
+    &quot;default&quot;: true,
+    &quot;tsType&quot;: &quot;boolean&quot;,
+    &quot;section&quot;: &quot;Forside&quot;
+  },
+  &quot;visTilgjengelighet&quot;: {
+    &quot;editor&quot;: &quot;boolean&quot;,
+    &quot;default&quot;: false,
+    &quot;tsType&quot;: &quot;boolean&quot;,
+    &quot;section&quot;: &quot;Forside&quot;
+  },
+  &quot;poseZoom&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 100,
+    &quot;min&quot;: 60,
+    &quot;max&quot;: 160,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
+  },
+  &quot;poseY&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 50,
+    &quot;min&quot;: 0,
+    &quot;max&quot;: 100,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
+  },
+  &quot;engZoom&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 100,
+    &quot;min&quot;: 100,
+    &quot;max&quot;: 200,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
+  },
+  &quot;engX&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 50,
+    &quot;min&quot;: 0,
+    &quot;max&quot;: 100,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
+  },
+  &quot;engY&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;default&quot;: 58,
+    &quot;min&quot;: 0,
+    &quot;max&quot;: 100,
+    &quot;step&quot;: 1,
+    &quot;unit&quot;: &quot;%&quot;,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Pals-kortet&quot;
+  }
+}">
+const TJENESTER = [
+  {
+    nr: "01",
+    tittel: "Profil og designsystem",
+    kort: "Visuell identitet, art direction og et designsystem som holder over tid og i alle flater.",
+    lang: "Jeg bygger identiteter som tåler å bli brukt av mange, i mange formater, over mange år. Ofte starter det med en merkevare som har grodd i alle retninger og trenger å samles.",
+    punkter: ["Visuell identitet", "Designsystem", "Art direction", "Emballasje og skilting", "Trykkfiler"]
+  },
+  {
+    nr: "02",
+    tittel: "Nettside",
+    kort: "Nye nettsider og oppdatering av eksisterende, bygget på innholdet kunden faktisk har.",
+    lang: "Jeg lager nettsider fra struktur og innhold til ferdig publisert side, og oppdaterer sider som allerede finnes. Jeg kan bygge sider fra bunn eller jeg kan jobbe i deres egne CMS-løsninger. Tekst, foto og design henger sammen med resten av profilen, og siden settes opp slik at kunden klarer å drifte den videre selv.",
+    punkter: ["Struktur og innhold", "Design og oppsett", "Bygg fra bunn eller i eget CMS", "Tekst og foto", "Publisering og drift"]
+  },
+  {
+    nr: "03",
+    tittel: "Maler du kan bruke selv",
+    kort: "Jeg kan produsere for deg, eller du kan få maler og produsere selv internt.",
+    lang: "Annonser, menyer, plakater og nyhetsbrev. Du velger om jeg produserer det løpende for deg, eller om du får maler og gjør det selv internt. Malene er låst der de må være låst og åpne der du trenger å endre noe, slik at uttrykket holder selv når andre bruker det.",
+    punkter: ["Annonsemaler", "Menyer", "Plakater", "Nyhetsbrev", "Sosiale medier"]
+  },
+  {
+    nr: "04",
+    tittel: "Foto og innholdsproduksjon",
+    kort: "Foto, video og tekst produsert for de flatene innholdet faktisk skal brukes i.",
+    lang: "Jeg produserer selv. Det gjør at kampanjer blir levert, og at bildene passer formatene de skal brukes i fra første stund. Fra enkeltbilder til storskala produksjoner for mange lokasjoner samtidig.",
+    punkter: ["Foto", "Video", "Tekst", "Magasin", "Storskala produksjon"]
+  },
+  {
+    nr: "05",
+    tittel: "Annonsering og publisering",
+    kort: "Annonser, nyhetsbrev og nettsider satt opp, publisert og holdt i gang.",
+    lang: "Siste ledd er det som oftest stopper: at innholdet faktisk kommer ut. Jeg setter opp annonsering, nyhetsbrev og nettsider, publiserer, og lager en struktur kunden klarer å drifte videre selv.",
+    punkter: ["Annonsering", "Sosiale medier", "Nyhetsbrev", "Menyer og bestilling"]
+  }
+];
+
+const ARBEIDSFORM = [
+  { tittel: "Direkte for kunden", tekst: "Fast avtale eller enkeltprosjekt. Jeg er kontaktpunktet, og henter inn folk når det trengs." },
+  { tittel: "Ekstra kapasitet for byrå", tekst: "Går inn i eksisterende team og prosesser når det topper seg, som AD eller produsent." },
+  { tittel: "Fra idé til trykk", tekst: "Én person gjennom hele kjeden. Færre ledd, kortere vei fra beslutning til noe som er ute." }
+];
+
+const CASER = [
+  {
+    slug: "gastro",
+    tagger: ["Nettside", "Foto", "Meny", "Annonsering", "Nyhetsbrev"],
+    tittel: "Gastro Catering",
+    kicker: "Nettside, foto og innhold",
+    leveranse: "Nettside, foto, menyer, annonsering og nyhetsbrev",
+    periode: "2026 –",
+    bilde: "/assets/gastro-topp.jpg",
+    kortLogo: "/assets/gastro-logo-hvit.png",
+    kortLogoMidt: true,
+    intro: "Gastro Catering leverer mat til møter, arrangementer og fester i Oslo-området. Ny profil og designsystem, oppdatert logo, høstfoto av menyen, PDF-menyer og ny nettside.",
+    introTillegg: "Menyene er delt i seks tydelige spor. Alt foto er tatt for den strukturen, med samme lys og tone på tvers av kategoriene, så nettsiden, PDF-menyene og annonsene henger sammen.",
+    fakta: [
+      { label: "Kunde", verdi: "Gastro Catering, Compass Group" },
+      { label: "Leveranse", verdi: "Profil og designsystem, logo, foto, PDF-menyer og nettside" },
+      { label: "Periode", verdi: "2026 –" }
+    ],
+    blokker: [
+      { bilder: [
+          { src: "/assets/gastro-topp.jpg", pos: "50% 62%" },
+          { src: "/assets/gastro-styling.jpg", pos: "center" },
+          { src: "/assets/gastro-hovedrett.jpg", pos: "center" }
+        ], alt: "Forrett, hovedrett og dessert fra høstmenyen", span: "1 / -1", ratio: "16 / 9", pos: "50% 62%", tekst: "", overlayLogo: "/assets/gastro-logo-hvit.png", overlayLogoAlt: "Gastro Catering", overlayTittel: "Ny profil, ny meny, ny nettside" },
+      { kunTittel: true, tittel: "Logo", span: "1 / -1" },
+      { src: "/assets/gastro-logo-sort.png", alt: "Gastro Catering-logoen i sort", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#f1ece2", polstring: "clamp(34px,6vw,74px)", tekst: "" },
+      { src: "/assets/gastro-logo-hvit.png", alt: "Gastro Catering-logoen i hvitt", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#1f2a24", polstring: "clamp(34px,6vw,74px)", tekst: "" },
+      { kunTittel: true, tittel: "Nettsiden", span: "1 / -1", lenke: "https://gastrocatering.no", lenkeTekst: "gastrocatering.no" },
+      {
+        rammeSider: [
+          { url: "https://gastrocatering.no/", etikett: "gastrocatering.no" },
+          { url: "https://gastrocatering.no/meny/", etikett: "gastrocatering.no/meny" }
+        ],
+        rammeBredde: 1440, rammeHoyde: 3400, rammeRull: true,
+        alt: "Nettsiden til Gastro Catering", span: "span 2", ratio: "16 / 10", tekst: ""
+      },
+      { video: "/assets/gastro-hostmeny-story.mp4", telefon: true, alt: "Animert some-annonse for høstmenyen", span: "auto", ratio: "10 / 13", tekst: "Some-annonsering, høstmenyen." },
+      { kunTittel: true, tittel: "Høstfoto", span: "1 / -1" },
+      { src: "/assets/gastro-styling.jpg", alt: "Råvarer og styling fra fotoserien", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-forrett.jpg", alt: "Forrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-forrett-2.jpg", alt: "Gravet laks", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-forrett-3.jpg", alt: "Terrin med sprøstekt crumble", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-hovedrett.jpg", alt: "Hovedrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-hovedrett-2.jpg", alt: "Fisk med potetpuré", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-dessert.jpg", alt: "Dessert", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-dessert-2.jpg", alt: "Macarons", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-dessert-3.jpg", alt: "Panna cotta med bringebær", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-dessert-4.jpg", alt: "Panna cotta med mango", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-fingermat-1.jpg", alt: "Fingermat med laks", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-fingermat-2.jpg", alt: "Fingermat med fennikel og sitrus", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-kjokken.jpg", alt: "Kokk som anretter fingermat", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
+    ]
+  },
+  {
+    slug: "gastro-menyer",
+    tagger: ["Meny", "Interaktivt", "Design"],
+    tittel: "Interaktive menyer",
+    kicker: "Gastro Catering",
+    leveranse: "Interaktive menyer for Gastro Catering og deres kunder",
+    periode: "2026",
+    bilde: "/assets/gastro-meny-topp.jpg",
+    intro: "Menyene til Gastro Catering er bygget som interaktive PDF-er. Leseren klikker seg mellom kategoriene i toppmenyen i stedet for å bla, og hver kategori har sin egen side med retter, beskrivelser og allergener.",
+    introTillegg: "I tillegg til Gastros egne menyer lager jeg menyer for husene de leverer til, satt i kundens egen profil: Pressens Hus og Universitetet i Oslo. Oppbygningen er den samme, drakten er husets.",
+    fakta: [
+      { label: "Kunde", verdi: "Gastro Catering, Compass Group" },
+      { label: "Leveranse", verdi: "Interaktive menyer, design og oppsett" },
+      { label: "Omfang", verdi: "Fire menyer, 52 sider" },
+      { label: "Periode", verdi: "2026" }
+    ],
+    blokker: [
+      { src: "/assets/gastro-meny-topp.jpg", alt: "Sliders og tapasbokser anrettet på fat", span: "1 / -1", ratio: "16 / 9", pos: "center", tekst: "", overlayLogo: "/assets/gastro-logo-hvit.png", overlayLogoAlt: "Gastro Catering", overlayTittel: "Menyer du klikker deg gjennom" },
+      {
+        kunTittel: true, tittel: "Gastros egne menyer", span: "1 / -1",
+        avsnitt: "Menyen for lunsj og møtemat har toppmenyen fast på alle sidene, og oversiktssiden viser alle sporene samlet med underkategoriene som egne knapper. I selskapsmenyen fungerer oversikten som inngang: sharing, fingermat, selskapsmeny, grill, food truck og selskapslokalet Villa Lilleborg."
+      },
+      { filmPar: ["gastro-lunsj", "gastro-selskap"], span: "1 / -1", ratio: "16 / 11", tekst: "Lunsj og møtemat, 15 sider. Selskap og event, 14 sider med priser per porsjon." },
+      {
+        kunTittel: true, tittel: "Menyer i husets drakt", span: "1 / -1",
+        avsnitt: "Samme oppbygning satt i kundens egen profil. Pressens Hus har husets gule flate, mørkeblå og P-en i logoen, med Gastro som leverandør oppe til høyre. UiO-menyen er liggende, med universitetets segl og sorte topp."
+      },
+      { filmPar: ["gastro-ph", "gastro-uio"], span: "1 / -1", ratio: "16 / 10", tekst: "Pressens Hus, 17 sider inkludert egen prisside. Universitetet i Oslo, 6 sider." },
+      {
+        kunTittel: true, tittel: "Menysmaking vår/sommer 2026", span: "1 / -1",
+        avsnitt: "Menyene ble presentert for kundene på en menysmaking i vår. Kjøkkenet anrettet rettene fra de nye menyene, og hver meny sto på bordet som eget kort."
+      },
+      { src: "/assets/gastro-smaking-anretning.jpg", alt: "Anretning med tapasbokser og sliders", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-kokker.jpg", alt: "Kokkene på kjøkkenet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-gyoza.jpg", alt: "Kokk som anretter gyoza", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-plating.jpg", alt: "Kokk som anretter varmrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-menykort.jpg", alt: "Menykort for selskapsmenyen på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-sliders.jpg", alt: "Sliders og småretter under smakingen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-bord.jpg", alt: "Rettene servert på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-lokalet.jpg", alt: "Gjestene til bords under menysmakingen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      {
+        kunTittel: true, tittel: "Innhold og drift", span: "1 / -1",
+        avsnitt: "Fra smakingen ble det også laget innhold til Gastros egne kanaler. Filmene er klippet for Instagram og publisert på profilen."
+      },
+      { instagram: "Dbp_7xtDYEN", alt: "Film fra menysmakingen", span: "auto", ratio: "9 / 17.4", tekst: "" },
+      { instagram: "DacZE6lNtaV", alt: "Film fra menysmakingen", span: "auto", ratio: "9 / 17.4", tekst: "" }
+    ]
+  },
+  {
+    slug: "bystasjonen",
+    tagger: ["Via Agency", "Profil", "Designsystem", "Kundeklubb"],
+    tittel: "Bystasjonen",
+    kicker: "Scala Eiendom",
+    leveranse: "Visuell profil og kundeklubb",
+    periode: "2026",
+    bilde: "/assets/byst-emblem-gronn.png",
+    topp: "/assets/byst-senteret.jpg",
+    intro: "Bystasjonen i Sandnes fikk en ny visuell profil. Navnet er satt i Playfair Display, og i tillegg finnes et rundt emblem med B-en i midten og «Bystasjonen Sandnes» satt i bue rundt.",
+    introTillegg: "Profilen er samlet i en ID-manual med logovarianter, fargepalett og typografi, og ført videre ut i kundeklubben i appen.",
+    fakta: [
+      { label: "Kunde", verdi: "Bystasjonen, Scala Eiendom, gjennom Via Agency" },
+      { label: "Leveranse", verdi: "Visuell profil, ID-manual og app" },
+      { label: "Typografi", verdi: "Playfair Display og Barlow" },
+      { label: "Periode", verdi: "2026" }
+    ],
+    blokker: [
+      { src: "/assets/byst-senteret.jpg", alt: "Bystasjonen sett fra gaten og innvendig i senteret", span: "1 / -1", ratio: "16 / 9", pos: "center", tekst: "" },
+      {
+        kunTittel: true, tittel: "Profilen", span: "1 / -1",
+        avsnitt: "Tre farger holder profilen: en mørk grønn som bunnfarge, en lys grønn til flater og en varm beige som aksent, i tillegg til en 30 % tint. Playfair Display brukes til navn, titler og sitater, Barlow til all informasjon."
+      },
+      { src: "/assets/byst-id.jpg", alt: "ID-manualen med logo, fargepalett, typografi og eksempler", span: "1 / -1", ratio: "16 / 9", fit: "contain", bakgrunn: "#ffffff", tekst: "Oppslag fra ID-manualen." },
+      { src: "/assets/byst-logo-beige.png", alt: "Logoen i beige på mørk grønn", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#082e33", polstring: "clamp(26px,4vw,54px)", tekst: "" },
+      { src: "/assets/byst-logo-gronn.png", alt: "Logoen i mørk grønn på lys grønn", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#d3ead6", polstring: "clamp(26px,4vw,54px)", tekst: "" },
+      { src: "/assets/byst-emblem-gull.png", alt: "Emblemet med B-en og navnet i bue", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#082e33", polstring: "clamp(18px,2.6vw,34px)", tekst: "" },
+      {
+        kunTittel: true, tittel: "Kundeklubben", span: "1 / -1",
+        avsnitt: "Kundeklubben ligger i appen: medlemstilbud, faste fordeler, nyheter, bonusprogram og medlemsbevis. Menyen står på mørk grønn med emblemet øverst, og tilbudene ligger som kort med bilde og rabatt."
+      },
+      { src: "/assets/byst-app.jpg", alt: "App-skjermer fra kundeklubben", span: "1 / -1", ratio: "16 / 9", fit: "contain", bakgrunn: "#f1ece2", tekst: "Splash, hjem, meny og medlemstilbud." },
+      {
+        kunTittel: true, tittel: "Byfest i Sandnes", span: "1 / -1",
+        avsnitt: "Film til sosiale medier, satt opp i profilen og tilpasset feed-format."
+      },
+      { video: "/assets/byst-byfest.mp4", alt: "Byfest Sandnes", span: "auto", ratio: "4 / 5", fit: "contain", bakgrunn: "#082e33", tekst: "Byfest Sandnes, 1080 × 1350." }
+    ]
+  },
+  {
+    slug: "bryn-katrine",
+    tagger: ["Via Agency", "Kampanje", "Film", "Foto"],
+    tittel: "Damenes Aften",
+    kicker: "Bryn Senter",
+    leveranse: "Damenes Aften med Katrine Sørland",
+    periode: "2026",
+    bilde: "/assets/bryn-katrine-2.jpg",
+    kortPos: "50% 5%",
+    toppPos: "50% 18%",
+    intro: "Damenes Aften på Bryn Senter med Katrine Sørland. Senteret ble fylt med store papirblomster, og Katrine gikk gjennom vårens plukk sammen med senterleder Sasha.",
+    fakta: [
+      { label: "Kunde", verdi: "Bryn Senter, Scala Eiendom, gjennom Via Agency" },
+      { label: "Leveranse", verdi: "Film og foto fra arrangementet" },
+      { label: "Format", verdi: "Sosiale medier" },
+      { label: "Periode", verdi: "2026" }
+    ],
+    blokker: [
+      { src: "/assets/bryn-katrine-2.jpg", alt: "Katrine Sørland foran papirblomstene i senteret", span: "1 / -1", ratio: "16 / 9", pos: "50% 18%", tekst: "", overlayKicker: "Bryn Senter · Scala Eiendom", overlayTittel: "Damenes Aften med Katrine Sørland" },
+      { vimeoPar: ["1225942401", "1225943828", "1225946628"], alt: "Filmer fra Damenes Aften", span: "1 / -1", ratio: "12 / 7", tekst: "Filmen fra arrangementet, Kathrines favoritter og 1080 × 1920-versjonen." },
+
+      {
+        kunTittel: true, tittel: "Foto", span: "1 / -1",
+        avsnitt: "Bildene er tatt i senteret, foran papirblomstene som sto som kulisse gjennom hele kampanjen."
+      },
+      { src: "/assets/bryn-katrine-1.jpg", alt: "Katrine Sørland foran papirblomstene", span: "auto", ratio: "4 / 5", pos: "50% 30%", tekst: "" },
+      { src: "/assets/bryn-katrine-4.jpg", alt: "Fra Damenes Aften på Bryn Senter", span: "auto", ratio: "4 / 5", pos: "center", tekst: "" },
+      { src: "/assets/bryn-katrine-3.jpg", alt: "Katrine Sørland og senterleder Sasha", span: "auto", ratio: "4 / 5", pos: "center", tekst: "Katrine Sørland og senterleder Sasha." },
+      {
+        kunTittel: true, tittel: "På Instagram", span: "1 / -1",
+        avsnitt: "Filmene ble publisert på senterets egen Instagram-profil."
+      },
+      { instagram: "DXtSr-At2IY", alt: "Kampanjen på Instagram", span: "auto", ratio: "4 / 5.6", tekst: "" }
+    ]
+  },
+  {
+    slug: "citycon",
+    tagger: ["Designsystem", "Kampanje", "Design", "Produksjon"],
+    tittel: "Citycon",
+    kicker: "Ni år som Art Director",
+    leveranse: "Designsystem, kampanjer, maler og produksjon",
+    periode: "2016 – 2025",
+    bilde: "/assets/citycon-jul-3.png",
+    toppPos: "50% 58%",
+    intro: "Citycon eier og driver kjøpesentre i Norden. I ni år jobbet jeg med dem som Art Director, med ansvar for designsystemet, kampanjene, malverket og produksjonen ut til sentrene i Norge og Norden.",
+    introTillegg: "Ni år lar seg ikke vise i sin helhet. Her er noen av favorittene: to kampanjer bygget fra grunnen av, og profilarbeidet for Trekanten i Asker.",
+    fakta: [
+      { label: "Kunde", verdi: "Citycon" },
+      { label: "Rolle", verdi: "Art Director" },
+      { label: "Ansvar", verdi: "Designsystem, kampanjer, maler, produksjon" },
+      { label: "Marked", verdi: "Norge og Norden" },
+      { label: "Periode", verdi: "2016 – 2025" }
+    ],
+    blokker: [
+      { vimeo: "1225927299", alt: "Film fra kampanjene for Citycon", span: "1 / -1", ratio: "16 / 9", tekst: "", overlayKicker: "Citycon · Kjøpesentre i Norden", overlayTittel: "Ni år med kampanjer, maler og produksjon" },
+      {
+        kunTittel: true, tittel: "Julekampanje", span: "1 / -1",
+        avsnitt: "Julen på sentrene, med figurer laget av dorull, pyntet pepperkakehus og et tre kledd i hjemmelagde pynt. Motivene ble fotografert både som rene produktbilder på rødt og som situasjonsbilder der de blir laget."
+      },
+      { src: "/assets/citycon-jul-3.png", alt: "Figurene på rød sokkel", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-2.png", alt: "Pepperkakehus på rød sokkel", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-4.png", alt: "Juletre med hjemmelaget pynt", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-6.png", alt: "Barn som lager julefigurer", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-5.png", alt: "Barn som pynter en figur", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-7.png", alt: "Voksen som pynter en figur", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-8.png", alt: "Barn som pynter pepperkakehuset", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-9.png", alt: "Pepperkakehuset pyntes ferdig", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-plakater.png", alt: "Tre plakater fra julekampanjen", span: "1 / -1", ratio: "1954 / 913", pos: "center", tekst: "Plakater med snakkeboble og signaturen «Fordi det er jul»." },
+      { src: "/assets/citycon-jul-materiell.png", alt: "Materiellpakken for julen", span: "1 / -1", ratio: "2047 / 1150", pos: "center", tekst: "Materiellpakken sentrene fikk: plakater, åpningstider, program og gavekort." },
+      { src: "/assets/citycon-jul-nett.png", alt: "Kampanjen på senternettsidene", span: "1 / -1", ratio: "1704 / 1000", pos: "center", tekst: "Samme kampanje på senternettsidene." },
+      {
+        kunTittel: true, tittel: "Julen året før", span: "1 / -1",
+        avsnitt: "En tidligere julekampanje med samme oppbygning: barn i grønt mot rødt, «er rett rundt hjørnet» som gjennomgående linje, og en materiellpakke sentrene kunne sette sine egne datoer og tilbud inn i."
+      },
+      { src: "/assets/citycon-jul-tidligere.png", alt: "Materiellpakken for den tidligere julekampanjen", span: "1 / -1", ratio: "2035 / 1134", pos: "center", tekst: "" },
+      { video: "/assets/citycon-jul-tidligere.mp4", alt: "Animert innlegg fra julekampanjen", span: "auto", ratio: "1 / 1", tekst: "Animert innlegg til senternes kanaler." },
+      {
+        kunTittel: true, tittel: "Trekanten", span: "1 / -1",
+        avsnitt: "Profilarbeid for Trekanten i Asker. Trekanten i navnet er selve merket, og formen går igjen i flatene: som logo over bilder, som fargede trekanter i egne arrangementer som Askerdagen."
+      },
+      { src: "/assets/citycon-trekanten-1.png", alt: "Trekanten-logoen over bilde av avokado", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-trekanten-2.png", alt: "Askerdagen-logoen over bilde av tre barn", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-trekanten-3.png", alt: "Askerdagen-logoen på lys bakgrunn", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      {
+        kunTittel: true, tittel: "Grønnere dager", span: "1 / -1",
+        avsnitt: "Kampanje for gjenbruksdagene på sentrene. Alt er bygget som stillbilder i studio: grønne kasser, sydd og reparert, lopper og planter, satt sammen til motiver som kunne resirkuleres videre til nye flater og nye sentre."
+      },
+      { src: "/assets/citycon-gronnere-2.png", alt: "Stilleben med planter, kanne og redskaper", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gronnere-3.png", alt: "Stilleben med symaskin, bamse og sytråd", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gronnere-4.png", alt: "Stilleben med sykkel, bamse og kleshenger", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gd-plakat-diy.png", alt: "Plakat: Velkommen til DIY-verksted", span: "auto", ratio: "1 / 1.414", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gd-plakat-byttedag.png", alt: "Plakat: Bli med på byttedag", span: "auto", ratio: "1 / 1.414", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gd-plakat-plante.png", alt: "Plakat: Vi inviterer til plante-verksted", span: "auto", ratio: "1 / 1.414", pos: "center", tekst: "" }
+    ]
+  },
+  {
+    slug: "pals-hostkaffe",
+    tagger: ["Emballasje", "Design"],
+    tittel: "Pals Høstkaffe for Amanda",
+    kicker: "Emballasje",
+    leveranse: "Design av etiketten",
+    periode: "2026",
+    bilde: "/assets/pals-eng.jpg",
+    topp: "/assets/pals-amanda-1.jpg",
+    kortDelt: ["/assets/pals-pose-kvadrat.jpg", "/assets/pals-eng.jpg"],
+    intro: "Pals Kaffe har brent en høstkaffe for Amanda Iversen Orlich, en venninne av oss som gikk bort alt for tidlig. Kaffen er et samarbeid med Nadia, brennemester hos Pals og en god venninne av meg. Etiketten er designet av Eilin, Amanda og Nadia.",
+    introTillegg: "Bildet på etiketten er Amandas eget, og «takk» er hennes egen håndskrift, hentet fra notatene hennes på Instagram. Kaffen er en vasket Guatemala, mellombrent, og 20 kroner fra hver pose går til Kreftforeningen.",
+    fakta: [
+      { label: "Kunde", verdi: "Pals Kaffe" },
+      { label: "Etikettdesign", verdi: "Eilin, Amanda og Nadia" },
+      { label: "Foto på etiketten", verdi: "Amanda Iversen Orlich" },
+      { label: "Periode", verdi: "2026" }
+    ],
+    blokker: [
+      { bilder: [
+          { src: "/assets/pals-eng.jpg", pos: "50% 58%" },
+          { src: "/assets/pals-pose-kvadrat.jpg", pos: "center", fit: "contain", bakgrunn: "#bdd8eb" },
+          { src: "/assets/pals-amanda-1.jpg", pos: "center" }
+        ], alt: "Høstkaffen holdt opp i en blomstereng i solnedgang", span: "1 / -1", ratio: "16 / 9", pos: "50% 58%", tekst: "", overlayKicker: "Pals Kaffe · Høstkaffe", overlayTittel: "Inspirert av Amanda" },
+      { kunTittel: true, tittel: "Etiketten", span: "1 / -1", lenke: "https://palskaffe.no/hostkaffe-inspirert-av-amanda/", lenkeTekst: "Historien bak, hos Pals" },
+      {
+        kunTittel: true, tittel: "Bestilling", span: "1 / -1",
+        avsnitt: "En pose koster 86,-. Send en mail med hvor mange du vil ha til Nadia. 20 kroner fra hver pose går til Kreftforeningen.",
+        knapper: [
+          { tekst: "Bestill kaffe her", url: "mailto:nadia.durdova@palskaffe.no" }
+        ]
+      },
+      { src: "/assets/pals-amanda-1.jpg", alt: "Kaffekanne holdt opp mot himmelen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "Foto: Amanda Iversen Orlich" },
+      { src: "/assets/pals-pose-kvadrat.jpg", alt: "Høstkaffe-posen fra Pals Kaffe", span: "auto", ratio: "1 / 1", pos: "center", bakgrunn: "#bdd8eb", tekst: "" },
+      { src: "/assets/pals-amanda-2.jpg", alt: "To som klemmer i en eng", span: "auto", ratio: "1 / 1", pos: "center", tekst: "Foto: Amanda Iversen Orlich" }
+    ]
+  },
+  {
+    slug: "construction-city",
+    tagger: ["Magasin", "Nettside", "E-post", "Tekst", "Foto", "Innholdsproduksjon"],
+    tittel: "Destinasjon Construction City",
+    kicker: "Interaktivt magasin",
+    leveranse: "Interaktivt magasin, nettside, e-postmal, tekst, design og foto",
+    periode: "2025 –",
+    bilde: "/assets/cc-skilt.jpg",
+    intro: "Construction City på Ulven samler bygg-, anleggs- og eiendomsbransjen under ett tak: 103 000 kvadratmeter, rundt 4 500 arbeidsplasser og en næringsklynge med nærmere 90 medlemmer. Destinasjon er det interaktive magasinet som viser hva huset tilbyr leietakere, klyngemedlemmer og gjester.",
+    introTillegg: "Magasinet er bygget som en destinasjonsguide, ikke en brosjyre. Leseren velger kategori i toppen – restauranter og servering, møterom og arrangement, møtemat, trening og fasiliteter, foodcourt og kaffebarer – og navigerer videre derfra. Jeg har skrevet alle tekstene selv og tatt mange av bildene.",
+    fakta: [
+      { label: "Kunde", verdi: "Construction City, Compass Group" },
+      { label: "Leveranse", verdi: "Interaktivt magasin, nettside, e-postmal, tekst, design og foto" },
+      { label: "Omfang", verdi: "21 sider, fem kategorier" },
+      { label: "Periode", verdi: "2025 –" }
+    ],
+    blokker: [
+      { src: "/assets/cc-skilt.jpg", alt: "Construction City-skiltet i atriet", span: "1 / -1", ratio: "16 / 9", pos: "50% 50%", tekst: "", overlayKicker: "Construction City · Ulven", overlayTittel: "En destinasjon for hele arbeidsdagen" },
+      {
+        kunTittel: true, tittel: "Nettside og e-postmal", span: "1 / -1", lenke: "https://bergumkreativ.github.io/Destinasjon_CC/", lenkeTekst: "Se nettsiden",
+        avsnitt: "Magasinet finnes også som nettside med samme inndeling, slik at innholdet kan deles, oppdateres og lenkes til direkte. E-postmalen sender det ut til leietakere og klyngemedlemmer, med lenker rett inn i de enkelte kategoriene."
+      },
+      { ramme: "https://bergumkreativ.github.io/Destinasjon_CC/", rammeBredde: 1440, rammeHoyde: 3600, rammeRull: true, alt: "Destinasjon Construction City, nettside", span: "span 2", ratio: "16 / 11", tekst: "Nettsiden." },
+      { mockup: "https://bergumkreativ.github.io/Destinasjon_CC/Epost-Destinasjon.html", rammeBredde: 700, rammeHoyde: 2600, rammeRull: true, alt: "E-postmal, Destinasjon Construction City", span: "auto", ratio: "3 / 4", tekst: "E-postmalen." },
+      {
+        kunTittel: true, tittel: "Magasinet", span: "1 / -1", lenke: "https://indd.adobe.com/view/a4fdef08-c881-4f91-8d02-0a7f002f9f53", lenkeTekst: "Se magasinet",
+        avsnitt: "Destinasjon er delt i fem kategorier leseren kan hoppe mellom: restauranter og servering, møterom og arrangement, møtemat, trening og fasiliteter, og foodcourt og kaffebarer. Hver del fører videre til kontakt og booking, slik at veien fra å lese til å bestille er kort."
+      },
+      { magFilm: true, span: "1 / -1", ratio: "16 / 8", tekst: "Slik navigerer leseren seg gjennom magasinet." },
+      {
+        kunTittel: true, tittel: "Menymaler i Canva", span: "1 / -1",
+        avsnitt: "Menyene til Høyden Restaurant er satt opp som Canva-maler kunden redigerer selv. Oppsettet ligger fast – logo, typografi, inndeling i retter, allergener og pris – slik at de bare bytter innhold når menyen skifter."
+      },
+      { src: "/assets/cc-meny-host.jpg", alt: "Høstmeny, Høyden Restaurant", span: "auto", ratio: "1 / 1.414", fit: "contain", bakgrunn: "#efebe3", tekst: "Høstmeny, restaurant." },
+      { src: "/assets/cc-meny-sommer.jpg", alt: "Sommermeny, selskap", span: "auto", ratio: "1 / 1.414", fit: "contain", bakgrunn: "#efebe3", tekst: "Sommermeny, selskap." },
+      { src: "/assets/cc-meny-grill.jpg", alt: "Grillmeny", span: "auto", ratio: "1 / 1.414", fit: "contain", bakgrunn: "#efebe3", tekst: "Grillmeny." },
+      {
+        kunTittel: true, tittel: "Foto", span: "1 / -1",
+        avsnitt: "Et utvalg av bildene jeg har tatt i huset, på tvers av restaurantene, møteplassene og fasilitetene."
+      },
+      { src: "/assets/cc-glass.jpg", alt: "Glassrekke over baren på Høyden", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-hoyden-meny.jpg", alt: "Menyen på bordet i Høyden Restaurant", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-takterrasse.jpg", alt: "Takterrassen med pledd og blomster", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-buffet.jpg", alt: "Buffet med møtemat", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-buffet-dj.jpg", alt: "Arrangement med buffet og DJ", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-garderobe.jpg", alt: "Garderoben ved treningssenteret", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-lounge.jpg", alt: "Loungen sett gjennom skillevegg", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-resepsjon.jpg", alt: "Resepsjonen i atriet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-centralen.jpg", alt: "Centralen Café", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-hoyden-skilt.jpg", alt: "Høyden-skiltet på den gule veggen", span: "auto", ratio: "1 / 1", pos: "40% 50%", tekst: "" }
+    ]
+  },
+  {
+    slug: "cc-drikker",
+    tagger: ["Emballasje", "Produktdesign", "Etikett"],
+    tittel: "City Cider og Eple + Mynte",
+    kicker: "Etikettdesign",
+    leveranse: "Etikettdesign for to alkoholfrie drikker",
+    periode: "2025",
+    bilde: "/assets/cc-drikker.jpg",
+    intro: "To alkoholfrie signaturdrikker til Høyden Restaurant og Construction City: City Cider, en alkoholfri cider, og Eple + Mynte, en frisk epledrikk. Jeg har designet etikettene til begge.",
+    introTillegg: "Etikettene bygger på husets egen identitet – prikkene fra logoen, det dempede fargespekteret og en enkel typografi. Frukten er tegnet i samme formspråk som prikkene, slik at de to flaskene leses som et par uten å bli like.",
+    fakta: [
+      { label: "Kunde", verdi: "Construction City Eiendom, OBOS" },
+      { label: "Leveranse", verdi: "Etikettdesign, to drikker" },
+      { label: "Format", verdi: "750 ml og 330 ml" },
+      { label: "Periode", verdi: "2025" }
+    ],
+    blokker: [
+      { src: "/assets/cc-drikker.jpg", alt: "City Cider og Eple + Mynte med etikettene", span: "1 / -1", ratio: "16 / 9", pos: "50% 50%", tekst: "" },
+      {
+        kunTittel: true, tittel: "De to drikkene", span: "1 / -1",
+        avsnitt: "City Cider er den alkoholfrie cideren, med C-en fra Construction City som hovedmotiv og smaksnotatene tørr, syrlig og eikepreget nederst på etiketten. Eple + Mynte er den friske epledrikken, med eplene og mynteblader i husets grønne og uten tilsatt sukker."
+      }
+    ]
+  },
+  {
+    slug: "los-tacos",
+    tagger: ["Via Agency", "Design", "Kampanje", "Merkevare"],
+    tittel: "Los Tacos",
+    kicker: "Design og merkevarebygging",
+    leveranse: "Design og merkevarebygging",
+    periode: "2020 –",
+    bilde: "/assets/lostacos-truck.jpg",
+    intro: "Jeg har jobbet med Los Tacos siden 2020, gjennom Via Agency. Los Tacos styrer mye av markedsføringen selv – designsystem, illustrasjoner, merch, plakater og menyer er laget av meg. Kjeden vokser, og uttrykket må kunne rulles ut på nye steder uten å bli tynt.",
+    introTillegg: "Vi startet med å videreutvikle fargepaletten – inspirert av fargene i maten og den autentiske taco-opplevelsen. Sterke kontraster, tydelige fonter og et rått, ufiltrert uttrykk gir merket energi og personlighet. Den visuelle identiteten ble designet for å skille seg ut i gatebildet, og samtidig være fleksibel nok til å brukes i digitale kampanjer, trykk og merch.",
+    fakta: [
+      { label: "Kunde", verdi: "Los Tacos, gjennom Via Agency" },
+      { label: "Leveranse", verdi: "Designsystem, illustrasjoner, merch, plakater, menyer" },
+      { label: "Periode", verdi: "2020 –" }
+    ],
+    blokker: [
+      { src: "/assets/lostacos-truck.jpg", alt: "Foodtrucken på festival", span: "1 / -1", ratio: "16 / 9", pos: "50% 60%", tekst: "", overlayKicker: "Los Tacos · Via Agency", overlayTittel: "Et brand som skaper liv uansett hvor det dukker opp" },
+      {
+        kunTittel: true, tittel: "Det fysiske møter det digitale", span: "1 / -1",
+        avsnitt: "En sentral del av arbeidet var å skape et sømløst samspill mellom det fysiske og digitale universet. Fra farger og tone of voice i sosiale medier – til meny-design, foodtruck-branding og festivalopplevelser. Alt henger sammen og bygger én tydelig historie: Du vet umiddelbart når du står foran en Los Tacos-opplevelse."
+      },
+      { src: "/assets/lostacos-apning-akerbrygge.jpg", alt: "Folk utenfor restauranten på åpningsdagen", span: "auto", ratio: "1 / 1", pos: "50% 55%", tekst: "" },
+      { src: "/assets/lostacos-ill-emballasje.jpg", alt: "Illustrert mønster på pose, kopp og gavekort", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-gjengen.jpg", alt: "Gjengen på Los Tacos-sitteputer på brygga", span: "auto", ratio: "1 / 1", pos: "50% 55%", tekst: "" },
+      { src: "/assets/lostacos-afterwork.jpg", alt: "Afterwork-meny på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-nattapent.jpg", alt: "Nattåpent-menyen på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-combodeal.jpg", alt: "Combo deals-bordmeny", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      {
+        kunTittel: true, tittel: "Åpningskampanjer", span: "1 / -1",
+        avsnitt: "For nye åpninger utviklet vi en serie kampanjer som bygget forventning og engasjement i forkant av lansering. Vi kombinerte lokal markedsføring, humor og konkurranser i sosiale medier – og sørget for høy synlighet gjennom lekne videoer, reels og giveaways. Resultatet snakker for seg selv, fulle restauranter på åpningsdagene!"
+      },
+      { src: "/assets/lostacos-dooh.jpg", alt: "Grand opening Bjørvika på digital skjerm", span: "span 2", ratio: "6 / 5", pos: "58% 50%", tekst: "" },
+      { video: "/assets/lostacos-bjorvika.mp4", alt: "Åpningsfilm for Bjørvika", span: "auto", ratio: "9 / 16", tekst: "" },
+      {
+        kunTittel: true, tittel: "Foodtrucks og festivaler", span: "1 / -1",
+        avsnitt: "Foodtrucken og festivalteltene ble en forlengelse av merkevaren – mobile arenaer for synlighet og opplevelse. Her skulle Los Tacos ta plass – bokstavelig talt. Sterke farger, store fonter og humoristiske budskap gjorde at folk stoppet opp, tok bilder og delte opplevelsen videre. Resultatet: Et brand som skaper liv uansett hvor det dukker opp."
+      },
+      { src: "/assets/lostacos-festival.jpg", alt: "Food truck og telt med kø", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-lykkehjul.jpg", alt: "Barn foran lykkehjulet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-merch.jpg", alt: "Merch på stativ", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-gaveposer.jpg", alt: "Gymposer med «Feed me tacos and tell me I'm pretty»", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-tskjorter.jpg", alt: "T-skjorter med «Taste my taco» foran foodtrucken", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-landstreff.jpg", alt: "Landstreff Stavanger", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-nc-truck.jpg", alt: "Køen ved foodtrucken på Norway Cup", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-festival-gjester.jpg", alt: "Gjester med nachos foran foodtrucken", span: "auto", ratio: "1 / 1", pos: "50% 40%", tekst: "" },
+      { src: "/assets/lostacos-ill-truck.jpg", alt: "Illustrert foodtruck, burrito, bowl og taco", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      {
+        kunTittel: true, tittel: "Julekampanjer", span: "1 / -1",
+        avsnitt: "Selv i høytiden skal det være lett å kjenne igjen Los Tacos. Julekampanjene lekte med merkevarens uttrykk, men beholdt det urbane og lekne. Vi utviklet gavekort, trykkmateriell og digitale flater som holdt på det gjenkjennelige formspråket – med et dryss av jul."
+      },
+      { src: "/assets/lostacos-julestromper.jpg", alt: "Julestrømper med Los Tacos-mønster", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-kalender.jpg", alt: "Sjokoladekalender med Tac-ho-ho-ho", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-gavekort.jpg", alt: "Gavekort foran juletre", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-strompe-bar.jpg", alt: "Julestrømpe hengt opp i baren", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-vinterland.jpg", alt: "Los Tacos-boden på Jul i vinterland", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-ill-jul.jpg", alt: "Illustrert julestrømpe og gavekort", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
+    ]
+  },
+  {
+    slug: "obos",
+    tagger: ["Via Agency", "Designsystem", "Kundeklubb", "Maler", "Digitale flater", "Kampanje"],
+    tittel: "OBOS-sentrene",
+    kicker: "Kundeklubb for tre sentre",
+    leveranse: "Designsystem, kundeklubbprofil, materiell til siste ledd og maler",
+    periode: "2025",
+    dekkGronn: true,
+    topp: "/assets/obos-cover.png",
+    toppFit: "contain",
+    toppBg: "#efe9de",
+    intro: "Lambertseter, Manglerud og Tveita fikk nye kundeklubber. Hvert senter har sitt eget navn, sin egen farge og sitt eget nabolag – Mitt Lambertseter, Manglerud Senter Fordelsklubb og Tveita Venn – men alle tre er bygget på det samme designsystemet, med eget emblem per senter. Mesteparten av jobben ligger i siste ledd: plakater, gulvfolie, senterskjermer, story og karusell, nyhetsbrev og QR- og SMS-koder som tar folk inn i appen. Alt finnes som maler i Canva, slik at sentrene selv lager materiell videre.",
+    fakta: [
+      { label: "Kunde", verdi: "OBOS Eiendom, gjennom Via Agency" },
+      { label: "Sentre", verdi: "Lambertseter, Manglerud, Tveita" },
+      { label: "Leveranse", verdi: "Designsystem, kundeklubbprofil, materiell til siste ledd, Canva-maler" },
+      { label: "Periode", verdi: "2025" }
+    ],
+    flaterTittel: "Materiell, siste ledd",
+    flater: [
+      { navn: "Plakat, utvalgte tilbud", format: "50×70 cm" },
+      { navn: "Plakat, tilbud", format: "A4" },
+      { navn: "Plakat, event", format: "A4" },
+      { navn: "Gulvfolie", format: "Ø 60 cm" },
+      { navn: "Story", format: "Instagram og Facebook" },
+      { navn: "Karusell", format: "Facebook" },
+      { navn: "Senterskjerm", format: "Animasjon" },
+      { navn: "Nyhetsbrev", format: "E-post" },
+      { navn: "QR- og SMS-kode", format: "Nedlasting av appen" }
+    ],
+    karusell: [
+      { src: "/assets/obos-sl-manglerud-plakat.png", alt: "Plakater, Manglerud Senter", tekst: "Manglerud: plakat 50×70 med månedens utvalgte tilbud, og A4 til enkelttilbud." },
+      { src: "/assets/obos-sl-manglerud-gulvfolie.png", alt: "Gulvfolie, Manglerud Senter", tekst: "Gulvfolie Ø 60 cm ved inngangen, med QR-kode og SMS-kode: send MS til 2242." },
+      { src: "/assets/obos-sl-manglerud-some.png", alt: "Karusell og story, Manglerud Senter", tekst: "Facebook-karusell og story, med de samme tilbudsmalene som plakatene." },
+      { src: "/assets/obos-sl-lambertseter-plakat.png", alt: "Plakater, Mitt Lambertseter", tekst: "Lambertseter har en egen A4 til arrangementer, i tillegg til tilbudsplakatene." },
+      { src: "/assets/obos-sl-lambertseter-gulvfolie.png", alt: "Gulvfolie, Mitt Lambertseter", tekst: "Gulvfolie i Lambertseters sort-hvite drakt." },
+      { src: "/assets/obos-sl-tveita-plakat.png", alt: "Plakater, Tveita Venn", tekst: "Tveita, med «Månedens beste kupp» som gjennomgående grep." },
+      { src: "/assets/obos-sl-tveita-some.png", alt: "Karusell og story, Tveita Venn", tekst: "Story og karusell for Tveita Venn." }
+    ],
+    blokker: [
+      { video: "/assets/obos-manglerud-skjerm.mp4", alt: "Senterskjerm, Manglerud", span: "auto", ratio: "9 / 16", tekst: "Senterskjermene i sentrene, med samme oppbygning og hvert senters egen farge." },
+      { video: "/assets/obos-lambertseter-skjerm.mp4", alt: "Senterskjerm, Lambertseter", span: "auto", ratio: "9 / 16", tekst: "Lambertseter." },
+      { video: "/assets/obos-tveita-skjerm.mp4", alt: "Senterskjerm, Tveita", span: "auto", ratio: "9 / 16", tekst: "Tveita." },
+      { src: "/assets/obos-maler-manglerud.png", alt: "Appen, Manglerud Senter Fordelsklubb", span: "auto", ratio: "4 / 5", pos: "center", tekst: "Alt materiellet peker inn i appen, som er der tilbudene og medlemsfordelene ligger." }
+    ]
+  },
+  {
+    slug: "b-las",
+    tagger: ["Nettside", "Profil", "Foto"],
+    tittel: "B-Lås",
+    kicker: "Nettside og profil",
+    leveranse: "Nettside, foto og profil",
+    periode: "2026",
+    bilde: "/assets/blas-hero.jpg",
+    kortPos: "50% 92%",
+    toppPos: "50% 76%",
+    kortOverlayKicker: "Lokal sikkerhet",
+    kortOverlayTittel: "med motor.",
+    intro: "Ny nettside, profilfoto og materiell til sosiale medier for en familiedrevet låsesmed med butikk i Ytre Enebakk — lansert til 10-årsjubileet.",
+    introTillegg: "Designet er hentet fra det B-Lås allerede har: bilene, gjengen og en profil som synes godt på veien og i Enebakk. De svarte bilene med gule striper er varemerket deres, og det er tatt igjen i profilen.",
+    fakta: [
+      { label: "Kunde", verdi: "B-Lås, Bjerkeland Lås" },
+      { label: "Sted", verdi: "Ytre Enebakk" },
+      { label: "Leveranse", verdi: "Nettside, foto, profil og materiell til sosiale medier" },
+      { label: "Periode", verdi: "2026" }
+    ],
+    blokker: [
+      { src: "/assets/blas-gjengen.jpg", alt: "Gjengen i B-Lås med bilene utenfor butikken i Ytre Enebakk", span: "1 / -1", ratio: "16 / 9", pos: "50% 46%", gulStrek: true, tekst: "", overlayKicker: "B-Lås AS · Ytre Enebakk", overlayTittel: "Lokal sikkerhet med motor" },
+      { kunTittel: true, tittel: "Nettsiden", span: "1 / -1", lenke: "https://b-las.no", lenkeTekst: "b-las.no" },
+      { ramme: "/blas-nettside/index.html", rammeBredde: 1440, rammeHoyde: 4200, rammeRull: true, alt: "B-Lås nettside", span: "1 / -1", ratio: "16 / 10", tekst: "" },
+      { kunTittel: true, tittel: "Sosiale medier", span: "1 / -1" },
+      { video: "/assets/blas-animasjon-feed.mp4", alt: "Animert innlegg til feed", span: "auto", ratio: "1 / 1", tekst: "" },
+      { ramme: "/blas-nettside/Feed-mockup.dc.html", rammeBredde: 470, rammeHoyde: 600, alt: "Instagram-feed", span: "auto", ratio: "47 / 60", tekst: "" }
+    ],
+    kampanje: {
+      portretter: [
+        { src: "/assets/blas-innlegg-ingar.png", alt: "Innlegg med Ingar" },
+        { src: "/assets/blas-innlegg-runar.png", alt: "Innlegg med Runar" },
+        { src: "/assets/blas-innlegg-robin.png", alt: "Innlegg med Robin" },
+        { src: "/assets/blas-innlegg-remi.png", alt: "Innlegg med Remi" }
+      ],
+      bilder: [
+        { src: "/assets/blas-bilene.jpg", alt: "Bilparken utenfor butikken", pos: "50% 50%" },
+        { src: "/assets/blas-nokkelsliping.jpg", alt: "Nøkkelkutting i verkstedet", pos: "50% 55%" },
+        { src: "/assets/blas-disken.jpg", alt: "Tre av gjengen bak disken i butikken", pos: "50% 48%" },
+        { src: "/assets/blas-nokkelemner.jpg", alt: "Montør ved bilen", pos: "50% 50%" }
+      ]
+    }
+  },
+  {
+    slug: "video",
+    tagger: ["Via Agency", "Video", "Produksjon"],
+    tittel: "Storskala innholdsproduksjon",
+    kicker: "Videoinnhold for hele porteføljen",
+    leveranse: "Videoinnhold for kjøpesentre i hele Norge",
+    periode: "2023 – 2026",
+    kortVimeo: "1225891119",
+    intro: "Videoinnhold utviklet for bruk på tvers av kjøpesentre over hele Norge, produsert for Scala Eiendom og Citycon gjennom Via Agency. Systemet baserer seg på fellesmaler på videoer som klippes etter butikkmiksen på senteret, og tilpasses hvert senter med logo.",
+    introTillegg: "Ett opptak dekker mange lokasjoner. Det som skiller sentrene fra hverandre, ligger i klippet og logoen, ikke i nye produksjoner. For Citycon er videoene produsert ut for 9 senter i ulike formater. For Scala er videoene produsert ut for 20 senter.",
+    fakta: [
+      { label: "Kunde", verdi: "Scala Eiendom og Citycon, gjennom Via Agency" },
+      { label: "Leveranse", verdi: "Konsept, videoproduksjon, klipp, maler, utrulling" },
+      { label: "Omfang", verdi: "Citycon: 9 sentre i ulike formater. Scala: 20 sentre." },
+      { label: "Periode", verdi: "2023 – 2026" }
+    ],
+    blokker: [
+      { vimeo: "1225891119", alt: "Introfilm: ett opptak brukt for 20 sentre", span: "1 / -1", ratio: "16 / 9", tekst: "", overlayKicker: "Citycon og Scala Eiendom · Via Agency", overlayTittel: "Ett opptak – 20 sentre" },
+      {
+        kunTittel: true, tittel: "Video og film", span: "1 / -1",
+        avsnitt: "Fellesmaler som klippes etter butikkmiksen på det enkelte senteret. Samme opptak, ulik sammensetning, og senterets egen logo til slutt."
+      },
+      { vimeo: "1225889178", alt: "Eksempler på ferdige reels", span: "1 / -1", ratio: "25 / 9", tekst: "" },
+      {
+        kunTittel: true, tittel: "Ferdige reels", span: "1 / -1",
+        avsnitt: "Eksempler på hvordan malen ser ut når den er klippet og satt opp for et enkelt senter."
+      },
+      { video: "/assets/innhold-paaske-bryn.mp4", alt: "Påskekampanje for Bryn Senter", span: "auto", ratio: "9 / 16", tekst: "Påske, Bryn Senter." },
+      { video: "/assets/innhold-valentines-vaerstetorvet.mp4", alt: "Valentines-kampanje for Værstetorvet", span: "auto", ratio: "9 / 16", tekst: "Valentines, Værstetorvet." },
+      { vimeo: "1225894804", alt: "UGC-reel for Herkules Senter", span: "auto", ratio: "9 / 16", tekst: "UGC-reel, Herkules Senter." },
+      {
+        kunTittel: true, tittel: "Julekampanje, Citycon", span: "1 / -1",
+        avsnitt: "Gaveguide og partyvesken, klippet i flere varianter etter hvem de skal treffe og hvilke butikker senteret har. Alle videoene leder inn til nettsiden med utvalgte produkter."
+      },
+      { video: "/assets/innhold-jul-gaveguide-familien.mp4", alt: "Gaveguide for familien", span: "auto", ratio: "9 / 16", tekst: "Gaveguide, familien." },
+      { video: "/assets/innhold-jul-gaveguide-trend.mp4", alt: "Gaveguide, trend dame", span: "auto", ratio: "9 / 16", tekst: "Gaveguide, trend." },
+      { video: "/assets/innhold-jul-partyvesken.mp4", alt: "Partyvesken", span: "auto", ratio: "9 / 16", tekst: "Partyvesken." },
+      { src: "/assets/innhold-jul-1.jpg", alt: "Innpakning med sløyfe og gavelapp", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/innhold-jul-2.jpg", alt: "Gaveeske med skjønnhetsprodukter", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/innhold-jul-3.jpg", alt: "Gavepose med Pokémon-kort", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
+    ]
+  }
+];
+
+// h er regnet ut fra logoens bilderatio slik at hver logo dekker samme flate:
+// h = sqrt(AREAL / ratio). Flisene er brede nok til at ingen logo blir klemt av max-width.
+const AREAL_NA = 6000;
+const AREAL_FOR = 4200;
+const hoyde = (ratio, areal) => Math.round(Math.sqrt(areal / ratio));
+
+const LOGOER_NA = [
+  { navn: "Compass Group", src: "/assets/logo-compass.png", h: hoyde(2.55, AREAL_NA) },
+  { navn: "Construction City", src: "/assets/logo-construction-city.png", h: hoyde(2.70, AREAL_NA) },
+  { navn: "Gastro Catering", src: "/assets/logo-gastro.png", h: hoyde(2.34, AREAL_NA) },
+  { navn: "Søtt + Salt", src: "/assets/logo-sott-salt.png", h: hoyde(5.82, AREAL_NA) },
+  { navn: "B-Lås", src: "/assets/logo-b-las.svg", h: hoyde(2.37, AREAL_NA) },
+  { navn: "Via Agency", src: "/assets/logo-via.png", h: hoyde(1.00, AREAL_NA) },
+  { navn: "Los Tacos", src: "/assets/logo-los-tacos.png", h: hoyde(5.49, AREAL_NA) },
+  { navn: "INC Works", src: "/assets/kunde-inc-works.png", h: hoyde(1.74, AREAL_NA) },
+  { navn: "OBOS Kjøpesenter", undernavn: "Kjøpesenter", src: "/assets/kunde-obos.png", h: hoyde(4.57, AREAL_NA) },
+  { navn: "OBOS Eiendom", undernavn: "Eiendom", src: "/assets/kunde-obos.png", h: hoyde(4.57, AREAL_NA) },
+  { navn: "Scala Eiendom", src: "/assets/logo-scala.png", h: hoyde(3.12, AREAL_NA) },
+  { navn: "Bystasjonen", src: "/assets/byst-logo-svart.png", h: hoyde(5.04, AREAL_NA) },
+  { navn: "Kongssenteret", src: "/assets/logo-kongssenteret.png", h: hoyde(4.27, AREAL_NA) }
+];
+
+const LOGOER_FOR = [
+  { navn: "Citycon", src: "/assets/logo-citycon.png", h: hoyde(4.39, AREAL_FOR) },
+  { navn: "Varner", src: "/assets/logo-varner.png", h: hoyde(6.53, AREAL_FOR) },
+  { navn: "Vita", src: "/assets/logo-vita.png", h: hoyde(2.14, AREAL_FOR) },
+  { navn: "Nille", src: "/assets/logo-nille-utstanset.png", h: hoyde(1.86, AREAL_FOR) },
+  { navn: "Egmont", src: "/assets/logo-egmont.png", h: hoyde(7.10, AREAL_FOR) }
+];
+
+const TIDLIGERE_UTEN_LOGO = ["Destinasjon Sandvika", "CC Vest", "Xhibition", "Kløverhuset", "Abilica", "DOGA", "Volcom Europe", "Voice Gruppen"];
+
+const KUNDER_EGNE = ["Compass Group", "Construction City", "Gastro Catering", "Søtt + Salt", "B-Lås", "OBOS Eiendom", "INC Works"];
+
+const KUNDER_VIA = ["Bystasjonen", "Kongssenteret", "Scala Eiendom", "OBOS Kjøpesenter", "Los Tacos"];
+
+const KUNDER_FOR = ["Citycon", "Destinasjon Sandvika", "CC Vest", "Xhibition", "Kløverhuset", "Nille", "Vita", "Abilica", "DOGA", "Varner", "Volcom Europe", "Voice Gruppen", "Egmont Publishing"];
+
+const ALLE_TAGGER = (() => {
+  const antall = {};
+  CASER.forEach((c) => (c.tagger || []).forEach((t) => { antall[t] = (antall[t] || 0) + 1; }));
+  return Object.keys(antall)
+    .filter((t) => antall[t] >= 3)
+    .sort((a, b) => antall[b] - antall[a] || a.localeCompare(b, "nb"))
+    .slice(0, 6);
+})();
+
+const SIDER = [
+  { label: "Tjenester", page: "tjenester" },
+  { label: "Jobber", page: "jobber" },
+  { label: "Om meg", page: "om" },
+  { label: "Kontakt", page: "kontakt" }
+];
+
+const BK_STATISK = typeof window !== "undefined" && typeof window.BK_ROUTE === "string";
+function bkStartRute() {
+  if (!BK_STATISK) return { page: "hjem", slug: null };
+  const d = window.BK_ROUTE.replace(/^\/|\/$/g, "").split("/");
+  if (!d[0]) return { page: "hjem", slug: null };
+  if (d[0] === "jobber" && d[1]) return { page: "case", slug: d[1] };
+  return { page: d[0], slug: null };
+}
+const BK_START = bkStartRute();
+
+class Component extends DCLogic {
+  state = { page: BK_START.page, slug: BK_START.slug, tag: null, kIdx: 0, sideIdx: 0, navn: "", epost: "", melding: "", sendt: false,
+    magIdx: 0, magVis: 1, magX: "50%", magY: "91%", magRing: 0.4, magRingVis: 0,
+    film: {} };
+
+  FILM = {
+    "gastro-lunsj": {
+      ratio: "709 / 1142",
+      sider: [
+        { n: "01", x: "91%", y: "11.2%" },
+        { n: "02", x: "10.2%", y: "16.6%" },
+        { n: "03", x: "23.7%", y: "11.2%" },
+        { n: "04", x: "50.6%", y: "11.2%" },
+        { n: "08", x: "64%", y: "11.2%" },
+        { n: "11", x: "77.6%", y: "11.2%" },
+        { n: "14", x: "23.6%", y: "97.4%" },
+        { n: "15", x: "91%", y: "11.2%" }
+      ],
+      mappe: "/assets/gastro-meny/"
+    },
+    "gastro-selskap": {
+      ratio: "709 / 1142",
+      sider: [
+        { n: "01", x: "83.6%", y: "11.2%" },
+        { n: "02", x: "16.1%", y: "11.2%" },
+        { n: "03", x: "28.8%", y: "41.1%" },
+        { n: "04", x: "29.6%", y: "11.2%" },
+        { n: "07", x: "43.2%", y: "11.2%" },
+        { n: "08", x: "56.6%", y: "11.2%" },
+        { n: "09", x: "70.1%", y: "11.2%" },
+        { n: "11", x: "50.4%", y: "41.1%" },
+        { n: "12", x: "83.6%", y: "11.2%" },
+        { n: "02", x: "74.8%", y: "80.4%" },
+        { n: "13", x: "76.2%", y: "97.3%" },
+        { n: "14", x: "83.6%", y: "11.2%" }
+      ],
+      mappe: "/assets/gastro-selskap/"
+    },
+    "gastro-ph": {
+      ratio: "709 / 1142",
+      sider: [
+        { n: "01", x: "7.8%", y: "13.1%" },
+        { n: "02", x: "19.3%", y: "13.1%" },
+        { n: "05", x: "31.5%", y: "13.1%" },
+        { n: "08", x: "44.4%", y: "13.1%" },
+        { n: "10", x: "57.8%", y: "13.1%" },
+        { n: "14", x: "69.8%", y: "13.1%" },
+        { n: "15", x: "80.8%", y: "13.1%" },
+        { n: "16", x: "91.8%", y: "13.1%" },
+        { n: "17", x: "7.8%", y: "13.1%" }
+      ],
+      mappe: "/assets/gastro-ph/"
+    },
+    "gastro-uio": {
+      ratio: "1413 / 1142",
+      bg: "transparent",
+      sider: [
+        { n: "01", x: "10%", y: "13.3%" },
+        { n: "02", x: "22.8%", y: "13.3%" },
+        { n: "04", x: "33.6%", y: "13.3%" },
+        { n: "05", x: "44.4%", y: "13.3%" },
+        { n: "03", x: "55.3%", y: "13.3%" },
+        { n: "06", x: "10%", y: "13.3%" }
+      ],
+      mappe: "/assets/gastro-uio/"
+    }
+  };
+
+  filmT = {};
+
+  filmStat = (navn) => {
+    const st = (this.state.film || {})[navn];
+    return st || { idx: 0, vis: 1, x: "50%", y: "50%", ring: 0.4, ringVis: 0 };
+  };
+
+  settFilm = (navn, endring) => {
+    this.setState((s) => {
+      const forrige = (s.film || {})[navn] || { idx: 0, vis: 1, x: "50%", y: "50%", ring: 0.4, ringVis: 0 };
+      const neste = Object.assign({}, s.film);
+      neste[navn] = Object.assign({}, forrige, endring);
+      return { film: neste };
+    });
+  };
+
+  kjorFilm = (navn) => {
+    if (typeof window === "undefined") return;
+    const def = this.FILM[navn];
+    if (!def) return;
+    const antall = def.sider.length;
+    const i = this.filmStat(navn).idx % antall;
+    const maal = def.sider[i];
+    this.settFilm(navn, { x: maal.x, y: maal.y, ringVis: 0, ring: 0.4 });
+    this.filmT[navn] = [
+      window.setTimeout(() => this.settFilm(navn, { ringVis: 1, ring: 1 }), 950),
+      window.setTimeout(() => this.settFilm(navn, { ringVis: 0, vis: 0 }), 1300),
+      window.setTimeout(() => this.settFilm(navn, { idx: (i + 1) % antall, vis: 1, ring: 0.4 }), 1560),
+      window.setTimeout(() => this.kjorFilm(navn), 2700)
+    ];
+  };
+
+  stoppEnFilm = (navn) => {
+    if (typeof window === "undefined") return;
+    (this.filmT[navn] || []).forEach((id) => id && window.clearTimeout(id));
+    this.filmT[navn] = [];
+  };
+
+  vekslFilm = (navn) => (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    const st = this.filmStat(navn);
+    if (st.kjorer) {
+      this.stoppEnFilm(navn);
+      this.settFilm(navn, { kjorer: false, idx: 0, vis: 1, ringVis: 0, ring: 0.4 });
+    } else {
+      this.settFilm(navn, { kjorer: true });
+      this.kjorFilm(navn);
+    }
+  };
+
+  stoppFilm = () => {
+    if (typeof window === "undefined") return;
+    Object.keys(this.filmT).forEach((navn) => {
+      (this.filmT[navn] || []).forEach((id) => id && window.clearTimeout(id));
+    });
+  };
+
+  vimeoParElement = (ider) => {
+    return React.createElement(
+      "div",
+      { style: { position: "absolute", inset: 0, display: "flex", alignItems: "stretch", gap: "clamp(8px,1vw,16px)", background: "#17181a" } },
+      ider.map((id) =>
+        React.createElement("div", { key: id, style: { position: "relative", flex: "1 1 0", minWidth: 0, overflow: "hidden" } },
+          React.createElement("iframe", {
+            src: "https://player.vimeo.com/video/" + id + "?title=0&byline=0&portrait=0&dnt=1&loop=1&autoplay=1&muted=1&autopause=0",
+            title: "Film", frameBorder: "0", allow: "autoplay; fullscreen; picture-in-picture",
+            style: { position: "absolute", inset: 0, width: "100%", height: "100%", border: 0, display: "block" }
+          })
+        )
+      )
+    );
+  };
+
+  filmParElement = (navn) => {
+    return React.createElement(
+      "div",
+      { style: { position: "absolute", inset: 0, display: "flex", alignItems: "stretch", gap: "clamp(8px,1vw,16px)", background: "#f1ece2" } },
+      navn.map((n) =>
+        React.createElement("div", { key: n, style: { position: "relative", flex: "1 1 0", minWidth: 0, overflow: "hidden" } }, this.filmElement(n))
+      )
+    );
+  };
+
+  filmElement = (navn) => {
+    const def = this.FILM[navn];
+    if (!def) return null;
+    const st = this.filmStat(navn);
+    const side = def.sider[st.idx % def.sider.length];
+    return React.createElement(
+      "div",
+      {
+        onClick: this.vekslFilm(navn),
+        role: "button",
+        "aria-label": st.kjorer ? "Stopp gjennomgangen" : "Spill gjennomgangen",
+        style: { position: "absolute", inset: 0, display: "flex", alignItems: "stretch", justifyContent: "center", background: "#f1ece2", padding: "clamp(10px,1.4vw,22px)", cursor: "pointer" }
+      },
+      React.createElement(
+        "div",
+        { style: { position: "relative", height: "100%", maxWidth: "100%", aspectRatio: def.ratio, flex: "0 0 auto" } },
+        React.createElement("img", {
+          src: def.mappe + "side-" + side.n + ".jpg",
+          alt: "Side fra menyen",
+          style: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", display: "block", background: def.bg || "#ffffff", opacity: st.vis, transition: "opacity 260ms ease" }
+        }),
+        st.kjorer ? React.createElement(
+          "div",
+          { style: { position: "absolute", left: st.x, top: st.y, transition: "left 820ms cubic-bezier(.4,0,.2,1), top 820ms cubic-bezier(.4,0,.2,1)", pointerEvents: "none" } },
+          React.createElement("div", { style: { position: "absolute", left: -15, top: -15, width: 34, height: 34, borderRadius: "50%", border: "2px solid #1f4d3f", opacity: st.ringVis, transform: "scale(" + st.ring + ")", transition: "opacity 220ms ease, transform 220ms ease" } }),
+          React.createElement(
+            "svg",
+            { width: 20, height: 26, viewBox: "0 0 20 26", fill: "none", style: { display: "block", filter: "drop-shadow(0 2px 5px rgba(0,0,0,0.35))" } },
+            React.createElement("path", { d: "M2 1.6 L2 21.4 L7.1 16.6 L10.3 23.7 L13.4 22.3 L10.2 15.4 L17 15.2 Z", fill: "#ffffff", stroke: "#17181a", strokeWidth: 1.4, strokeLinejoin: "round" })
+          )
+        ) : null,
+        st.kjorer ? null : React.createElement(
+          "div",
+          { style: { position: "absolute", inset: 0, display: "grid", placeItems: "center", pointerEvents: "none" } },
+          React.createElement(
+            "div",
+            { style: { display: "flex", alignItems: "center", gap: 10, padding: "10px 18px 10px 14px", borderRadius: 999, background: "rgba(23,24,26,0.72)", color: "#ffffff", fontSize: 14, letterSpacing: "0.02em", backdropFilter: "blur(4px)" } },
+            React.createElement(
+              "svg",
+              { width: 14, height: 16, viewBox: "0 0 14 16", fill: "none" },
+              React.createElement("path", { d: "M1 1 L13 8 L1 15 Z", fill: "#ffffff" })
+            ),
+            "Spill gjennomgangen"
+          )
+        )
+      )
+    );
+  };
+
+  magSider = [
+    { src: "/assets/mag/side-02.jpg", x: "12%", y: "91%" },
+    { src: "/assets/mag/side-05.jpg", x: "30%", y: "91%" },
+    { src: "/assets/mag/side-09.jpg", x: "50%", y: "91%" },
+    { src: "/assets/mag/side-13.jpg", x: "69%", y: "91%" },
+    { src: "/assets/mag/side-17.jpg", x: "87%", y: "91%" }
+  ];
+
+  magT = {};
+
+  magKjor = () => {
+    if (typeof window === "undefined") return;
+    const steg = () => {
+      const neste = (this.state.magIdx + 1) % this.magSider.length;
+      const maal = this.magSider[neste];
+      this.setState({ magX: maal.x, magY: maal.y, magRingVis: 0, magRing: 0.4 });
+      this.magT.a = window.setTimeout(() => this.setState({ magRingVis: 1, magRing: 1 }), 900);
+      this.magT.b = window.setTimeout(() => this.setState({ magRingVis: 0, magVis: 0 }), 1180);
+      this.magT.c = window.setTimeout(() => this.setState({ magIdx: neste, magVis: 1 }), 1400);
+      this.magT.d = window.setTimeout(steg, 2900);
+    };
+    this.magT.d = window.setTimeout(steg, 1200);
+  };
+
+  componentDidMount() {
+    this.maalRammer();
+    if (typeof window !== "undefined" && !BK_STATISK) {
+      const r = this.ruteFraHash();
+      if (r && (r.page !== this.state.page || r.slug !== this.state.slug)) {
+        this.setState({ page: r.page, slug: r.slug });
+      } else if (!window.location.hash) {
+        window.location.replace("#/");
+      }
+      window.addEventListener("hashchange", this.hashEndret);
+    }
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", this.maalRammer);
+      this.magSider.forEach((s) => { const bilde = new window.Image(); bilde.src = s.src; });
+      this.magKjor();
+      Object.keys(this.FILM).forEach((navn) => {
+        const def = this.FILM[navn];
+        def.sider.forEach((side) => { const bilde = new window.Image(); bilde.src = def.mappe + "side-" + side.n + ".jpg"; });
+      });
+      this.sideTimer = window.setInterval(() => {
+        this.setState((s) => ({ sideIdx: s.sideIdx + 1 }));
+      }, 11500);
+    }
+  }
+
+  componentDidUpdate() {
+    this.maalRammer();
+  }
+
+  componentWillUnmount() {
+    if (typeof window !== "undefined") {
+      window.removeEventListener("resize", this.maalRammer);
+      if (this.sideTimer) window.clearInterval(this.sideTimer);
+      this.stoppMag();
+      this.stoppFilm();
+    }
+  }
+
+  maalRammer = () => {
+    if (typeof document === "undefined") return;
+    document.querySelectorAll("[data-ramme]").forEach((boks) => {
+      const bredde = boks.clientWidth;
+      const hoyde = boks.clientHeight;
+      if (!bredde) return;
+      const dBredde = parseFloat(boks.getAttribute("data-ramme")) || 1440;
+      const dHoyde = parseFloat(boks.getAttribute("data-ramme-hoyde")) || 900;
+      const skala = bredde / dBredde;
+      const ramme = boks.querySelector("iframe");
+      const rull = boks.firstElementChild;
+      if (ramme) ramme.style.transform = "scale(" + skala + ")";
+      if (rull && boks.getAttribute("data-ramme-rull")) {
+        const reise = Math.max(0, dHoyde * skala - hoyde);
+        rull.style.setProperty("--bk-reise", reise + "px");
+        const takt = boks.getAttribute("data-ramme-takt");
+        const anim = takt
+          ? "bkrammerull 11s cubic-bezier(.5,0,.5,1) 1 forwards"
+          : "bkrammerull 26s cubic-bezier(.4,0,.4,1) infinite alternate";
+        const nokkel = (ramme && ramme.getAttribute("src")) || "";
+        if (rull.dataset.nokkel !== nokkel) {
+          rull.dataset.nokkel = nokkel;
+          rull.style.animation = "none";
+          void rull.offsetWidth;
+        }
+        rull.style.animation = anim;
+      }
+    });
+  };
+
+  settTag = (t) => (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    this.setState({ tag: t });
+  };
+
+  hashFor = (page, slug) => {
+    const p = BK_STATISK ? "/" : "#/";
+    return page === "case" && slug ? p + "jobber/" + slug : (page === "hjem" ? p : p + page);
+  };
+
+  ruteFraHash = () => {
+    if (typeof window === "undefined") return null;
+    const h = (window.location.hash || "").replace(/^#\/?/, "").replace(/\/$/, "");
+    if (!h) return { page: "hjem", slug: null };
+    const d = h.split("/");
+    if (d[0] === "jobber" && d[1]) return { page: "case", slug: decodeURIComponent(d[1]) };
+    return ["hjem", "jobber", "tjenester", "om", "kontakt"].indexOf(d[0]) >= 0
+      ? { page: d[0], slug: null }
+      : { page: "hjem", slug: null };
+  };
+
+  hashEndret = () => {
+    const r = this.ruteFraHash();
+    if (!r) return;
+    if (r.page !== this.state.page || r.slug !== this.state.slug) {
+      this.setState({ page: r.page, slug: r.slug, kIdx: 0 });
+    }
+  };
+
+  gaTil = (page, slug) => (e) => {
+    if (BK_STATISK) return;
+    if (e && e.preventDefault) e.preventDefault();
+    this.setState({ page: page, slug: slug || null, kIdx: 0 });
+    if (typeof window !== "undefined") {
+      const h = this.hashFor(page, slug);
+      if (window.location.hash !== h) window.location.hash = h;
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+  };
+
+  sendSkjema = (e) => {
+    e.preventDefault();
+    const { navn, epost, melding } = this.state;
+    const emne = encodeURIComponent("Henvendelse fra eilinbergum.com – " + (navn || "ny melding"));
+    const kropp = encodeURIComponent(melding + "\n\n—\n" + navn + "\n" + epost);
+    if (typeof window !== "undefined") {
+      window.location.href = "mailto:eilin@eilinbergum.com?subject=" + emne + "&body=" + kropp;
+    }
+    this.setState({ sendt: true });
+  };
+
+  renderVals() {
+    const page = this.state.page;
+    const visKundelogoer = this.props.visKundelogoer !== false;
+    const caseUtvalg = this.props.caseUtvalg || "Stor forside + rutenett";
+
+    const medGo = CASER.map((c) => Object.assign({}, c, {
+      go: this.gaTil("case", c.slug),
+      href: this.hashFor("case", c.slug),
+      bilde: c.dekkGronn ? null : (c.bilde || null),
+      kortVideoEl: c.kortVimeo
+        ? React.createElement(
+            "div",
+            { style: { position: "relative", width: "100%", height: "100%", overflow: "hidden", background: "#17181a" } },
+            React.createElement("iframe", {
+              src: "https://player.vimeo.com/video/" + c.kortVimeo + "?background=1&autoplay=1&muted=1&loop=1&autopause=0&dnt=1",
+              title: c.tittel, frameBorder: "0", allow: "autoplay",
+              style: {
+                position: "absolute", top: "50%", left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "420%", height: "420%", border: "0", pointerEvents: "none"
+              }
+            })
+          )
+        : c.kortVideoer
+        ? React.createElement(
+            "div",
+            { style: { display: "flex", gap: "2px", width: "100%", height: "100%", background: "#17181a" } },
+            c.kortVideoer.map((v) =>
+              React.createElement("video", {
+                key: v, src: v, autoPlay: true, muted: true, loop: true,
+                playsInline: true, preload: "auto",
+                style: { flex: "1 1 0", minWidth: 0, height: "100%", objectFit: "cover", display: "block" }
+              })
+            )
+          )
+        : null,
+      bilde: c.kortDelt ? null : c.bilde,
+      gridBilde: c.dekkGronn ? null : (c.bilde || null),
+      kortDelt: !!c.kortDelt,
+      kortDeltVenstre: c.kortDelt ? c.kortDelt[0] : null,
+      kortDeltHoyre: c.kortDelt ? c.kortDelt[1] : null,
+      kortPos: c.kortPos || "center",
+      kortOverlayKicker: c.kortOverlayKicker || "",
+      kortOverlayTittel: c.kortOverlayTittel || "",
+      kortLogoEl: c.kortLogo
+        ? React.createElement(
+            "div",
+            { style: c.kortLogoMidt
+                ? { position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", padding: "clamp(16px,2vw,26px)", background: "rgba(0,0,0,0.28)" }
+                : { position: "absolute", inset: 0, display: "flex", alignItems: "flex-end", padding: "clamp(16px,2vw,26px)", background: "linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 55%)" } },
+            React.createElement("img", {
+              src: c.kortLogo, alt: "",
+              style: { height: c.kortLogoMidt ? "clamp(34px,5vw,64px)" : "clamp(20px,2.4vw,32px)", width: "auto", objectFit: "contain", display: "block" }
+            })
+          )
+        : null,
+      mangler: !c.bilde && !c.dekkGronn && !c.kortVideoer && !c.kortVimeo,
+      dekkGronn: !!c.dekkGronn,
+      emblemer: c.dekkGronn
+        ? [
+            { src: "/assets/obos-neg-lambertseter.png", delay: "0s", bredde: "34%" },
+            { src: "/assets/obos-neg-manglerud.png", delay: "3s", bredde: "29%" },
+            { src: "/assets/obos-neg-tveita.png", delay: "6s", bredde: "33%" }
+          ]
+        : [],
+      tagger: c.tagger || []
+    }));
+
+    const valgtTag = this.state.tag;
+    const filtrerte = valgtTag
+      ? medGo.filter((c) => c.tagger.indexOf(valgtTag) >= 0)
+      : medGo;
+
+    const poseY = this.props.poseY ?? 50;
+    const engX = this.props.engX ?? 50;
+    const engY = this.props.engY ?? 58;
+    const poseSkala = (this.props.poseZoom ?? 100) / 100;
+    const engSkala = (this.props.engZoom ?? 100) / 100;
+
+    const utvalgteSlugs = ["pals-hostkaffe", "gastro", "construction-city", "cc-drikker", "los-tacos", "video", "obos", "b-las", "citycon", "bystasjonen"];
+    const utvalgte = utvalgteSlugs
+      .map((s) => medGo.find((c) => c.slug === s))
+      .filter(Boolean)
+      .map((c, i) => Object.assign({}, c, {
+        span: caseUtvalg === "Jevnt rutenett" ? "auto" : (i === 0 ? "1 / -1" : "auto"),
+        ratio: caseUtvalg === "Jevnt rutenett" ? "4 / 3" : (i === 0 ? "16 / 9" : "4 / 3")
+      }));
+
+    const idx = CASER.findIndex((c) => c.slug === this.state.slug);
+    const aktiv = idx >= 0 ? CASER[idx] : null;
+    const neste = idx >= 0 ? CASER[(idx + 1) % CASER.length] : null;
+
+    const aktivCase = aktiv
+      ? Object.assign({}, aktiv, {
+          tagger: aktiv.tagger || [],
+          blokker: aktiv.blokker.map((b) => Object.assign({}, b, {
+            bildeSrc: b.src && !b.rull && !b.anim && !b.bilder ? b.src : null,
+            bilderSett: b.bilder
+              ? b.bilder.map((bi, i) => ({
+                  src: bi.src,
+                  pos: bi.pos || "center",
+                  fit: bi.fit || "cover",
+                  bakgrunn: bi.bakgrunn || "transparent",
+                  delay: (i * (12 / b.bilder.length)).toFixed(2) + "s"
+                }))
+              : null,
+            rullSrc: b.rull ? b.src : null,
+            animSrc: b.anim ? b.src : null,
+            slutt: b.slutt || "-85%",
+            videoElement: b.video && b.telefon
+              ? React.createElement("div", {
+                  style: { width: "100%", height: "100%", background: "#f1ece2", display: "flex", alignItems: "center", justifyContent: "center" }
+                }, React.createElement("div", {
+                  style: { height: "90%", aspectRatio: "9 / 19", background: "#17181a", borderRadius: "clamp(22px,3vw,40px)", padding: "clamp(5px,0.7vw,9px)", boxShadow: "0 24px 48px rgba(23,24,26,0.18)" }
+                }, React.createElement("video", {
+                  src: b.video, muted: true, loop: true, autoPlay: true, playsInline: true, preload: "auto",
+                  style: { width: "100%", height: "100%", objectFit: "cover", borderRadius: "clamp(17px,2.4vw,32px)", display: "block", background: "#17181a" }
+                })))
+              : b.video
+              ? React.createElement("video", {
+                  src: b.video, controls: true, muted: true, loop: true,
+                  autoPlay: true, playsInline: true, preload: "auto",
+                  style: { width: "100%", height: "100%", objectFit: b.fit || "cover", background: "#17181a", display: "block" }
+                })
+              : null,
+            vimeoParEl: b.vimeoPar ? this.vimeoParElement(b.vimeoPar) : null,
+            vimeoElement: b.vimeo
+              ? React.createElement("iframe", {
+                  src: "https://player.vimeo.com/video/" + b.vimeo + "?title=0&byline=0&portrait=0&dnt=1&autoplay=1&muted=1&loop=1&autopause=0",
+                  title: b.alt || aktiv.tittel, loading: "lazy",
+                  allow: "autoplay; fullscreen; picture-in-picture", allowFullScreen: true,
+                  style: { width: "100%", height: "100%", border: 0, display: "block" }
+                })
+              : null,
+            overlayLogoEl: b.overlayLogo
+              ? React.createElement("img", {
+                  src: b.overlayLogo, alt: b.overlayLogoAlt || "",
+                  style: { height: "clamp(30px,3.6vw,52px)", width: "auto", objectFit: "contain", alignSelf: "flex-start" }
+                })
+              : null,
+            fit: b.fit || "cover",
+            pos: b.pos || "top",
+            bakgrunn: b.bakgrunn || "#e8e2d6",
+            polstring: b.polstring || "0",
+            vimeoUrl: b.vimeo
+              ? "https://player.vimeo.com/video/" + b.vimeo + "?title=0&byline=0&portrait=0&dnt=1"
+              : null,
+            mockupSrc: b.mockup || null,
+            rammeSrc: b.rammeSider && b.rammeSider.length
+              ? b.rammeSider[this.state.sideIdx % b.rammeSider.length].url
+              : (b.ramme || null),
+            rammeEtikett: b.rammeSider && b.rammeSider.length
+              ? b.rammeSider[this.state.sideIdx % b.rammeSider.length].etikett
+              : null,
+            rammeTakt: b.rammeSider && b.rammeSider.length ? "1" : null,
+            rammeBredde: b.rammeBredde || 1440,
+            rammeHoyde: b.rammeHoyde || 900,
+            rammeRull: b.rammeRull ? "1" : null,
+            gulStrek: !!b.gulStrek,
+            harMedie: !b.kunTittel,
+            knapper: b.knapper && b.knapper.length ? b.knapper : null,
+            magFilm: !!b.magFilm,
+            instaElement: b.instagram
+              ? React.createElement("iframe", {
+                  src: "https://www.instagram.com/p/" + b.instagram + "/embed/",
+                  title: b.alt || "Instagram-video", loading: "lazy", scrolling: "no",
+                  allow: "autoplay; clipboard-write; encrypted-media; picture-in-picture",
+                  style: { position: "absolute", left: 0, top: "-56px", width: "100%", height: "calc(100% + 300px)", border: 0, display: "block", background: "#ffffff" }
+                })
+              : null,
+            film: b.filmPar ? "par" : (b.film || ""),
+            filmEl: b.filmPar ? this.filmParElement(b.filmPar) : (b.film ? this.filmElement(b.film) : null),
+            mangler: !b.kunTittel && !b.src && !b.vimeo && !b.video && !b.ramme && !b.magFilm && !b.film && !b.filmPar && !b.instagram && !b.vimeoPar && !b.flateStor,
+            flateStor: b.flateStor || "",
+            flateLiten: b.flateLiten || "",
+            flateInk: b.flateInk || "#17181a",
+            flateFont: b.flateFont || "inherit",
+            tekst: b.tekst || "",
+            kilde: b.kilde || "",
+            alt: b.alt || aktiv.tittel
+          }))
+        })
+      : { kicker: "", tittel: "", intro: "", fakta: [], blokker: [], tagger: [], flater: [], kampanje: { portretter: [], bilder: [] } };
+
+    if (aktiv && !aktivCase.kampanje) aktivCase.kampanje = { portretter: [], bilder: [] };
+
+    // Første blokk brukes som toppbilde når den er et bredt stillbilde, og fjernes fra rutenettet.
+    const bAlle = aktivCase.blokker || [];
+    const b0 = bAlle[0];
+    const heroBlokk =
+      b0 && b0.harMedie && b0.span === "1 / -1" &&
+      (b0.bildeSrc || b0.bilderSett) &&
+      !b0.rammeSrc && !b0.mockupSrc && !b0.magFilm && !b0.flateStor && !b0.anim && !b0.rullSrc
+        ? b0
+        : null;
+    if (heroBlokk) aktivCase.blokker = bAlle.slice(1);
+
+    const kBilder = (aktiv && aktiv.karusell) || [];
+    const kNr = kBilder.length ? Math.min(this.state.kIdx, kBilder.length - 1) : 0;
+    const kBilde = kBilder[kNr] || null;
+
+    return {
+      navItems: SIDER.map((s) => ({
+        label: s.label,
+        active: page === s.page,
+        go: this.gaTil(s.page),
+        href: this.hashFor(s.page)
+      })),
+      goHome: this.gaTil("hjem"),
+      goJobber: this.gaTil("jobber"),
+      goTjenester: this.gaTil("tjenester"),
+      goKontakt: this.gaTil("kontakt"),
+      hjemHref: this.hashFor("hjem"),
+      jobberHref: this.hashFor("jobber"),
+      tjenesterHref: this.hashFor("tjenester"),
+      kontaktHref: this.hashFor("kontakt"),
+      goNeste: neste ? this.gaTil("case", neste.slug) : this.gaTil("jobber"),
+      nesteHref: neste ? this.hashFor("case", neste.slug) : this.hashFor("jobber"),
+      nesteTittel: neste ? neste.tittel : "Alle jobber",
+
+      isHome: page === "hjem",
+      isTjenester: page === "tjenester",
+      isJobber: page === "jobber",
+      isOm: page === "om",
+      isKontakt: page === "kontakt",
+      isCase: page === "case" && !!aktiv,
+      isIkkeFunnet: page === "404",
+
+      tjenester: TJENESTER,
+      arbeidsform: ARBEIDSFORM,
+      utvalgte: utvalgte,
+      poseY: poseY,
+      engX: engX,
+      engY: engY,
+      poseSkala: poseSkala,
+      engSkala: engSkala,
+      alleCaser: filtrerte,
+      taggFilter: [{ label: "Alle", active: !valgtTag, go: this.settTag(null) }].concat(
+        (valgtTag && ALLE_TAGGER.indexOf(valgtTag) < 0 ? ALLE_TAGGER.concat([valgtTag]) : ALLE_TAGGER)
+          .map((t) => ({ label: t, active: valgtTag === t, go: this.settTag(t) }))
+      ),
+      antallVist: filtrerte.length === CASER.length
+        ? CASER.length + " jobber"
+        : filtrerte.length + " av " + CASER.length + " jobber",
+      logoerNa: LOGOER_NA.concat(LOGOER_NA).map((l) => ({ navn: l.navn, undernavn: l.undernavn || null, src: l.src, h: l.h, harLogo: !!l.src, manglerLogo: !l.src, via: KUNDER_VIA.indexOf(l.navn) >= 0 })),
+      logoRad: LOGOER_FOR.concat(LOGOER_FOR, LOGOER_FOR, LOGOER_FOR),
+      tidligereUtenLogo: TIDLIGERE_UTEN_LOGO,
+      kunderEgne: KUNDER_EGNE,
+      kunderVia: KUNDER_VIA,
+      kunderFor: KUNDER_FOR,
+      aktivCase: Object.assign({ flaterTittel: "Flater", flater: [], kampanje: { portretter: [], bilder: [] } }, aktivCase),
+      harKarusell: !!(aktiv && aktiv.karusell && aktiv.karusell.length),
+      toppHero: heroBlokk,
+      toppBilde: heroBlokk ? null : (aktiv ? (aktiv.topp || aktiv.bilde || null) : null),
+      toppPos: (aktiv && (aktiv.toppPos || aktiv.kortPos)) || "center",
+      toppFit: (aktiv && aktiv.toppFit) || "cover",
+      toppBg: (aktiv && aktiv.toppBg) || "#e8e2d6",
+      magBilde: React.createElement("img", {
+        src: this.magSider[this.state.magIdx % this.magSider.length].src,
+        alt: "Destinasjon Construction City",
+        style: { width: "100%", height: "100%", objectFit: "contain", display: "block", boxShadow: "0 16px 44px rgba(23,24,26,0.18)", opacity: this.state.magVis, transition: "opacity 260ms ease" }
+      }),
+      magVis: this.state.magVis,
+      magX: this.state.magX,
+      magY: this.state.magY,
+      magRing: this.state.magRing,
+      magRingVis: this.state.magRingVis,
+      karusellBilde: kBilde
+        ? React.createElement("img", {
+            src: kBilde.src,
+            alt: kBilde.alt || "",
+            style: { width: "100%", height: "100%", objectFit: kBilde.fit || "cover", display: "block" }
+          })
+        : null,
+      karusellAlt: kBilde ? kBilde.alt : "",
+      karusellTekst: kBilde ? kBilde.tekst : "",
+      karusellTeller: kBilder.length ? (kNr + 1) + " / " + kBilder.length : "",
+      karusellPunkter: kBilder.map((b, i) => ({
+        merke: "Bilde " + (i + 1),
+        farge: i === kNr ? "#1f4d3f" : "#c9d3cb",
+        go: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ kIdx: i }); }
+      })),
+      karusellForrige: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ kIdx: (kNr - 1 + kBilder.length) % kBilder.length }); },
+      karusellNeste: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ kIdx: (kNr + 1) % kBilder.length }); },
+      harFlater: !!(aktivCase.flater && aktivCase.flater.length),
+      harKampanje: !!(aktiv && aktiv.kampanje && aktiv.kampanje.portretter && aktiv.kampanje.portretter.length),
+
+      visKundelogoer: visKundelogoer,
+      visTilgjengelighet: this.props.visTilgjengelighet === true,
+
+      fakta: [
+        { label: "Base", verdi: "Oslo" },
+        { label: "Erfaring", verdi: "Over 10 år" },
+        { label: "Jobber som", verdi: "Markedsfører, innholdsprodusent, designer" }
+      ],
+
+      navn: this.state.navn,
+      epost: this.state.epost,
+      melding: this.state.melding,
+      sendt: this.state.sendt,
+      ikkeSendt: !this.state.sendt,
+      setNavn: (e) => this.setState({ navn: e.target.value }),
+      setEpost: (e) => this.setState({ epost: e.target.value }),
+      setMelding: (e) => this.setState({ melding: e.target.value }),
+      sendSkjema: this.sendSkjema,
+      visSamtykke: (e) => { e.preventDefault(); if (window.bkSamtykke) window.bkSamtykke(); },
+      nullstillSkjema: (e) => {
+        e.preventDefault();
+        this.setState({ sendt: false, navn: "", epost: "", melding: "" });
+      }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="no">
 <head>
 <meta charset="utf-8">
+<script>(function(){var h=location.hash;if(h&&h.indexOf("#/")===0){var p=h.slice(2).replace(/\/$/,"");if(p)location.replace("/"+p);}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
 (function () {
@@ -26,11 +27,12 @@
     b.id = 'bk-samtykke';
     b.setAttribute('role', 'dialog');
     b.setAttribute('aria-label', 'Informasjonskapsler');
-    b.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:460px;margin-left:auto;background:#17181a;color:#d5d6d0;padding:20px 22px;font:15px/1.55 "Hanken Grotesk",system-ui,sans-serif;box-shadow:0 18px 40px rgba(0,0,0,0.25);display:flex;flex-direction:column;gap:16px;';
-    b.innerHTML = '<p style="margin:0">Jeg bruker Google Analytics for å se hvordan siden brukes. Er det greit?</p>' +
+    b.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:440px;margin-left:auto;background:#f7f4ee;color:#17181a;border:1px solid #dcd6ca;padding:24px 26px;font:300 16px/1.6 "Hanken Grotesk",system-ui,sans-serif;box-shadow:0 18px 40px rgba(23,24,26,0.12);display:flex;flex-direction:column;gap:18px;';
+    b.innerHTML = '<p style="margin:0;font-size:13px;font-weight:400;letter-spacing:0.05em;text-transform:uppercase;color:#6d706a">Informasjonskapsler</p>' +
+      '<p style="margin:-8px 0 0;color:#4e514c">Jeg bruker Google Analytics for å se hvordan siden brukes. Er det greit?</p>' +
       '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
-      '<button type="button" data-v="ja" style="font:inherit;cursor:pointer;border:0;background:#f7f4ee;color:#17181a;padding:10px 18px;min-height:44px">Godta</button>' +
-      '<button type="button" data-v="nei" style="font:inherit;cursor:pointer;border:1px solid #5c5f59;background:transparent;color:#d5d6d0;padding:10px 18px;min-height:44px">Avslå</button></div>';
+      '<button type="button" data-v="ja" style="font-family:inherit;font-size:15px;letter-spacing:0.02em;cursor:pointer;border:0;border-radius:999px;background:#1f4d3f;color:#f7f4ee;padding:12px 26px;min-height:44px">Godta</button>' +
+      '<button type="button" data-v="nei" style="font-family:inherit;font-size:15px;letter-spacing:0.02em;cursor:pointer;border:1px solid #c9d3cb;border-radius:999px;background:transparent;color:#1f4d3f;padding:12px 26px;min-height:44px">Avslå</button></div>';
     b.addEventListener('click', function (e) { var v = e.target.getAttribute && e.target.getAttribute('data-v'); if (v) lagre(v); });
     document.body.appendChild(b);
   }
@@ -38,205 +40,218 @@
   if (!valg) { if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', vis); else vis(); }
 })();
 </script>
-<script src="./support.js"></script>
+<title>Bergum Kreativ – design, innhold og markedsføring</title>
+<meta name="description" content="Eilin Bergum er markedsfører, innholdsprodusent og designer. Profil, designsystem, nettside, foto og innhold for restaurant, catering og handel.">
+<link rel="canonical" href="https://eilinbergum.com/">
+<meta property="og:title" content="Bergum Kreativ – design, innhold og markedsføring">
+<meta property="og:description" content="Eilin Bergum er markedsfører, innholdsprodusent og designer. Profil, designsystem, nettside, foto og innhold for restaurant, catering og handel.">
+<meta property="og:url" content="https://eilinbergum.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Bergum Kreativ">
+<meta property="og:image" content="https://eilinbergum.com/assets/og/forside.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://eilinbergum.com/#eilin","name":"Eilin Bergum","jobTitle":["Designer","Fotograf","Markedsfører"],"email":"mailto:eilin@eilinbergum.com","url":"https://eilinbergum.com/","worksFor":{"@id":"https://eilinbergum.com/#bergum-kreativ"}},{"@type":"ProfessionalService","@id":"https://eilinbergum.com/#bergum-kreativ","name":"Bergum Kreativ","url":"https://eilinbergum.com/","email":"eilin@eilinbergum.com","areaServed":"NO","image":"https://eilinbergum.com/assets/og/forside.jpg","founder":{"@id":"https://eilinbergum.com/#eilin"},"description":"Eilin Bergum er markedsfører, innholdsprodusent og designer. Profil, designsystem, nettside, foto og innhold for restaurant, catering og handel."},{"@type":"WebSite","@id":"https://eilinbergum.com/#website","name":"Bergum Kreativ","url":"https://eilinbergum.com/","inLanguage":"nb-NO","publisher":{"@id":"https://eilinbergum.com/#bergum-kreativ"}}]}</script>
+<script>window.BK_ROUTE = "/";</script>
+<script src="/support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<title>Bergum Kreativ – Eilin Bergum</title>
-<meta name="description" content="Markedsfører, innholdsprodusent og designer. Merkevare, innhold og nettside for restaurant, catering og handel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
-<meta name="ext-resource-dependency" content="assets/logo-compass.png">
-<meta name="ext-resource-dependency" content="assets/logo-construction-city.png">
-<meta name="ext-resource-dependency" content="assets/logo-gastro.png">
-<meta name="ext-resource-dependency" content="assets/logo-sott-salt.png">
-<meta name="ext-resource-dependency" content="assets/logo-b-las.svg">
-<meta name="ext-resource-dependency" content="assets/blas-gjengen.jpg">
-<meta name="ext-resource-dependency" content="assets/blas-hero.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-skilt.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-hoyden-inngang.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-glass.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-hoyden-meny.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-takterrasse.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-buffet.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-buffet-dj.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-garderobe.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-lounge.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-resepsjon.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-centralen.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-mag-vifte-hel.jpg">
-<meta name="ext-resource-dependency" content="assets/cc-drikker.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-01.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-02.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-03.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-04.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-05.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-06.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-07.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-08.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-09.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-10.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-11.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-12.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-13.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-14.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-15.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-16.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-17.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-18.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-19.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-20.jpg">
-<meta name="ext-resource-dependency" content="assets/mag/side-21.jpg">
-<meta name="ext-resource-dependency" content="assets/blas-innlegg-ingar.png">
-<meta name="ext-resource-dependency" content="assets/blas-innlegg-runar.png">
-<meta name="ext-resource-dependency" content="assets/blas-innlegg-robin.png">
-<meta name="ext-resource-dependency" content="assets/blas-innlegg-remi.png">
-<meta name="ext-resource-dependency" content="assets/blas-nokkelsliping.jpg">
-<meta name="ext-resource-dependency" content="assets/blas-disken.jpg">
-<meta name="ext-resource-dependency" content="assets/blas-nokkelemner.jpg">
-<meta name="ext-resource-dependency" content="blas-nettside/index.html">
-<meta name="ext-resource-dependency" content="blas-nettside/Feed-mockup.dc.html">
-<meta name="ext-resource-dependency" content="assets/blas-animasjon-feed.mp4">
-<meta name="ext-resource-dependency" content="assets/blas-bilene.jpg">
-<meta name="ext-resource-dependency" content="assets/logo-via.png">
-<meta name="ext-resource-dependency" content="assets/logo-los-tacos.png">
-<meta name="ext-resource-dependency" content="assets/kunde-inc-works.png">
-<meta name="ext-resource-dependency" content="assets/kunde-obos.png">
-<meta name="ext-resource-dependency" content="assets/logo-scala.png">
-<meta name="ext-resource-dependency" content="assets/logo-kongssenteret.png">
-<meta name="ext-resource-dependency" content="assets/byst-logo-svart.png">
-<meta name="ext-resource-dependency" content="assets/byst-emblem-gronn.png">
-<meta name="ext-resource-dependency" content="assets/bryn-katrine-3.jpg">
-<meta name="ext-resource-dependency" content="assets/bryn-katrine-2.jpg">
-<meta name="ext-resource-dependency" content="assets/bryn-katrine-1.jpg">
-<meta name="ext-resource-dependency" content="assets/bryn-katrine-4.jpg">
-<meta name="ext-resource-dependency" content="assets/byst-emblem-gull.png">
-<meta name="ext-resource-dependency" content="assets/byst-liv.jpg">
-<meta name="ext-resource-dependency" content="assets/byst-app.jpg">
-<meta name="ext-resource-dependency" content="assets/byst-skilting.jpg">
-<meta name="ext-resource-dependency" content="assets/byst-id.jpg">
-<meta name="ext-resource-dependency" content="assets/byst-senteret.jpg">
-<meta name="ext-resource-dependency" content="assets/byst-logo-beige.png">
-<meta name="ext-resource-dependency" content="assets/byst-logo-gronn.png">
-<meta name="ext-resource-dependency" content="assets/byst-logo-hvit.png">
-<meta name="ext-resource-dependency" content="assets/logo-citycon.png">
-<meta name="ext-resource-dependency" content="assets/logo-varner.png">
-<meta name="ext-resource-dependency" content="assets/logo-vita.png">
-<meta name="ext-resource-dependency" content="assets/logo-nille-utstanset.png">
-<meta name="ext-resource-dependency" content="assets/logo-egmont.png">
-<meta name="ext-resource-dependency" content="assets/obos-cover.png">
-<meta name="ext-resource-dependency" content="assets/obos-hjem-lambertseter.png">
-<meta name="ext-resource-dependency" content="assets/obos-hjem-manglerud.png">
-<meta name="ext-resource-dependency" content="assets/obos-hjem-tveita.png">
-<meta name="ext-resource-dependency" content="assets/obos-lambertseter-splash.png">
-<meta name="ext-resource-dependency" content="assets/obos-manglerud-splash.png">
-<meta name="ext-resource-dependency" content="assets/obos-tveita-splash.png">
-<meta name="ext-resource-dependency" content="assets/obos-lambertseter-tilbud.png">
-<meta name="ext-resource-dependency" content="assets/obos-manglerud-tilbud.png">
-<meta name="ext-resource-dependency" content="assets/obos-tveita-tilbud.png">
-<meta name="ext-resource-dependency" content="assets/obos-sl-lambertseter-gulvfolie.png">
-<meta name="ext-resource-dependency" content="assets/obos-sl-tveita-some.png">
-<meta name="ext-resource-dependency" content="assets/obos-sl-manglerud-plakat.png">
-<meta name="ext-resource-dependency" content="assets/obos-sl-manglerud-gulvfolie.png">
-<meta name="ext-resource-dependency" content="assets/obos-sl-manglerud-some.png">
-<meta name="ext-resource-dependency" content="assets/obos-sl-lambertseter-plakat.png">
-<meta name="ext-resource-dependency" content="assets/obos-sl-tveita-plakat.png">
-<meta name="ext-resource-dependency" content="assets/obos-emblem-lambertseter.png">
-<meta name="ext-resource-dependency" content="assets/obos-emblem-manglerud.png">
-<meta name="ext-resource-dependency" content="assets/obos-emblem-tveita.png">
-<meta name="ext-resource-dependency" content="assets/obos-lambertseter-skjerm.mp4">
-<meta name="ext-resource-dependency" content="assets/obos-manglerud-skjerm.mp4">
-<meta name="ext-resource-dependency" content="assets/obos-tveita-skjerm.mp4">
-<meta name="ext-resource-dependency" content="assets/gastro-forside.png">
-<meta name="ext-resource-dependency" content="assets/gastro-hostmeny-story.mp4">
-<meta name="ext-resource-dependency" content="assets/gastro-topp.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-styling.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-meny-topp.jpg">
-<meta name="ext-resource-dependency" content="assets/citycon-gronnere-1.png">
-<meta name="ext-resource-dependency" content="assets/citycon-gd-plakat-diy.png">
-<meta name="ext-resource-dependency" content="assets/citycon-gd-plakat-byttedag.png">
-<meta name="ext-resource-dependency" content="assets/citycon-gd-plakat-plante.png">
-<meta name="ext-resource-dependency" content="assets/citycon-gd-nettside.png">
-<meta name="ext-resource-dependency" content="assets/citycon-gronnere-2.png">
-<meta name="ext-resource-dependency" content="assets/citycon-gronnere-3.png">
-<meta name="ext-resource-dependency" content="assets/citycon-gronnere-4.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-1.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-plakater.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-materiell.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-nett.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-tidligere.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-tidligere.mp4">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-2.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-3.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-4.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-5.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-6.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-7.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-8.png">
-<meta name="ext-resource-dependency" content="assets/citycon-jul-9.png">
-<meta name="ext-resource-dependency" content="assets/citycon-trekanten-1.png">
-<meta name="ext-resource-dependency" content="assets/citycon-trekanten-2.png">
-<meta name="ext-resource-dependency" content="assets/citycon-trekanten-3.png">
-<meta name="ext-resource-dependency" content="assets/gastro-forrett.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-hovedrett.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-dessert.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-fingermat-1.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-fingermat-2.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-kjokken.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-forrett-2.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-forrett-3.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-hovedrett-2.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-dessert-2.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-dessert-3.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-dessert-4.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-logo-sort.png">
-<meta name="ext-resource-dependency" content="assets/gastro-logo-hvit.png">
-<meta name="ext-resource-dependency" content="assets/pals-pose-kvadrat.jpg">
-<meta name="ext-resource-dependency" content="assets/pals-eng.jpg">
-<meta name="ext-resource-dependency" content="assets/pals-amanda-1.jpg">
-<meta name="ext-resource-dependency" content="assets/pals-amanda-2.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-gjengen.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-julestromper.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-kalender.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-gavekort.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-strompe-bar.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-vinterland.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-ill-truck.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-ill-emballasje.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-ill-jul.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-truck.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-festival.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-lykkehjul.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-merch.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-gaveposer.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-tskjorter.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-landstreff.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-afterwork.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-nattapent.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-combodeal.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-nc-truck.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-festival-gjester.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-dooh.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-dooh-akerbrygge.jpg">
-<meta name="ext-resource-dependency" content="assets/lostacos-apning-akerbrygge.jpg">
+<meta name="ext-resource-dependency" content="/assets/logo-compass.png">
+<meta name="ext-resource-dependency" content="/assets/logo-construction-city.png">
+<meta name="ext-resource-dependency" content="/assets/logo-gastro.png">
+<meta name="ext-resource-dependency" content="/assets/logo-sott-salt.png">
+<meta name="ext-resource-dependency" content="/assets/logo-b-las.svg">
+<meta name="ext-resource-dependency" content="/assets/blas-gjengen.jpg">
+<meta name="ext-resource-dependency" content="/assets/blas-hero.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-skilt.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-hoyden-inngang.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-glass.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-hoyden-meny.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-takterrasse.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-buffet.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-buffet-dj.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-garderobe.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-lounge.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-resepsjon.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-centralen.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-mag-vifte-hel.jpg">
+<meta name="ext-resource-dependency" content="/assets/cc-drikker.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-01.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-02.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-03.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-04.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-05.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-06.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-07.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-08.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-09.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-10.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-11.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-12.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-13.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-14.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-15.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-16.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-17.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-18.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-19.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-20.jpg">
+<meta name="ext-resource-dependency" content="/assets/mag/side-21.jpg">
+<meta name="ext-resource-dependency" content="/assets/blas-innlegg-ingar.png">
+<meta name="ext-resource-dependency" content="/assets/blas-innlegg-runar.png">
+<meta name="ext-resource-dependency" content="/assets/blas-innlegg-robin.png">
+<meta name="ext-resource-dependency" content="/assets/blas-innlegg-remi.png">
+<meta name="ext-resource-dependency" content="/assets/blas-nokkelsliping.jpg">
+<meta name="ext-resource-dependency" content="/assets/blas-disken.jpg">
+<meta name="ext-resource-dependency" content="/assets/blas-nokkelemner.jpg">
+<meta name="ext-resource-dependency" content="/blas-nettside/index.html">
+<meta name="ext-resource-dependency" content="/blas-nettside/Feed-mockup.dc.html">
+<meta name="ext-resource-dependency" content="/assets/blas-animasjon-feed.mp4">
+<meta name="ext-resource-dependency" content="/assets/blas-bilene.jpg">
+<meta name="ext-resource-dependency" content="/assets/logo-via.png">
+<meta name="ext-resource-dependency" content="/assets/logo-los-tacos.png">
+<meta name="ext-resource-dependency" content="/assets/kunde-inc-works.png">
+<meta name="ext-resource-dependency" content="/assets/kunde-obos.png">
+<meta name="ext-resource-dependency" content="/assets/logo-scala.png">
+<meta name="ext-resource-dependency" content="/assets/logo-kongssenteret.png">
+<meta name="ext-resource-dependency" content="/assets/byst-logo-svart.png">
+<meta name="ext-resource-dependency" content="/assets/byst-emblem-gronn.png">
+<meta name="ext-resource-dependency" content="/assets/bryn-katrine-3.jpg">
+<meta name="ext-resource-dependency" content="/assets/bryn-katrine-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/bryn-katrine-1.jpg">
+<meta name="ext-resource-dependency" content="/assets/bryn-katrine-4.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-emblem-gull.png">
+<meta name="ext-resource-dependency" content="/assets/byst-liv.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-app.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-skilting.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-id.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-senteret.jpg">
+<meta name="ext-resource-dependency" content="/assets/byst-logo-beige.png">
+<meta name="ext-resource-dependency" content="/assets/byst-logo-gronn.png">
+<meta name="ext-resource-dependency" content="/assets/byst-logo-hvit.png">
+<meta name="ext-resource-dependency" content="/assets/logo-citycon.png">
+<meta name="ext-resource-dependency" content="/assets/logo-varner.png">
+<meta name="ext-resource-dependency" content="/assets/logo-vita.png">
+<meta name="ext-resource-dependency" content="/assets/logo-nille-utstanset.png">
+<meta name="ext-resource-dependency" content="/assets/logo-egmont.png">
+<meta name="ext-resource-dependency" content="/assets/obos-cover.png">
+<meta name="ext-resource-dependency" content="/assets/obos-hjem-lambertseter.png">
+<meta name="ext-resource-dependency" content="/assets/obos-hjem-manglerud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-hjem-tveita.png">
+<meta name="ext-resource-dependency" content="/assets/obos-lambertseter-splash.png">
+<meta name="ext-resource-dependency" content="/assets/obos-manglerud-splash.png">
+<meta name="ext-resource-dependency" content="/assets/obos-tveita-splash.png">
+<meta name="ext-resource-dependency" content="/assets/obos-lambertseter-tilbud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-manglerud-tilbud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-tveita-tilbud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-lambertseter-gulvfolie.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-tveita-some.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-manglerud-plakat.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-manglerud-gulvfolie.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-manglerud-some.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-lambertseter-plakat.png">
+<meta name="ext-resource-dependency" content="/assets/obos-sl-tveita-plakat.png">
+<meta name="ext-resource-dependency" content="/assets/obos-emblem-lambertseter.png">
+<meta name="ext-resource-dependency" content="/assets/obos-emblem-manglerud.png">
+<meta name="ext-resource-dependency" content="/assets/obos-emblem-tveita.png">
+<meta name="ext-resource-dependency" content="/assets/obos-lambertseter-skjerm.mp4">
+<meta name="ext-resource-dependency" content="/assets/obos-manglerud-skjerm.mp4">
+<meta name="ext-resource-dependency" content="/assets/obos-tveita-skjerm.mp4">
+<meta name="ext-resource-dependency" content="/assets/gastro-forside.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-hostmeny-story.mp4">
+<meta name="ext-resource-dependency" content="/assets/gastro-topp.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-styling.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-meny-topp.jpg">
+<meta name="ext-resource-dependency" content="/assets/citycon-gronnere-1.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gd-plakat-diy.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gd-plakat-byttedag.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gd-plakat-plante.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gd-nettside.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gronnere-2.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gronnere-3.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-gronnere-4.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-1.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-plakater.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-materiell.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-nett.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-tidligere.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-tidligere.mp4">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-2.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-3.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-4.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-5.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-6.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-7.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-8.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-jul-9.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-trekanten-1.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-trekanten-2.png">
+<meta name="ext-resource-dependency" content="/assets/citycon-trekanten-3.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-forrett.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-hovedrett.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-dessert.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-fingermat-1.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-fingermat-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-kjokken.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-forrett-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-forrett-3.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-hovedrett-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-dessert-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-dessert-3.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-dessert-4.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-logo-sort.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-logo-hvit.png">
+<meta name="ext-resource-dependency" content="/assets/pals-pose-kvadrat.jpg">
+<meta name="ext-resource-dependency" content="/assets/pals-eng.jpg">
+<meta name="ext-resource-dependency" content="/assets/pals-amanda-1.jpg">
+<meta name="ext-resource-dependency" content="/assets/pals-amanda-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-gjengen.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-julestromper.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-kalender.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-gavekort.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-strompe-bar.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-vinterland.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-ill-truck.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-ill-emballasje.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-ill-jul.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-truck.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-festival.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-lykkehjul.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-merch.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-gaveposer.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-tskjorter.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-landstreff.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-afterwork.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-nattapent.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-combodeal.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-nc-truck.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-festival-gjester.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-dooh.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-dooh-akerbrygge.jpg">
+<meta name="ext-resource-dependency" content="/assets/lostacos-apning-akerbrygge.jpg">
 
 
-<meta name="ext-resource-dependency" content="assets/lostacos-bjorvika.mp4">
-<meta name="ext-resource-dependency" content="assets/innhold-paaske-bryn.mp4">
-<meta name="ext-resource-dependency" content="assets/innhold-valentines-vaerstetorvet.mp4">
-<meta name="ext-resource-dependency" content="assets/innhold-jul-gaveguide-familien.mp4">
-<meta name="ext-resource-dependency" content="assets/innhold-jul-gaveguide-trend.mp4">
-<meta name="ext-resource-dependency" content="assets/innhold-jul-partyvesken.mp4">
-<meta name="ext-resource-dependency" content="assets/innhold-jul-1.jpg">
-<meta name="ext-resource-dependency" content="assets/innhold-jul-2.jpg">
-<meta name="ext-resource-dependency" content="assets/innhold-jul-3.jpg">
-<meta name="ext-resource-dependency" content="assets/gastro-menyer.png">
-<meta name="ext-resource-dependency" content="assets/gastro-lunsj.png">
-<meta name="ext-resource-dependency" content="assets/gastro-detalj.png">
+<meta name="ext-resource-dependency" content="/assets/lostacos-bjorvika.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-paaske-bryn.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-valentines-vaerstetorvet.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-gaveguide-familien.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-gaveguide-trend.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-partyvesken.mp4">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-1.jpg">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-2.jpg">
+<meta name="ext-resource-dependency" content="/assets/innhold-jul-3.jpg">
+<meta name="ext-resource-dependency" content="/assets/gastro-menyer.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-lunsj.png">
+<meta name="ext-resource-dependency" content="/assets/gastro-detalj.png">
 <style>
   body { margin: 0; background: #f7f4ee; color: #17181a; font-family: "Hanken Grotesk", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
   * { box-sizing: border-box; }
@@ -265,7 +280,7 @@
 <header style="position: sticky; top: 0; z-index: 60; background: rgba(247,244,238,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid #e2dacb;">
   <div style="max-width: 1180px; margin: 0 auto; padding: clamp(12px,2.4vw,18px) clamp(20px,5vw,56px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px;">
     <a href="{{ hjemHref }}" onClick="{{ goHome }}" style="display: block; flex: none;" aria-label="Bergum Kreativ, til forsiden">
-      <img src="assets/logo-bergum-sort.png" alt="Bergum Kreativ" style="width: clamp(96px,26vw,118px); height: auto;">
+      <img src="/assets/logo-bergum-sort.png" alt="Bergum Kreativ" style="width: clamp(96px,26vw,118px); height: auto;">
     </a>
     <nav style="display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 2px clamp(10px,2.4vw,34px); min-width: 0;">
       <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="4">
@@ -286,7 +301,7 @@
 <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
 <div>
   <section style="position: relative; overflow: hidden; background: #17181a; min-height: clamp(420px, 66vh, 680px); display: flex; align-items: flex-end;">
-    <img src="assets/topp-arbeidsbord.jpg" alt="Arbeidsbord med laptop, telefon, blyanter og grønne planter" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center;">
+    <img src="/assets/topp-arbeidsbord.jpg" alt="Arbeidsbord med laptop, telefon, blyanter og grønne planter" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center;">
     <div style="position: absolute; inset: 0; background: linear-gradient(190deg, rgba(15,16,17,0.42) 0%, rgba(15,16,17,0.58) 42%, rgba(15,16,17,0.86) 100%);"></div>
     <div style="position: relative; width: 100%; max-width: 1180px; margin: 0 auto; padding: clamp(56px,9vw,110px) clamp(20px,5vw,56px) clamp(36px,5vw,64px); color: #ffffff;">
       <sc-if value="{{ visTilgjengelighet }}" hint-placeholder-val="{{ false }}">
@@ -348,7 +363,7 @@
               </sc-if>
               <sc-if value="{{ c.kortDelt }}" hint-placeholder-val="{{ false }}">
                 <div style="position: absolute; inset: 0; overflow: hidden;">
-                  <img src="{{ c.kortDeltHoyre }}" alt="{{ c.tittel }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{ engX }}% {{ engY }}%; transform: scale({{ engSkala }});">
+                  <img src="{{ c.kortDeltHoyre }}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{ engX }}% {{ engY }}%; transform: scale({{ engSkala }});">
                   <div style="position: absolute; inset: 0; background: #bdd8eb; animation: bkkryss 9s ease-in-out infinite;">
                     <img src="{{ c.kortDeltVenstre }}" alt="{{ c.tittel }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% {{ poseY }}%; transform: scale({{ poseSkala }});">
                   </div>
@@ -534,7 +549,7 @@
   </div>
   <div style="max-width: 1180px; margin: 0 auto; padding: clamp(36px,5vw,64px) clamp(20px,5vw,56px) clamp(56px,8vw,110px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(32px,5vw,72px); align-items: start;">
     <div style="aspect-ratio: 4 / 5; overflow: hidden;">
-      <img src="https://images.squarespace-cdn.com/content/v1/699ff80d9e47765296f869af/df7795c4-cdeb-421f-94ab-7577c75bd86b/tempImageqJ9Rju.jpg" alt="Eilin Bergum" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+      <img src="https://images.squarespace-cdn.com/content/v1/699ff80d9e47765296f869af/df7795c4-cdeb-421f-94ab-7577c75bd86b/tempImageqJ9Rju.jpg" alt="Eilin Bergum" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
     <div style="display: flex; flex-direction: column; gap: 20px;">
       <p style="margin: 0; font-size: clamp(19px,1.7vw,23px); line-height: 1.55; letter-spacing: -0.01em; color: #17181a; max-width: 40ch;">Jeg har jobbet med kommersiell kommunikasjon i over ti år, hovedsakelig for kjøpesentre, restauranter og handelsvirksomheter.</p>
@@ -626,6 +641,19 @@
       <button type="submit" style="font-family: inherit; background: #1f4d3f; color: #f7f4ee; border: none; padding: 15px 28px; border-radius: 999px; font-size: 15px; letter-spacing: 0.02em; cursor: pointer; align-self: start;" style-hover="background: #17181a;">Send melding</button>
     </form>
     </sc-if>
+  </div>
+</div>
+</sc-if>
+
+<!-- ============ 404 ============ -->
+<sc-if value="{{ isIkkeFunnet }}" hint-placeholder-val="{{ false }}">
+<div style="max-width: 1180px; margin: 0 auto; padding: clamp(48px,7vw,104px) clamp(20px,5vw,56px) clamp(56px,8vw,120px);">
+  <p style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #5c5f59;">404</p>
+  <h1 style="margin: 0; font-size: clamp(34px,5.6vw,72px); font-weight: 200; line-height: 1.05; letter-spacing: -0.03em; max-width: 20ch;">Siden finnes ikke.</h1>
+  <p style="margin: 28px 0 0; max-width: 58ch; font-size: clamp(17px,1.4vw,20px); line-height: 1.6; color: #4e514c;">Adressen kan være feil, eller siden er flyttet.</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(30px,3.6vw,44px);">
+    <a href="{{ hjemHref }}" onClick="{{ goHome }}" style="background: #1f4d3f; color: #f7f4ee; padding: 14px 26px; border-radius: 999px; font-size: 15px; letter-spacing: 0.02em;" style-hover="background: #17181a;">Til forsiden</a>
+    <a href="{{ jobberHref }}" onClick="{{ goJobber }}" style="border: 1px solid #c9d3cb; color: #1f4d3f; padding: 14px 26px; border-radius: 999px; font-size: 15px; letter-spacing: 0.02em;" style-hover="border-color: #1f4d3f;">Se jobber</a>
   </div>
 </div>
 </sc-if>
@@ -812,7 +840,7 @@
                 </div>
               </div>
               <div style="flex: 1 1 0; min-width: 0; height: 100%;">
-                <img src="assets/mag/side-01.jpg" alt="Forsiden av magasinet" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; display: block;">
+                <img src="/assets/mag/side-01.jpg" alt="Forsiden av magasinet" loading="lazy" style="width: 100%; height: 100%; object-fit: contain; display: block;">
               </div>
             </div>
           </sc-if>
@@ -875,7 +903,7 @@
 <footer style="background: #17181a; color: #a9aaa4;">
   <div style="max-width: 1180px; margin: 0 auto; padding: clamp(40px,5vw,64px) clamp(20px,5vw,56px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 32px; align-items: start;">
     <div>
-      <img src="assets/logo-bergum-hvit.png" alt="Bergum Kreativ" style="width: 118px; height: auto; margin-bottom: 16px;">
+      <img src="/assets/logo-bergum-hvit.png" alt="Bergum Kreativ" style="width: 118px; height: auto; margin-bottom: 16px;">
       <p style="margin: 0; font-size: 15px; line-height: 1.6; max-width: 30ch;">Merkevare, innhold og nettside for restaurant, catering og handel.</p>
     </div>
     <nav style="display: flex; flex-direction: column; gap: 10px;">
@@ -1020,8 +1048,8 @@ const CASER = [
     kicker: "Nettside, foto og innhold",
     leveranse: "Nettside, foto, menyer, annonsering og nyhetsbrev",
     periode: "2026 –",
-    bilde: "assets/gastro-topp.jpg",
-    kortLogo: "assets/gastro-logo-hvit.png",
+    bilde: "/assets/gastro-topp.jpg",
+    kortLogo: "/assets/gastro-logo-hvit.png",
     kortLogoMidt: true,
     intro: "Gastro Catering leverer mat til møter, arrangementer og fester i Oslo-området. Ny profil og designsystem, oppdatert logo, høstfoto av menyen, PDF-menyer og ny nettside.",
     introTillegg: "Menyene er delt i seks tydelige spor. Alt foto er tatt for den strukturen, med samme lys og tone på tvers av kategoriene, så nettsiden, PDF-menyene og annonsene henger sammen.",
@@ -1032,13 +1060,13 @@ const CASER = [
     ],
     blokker: [
       { bilder: [
-          { src: "assets/gastro-topp.jpg", pos: "50% 62%" },
-          { src: "assets/gastro-styling.jpg", pos: "center" },
-          { src: "assets/gastro-hovedrett.jpg", pos: "center" }
-        ], alt: "Forrett, hovedrett og dessert fra høstmenyen", span: "1 / -1", ratio: "16 / 9", pos: "50% 62%", tekst: "", overlayLogo: "assets/gastro-logo-hvit.png", overlayLogoAlt: "Gastro Catering", overlayTittel: "Ny profil, ny meny, ny nettside" },
+          { src: "/assets/gastro-topp.jpg", pos: "50% 62%" },
+          { src: "/assets/gastro-styling.jpg", pos: "center" },
+          { src: "/assets/gastro-hovedrett.jpg", pos: "center" }
+        ], alt: "Forrett, hovedrett og dessert fra høstmenyen", span: "1 / -1", ratio: "16 / 9", pos: "50% 62%", tekst: "", overlayLogo: "/assets/gastro-logo-hvit.png", overlayLogoAlt: "Gastro Catering", overlayTittel: "Ny profil, ny meny, ny nettside" },
       { kunTittel: true, tittel: "Logo", span: "1 / -1" },
-      { src: "assets/gastro-logo-sort.png", alt: "Gastro Catering-logoen i sort", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#f1ece2", polstring: "clamp(34px,6vw,74px)", tekst: "" },
-      { src: "assets/gastro-logo-hvit.png", alt: "Gastro Catering-logoen i hvitt", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#1f2a24", polstring: "clamp(34px,6vw,74px)", tekst: "" },
+      { src: "/assets/gastro-logo-sort.png", alt: "Gastro Catering-logoen i sort", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#f1ece2", polstring: "clamp(34px,6vw,74px)", tekst: "" },
+      { src: "/assets/gastro-logo-hvit.png", alt: "Gastro Catering-logoen i hvitt", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#1f2a24", polstring: "clamp(34px,6vw,74px)", tekst: "" },
       { kunTittel: true, tittel: "Nettsiden", span: "1 / -1", lenke: "https://gastrocatering.no", lenkeTekst: "gastrocatering.no" },
       {
         rammeSider: [
@@ -1048,21 +1076,21 @@ const CASER = [
         rammeBredde: 1440, rammeHoyde: 3400, rammeRull: true,
         alt: "Nettsiden til Gastro Catering", span: "span 2", ratio: "16 / 10", tekst: ""
       },
-      { video: "assets/gastro-hostmeny-story.mp4", telefon: true, alt: "Animert some-annonse for høstmenyen", span: "auto", ratio: "10 / 13", tekst: "Some-annonsering, høstmenyen." },
+      { video: "/assets/gastro-hostmeny-story.mp4", telefon: true, alt: "Animert some-annonse for høstmenyen", span: "auto", ratio: "10 / 13", tekst: "Some-annonsering, høstmenyen." },
       { kunTittel: true, tittel: "Høstfoto", span: "1 / -1" },
-      { src: "assets/gastro-styling.jpg", alt: "Råvarer og styling fra fotoserien", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-forrett.jpg", alt: "Forrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-forrett-2.jpg", alt: "Gravet laks", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-forrett-3.jpg", alt: "Terrin med sprøstekt crumble", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-hovedrett.jpg", alt: "Hovedrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-hovedrett-2.jpg", alt: "Fisk med potetpuré", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-dessert.jpg", alt: "Dessert", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-dessert-2.jpg", alt: "Macarons", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-dessert-3.jpg", alt: "Panna cotta med bringebær", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-dessert-4.jpg", alt: "Panna cotta med mango", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-fingermat-1.jpg", alt: "Fingermat med laks", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-fingermat-2.jpg", alt: "Fingermat med fennikel og sitrus", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-kjokken.jpg", alt: "Kokk som anretter fingermat", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
+      { src: "/assets/gastro-styling.jpg", alt: "Råvarer og styling fra fotoserien", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-forrett.jpg", alt: "Forrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-forrett-2.jpg", alt: "Gravet laks", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-forrett-3.jpg", alt: "Terrin med sprøstekt crumble", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-hovedrett.jpg", alt: "Hovedrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-hovedrett-2.jpg", alt: "Fisk med potetpuré", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-dessert.jpg", alt: "Dessert", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-dessert-2.jpg", alt: "Macarons", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-dessert-3.jpg", alt: "Panna cotta med bringebær", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-dessert-4.jpg", alt: "Panna cotta med mango", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-fingermat-1.jpg", alt: "Fingermat med laks", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-fingermat-2.jpg", alt: "Fingermat med fennikel og sitrus", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-kjokken.jpg", alt: "Kokk som anretter fingermat", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
     ]
   },
   {
@@ -1072,7 +1100,7 @@ const CASER = [
     kicker: "Gastro Catering",
     leveranse: "Interaktive menyer for Gastro Catering og deres kunder",
     periode: "2026",
-    bilde: "assets/gastro-meny-topp.jpg",
+    bilde: "/assets/gastro-meny-topp.jpg",
     intro: "Menyene til Gastro Catering er bygget som interaktive PDF-er. Leseren klikker seg mellom kategoriene i toppmenyen i stedet for å bla, og hver kategori har sin egen side med retter, beskrivelser og allergener.",
     introTillegg: "I tillegg til Gastros egne menyer lager jeg menyer for husene de leverer til, satt i kundens egen profil: Pressens Hus og Universitetet i Oslo. Oppbygningen er den samme, drakten er husets.",
     fakta: [
@@ -1082,7 +1110,7 @@ const CASER = [
       { label: "Periode", verdi: "2026" }
     ],
     blokker: [
-      { src: "assets/gastro-meny-topp.jpg", alt: "Sliders og tapasbokser anrettet på fat", span: "1 / -1", ratio: "16 / 9", pos: "center", tekst: "", overlayLogo: "assets/gastro-logo-hvit.png", overlayLogoAlt: "Gastro Catering", overlayTittel: "Menyer du klikker deg gjennom" },
+      { src: "/assets/gastro-meny-topp.jpg", alt: "Sliders og tapasbokser anrettet på fat", span: "1 / -1", ratio: "16 / 9", pos: "center", tekst: "", overlayLogo: "/assets/gastro-logo-hvit.png", overlayLogoAlt: "Gastro Catering", overlayTittel: "Menyer du klikker deg gjennom" },
       {
         kunTittel: true, tittel: "Gastros egne menyer", span: "1 / -1",
         avsnitt: "Menyen for lunsj og møtemat har toppmenyen fast på alle sidene, og oversiktssiden viser alle sporene samlet med underkategoriene som egne knapper. I selskapsmenyen fungerer oversikten som inngang: sharing, fingermat, selskapsmeny, grill, food truck og selskapslokalet Villa Lilleborg."
@@ -1097,14 +1125,14 @@ const CASER = [
         kunTittel: true, tittel: "Menysmaking vår/sommer 2026", span: "1 / -1",
         avsnitt: "Menyene ble presentert for kundene på en menysmaking i vår. Kjøkkenet anrettet rettene fra de nye menyene, og hver meny sto på bordet som eget kort."
       },
-      { src: "assets/gastro-smaking-anretning.jpg", alt: "Anretning med tapasbokser og sliders", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-smaking-kokker.jpg", alt: "Kokkene på kjøkkenet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-smaking-gyoza.jpg", alt: "Kokk som anretter gyoza", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-smaking-plating.jpg", alt: "Kokk som anretter varmrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-smaking-menykort.jpg", alt: "Menykort for selskapsmenyen på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-smaking-sliders.jpg", alt: "Sliders og småretter under smakingen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-smaking-bord.jpg", alt: "Rettene servert på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/gastro-smaking-lokalet.jpg", alt: "Gjestene til bords under menysmakingen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-anretning.jpg", alt: "Anretning med tapasbokser og sliders", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-kokker.jpg", alt: "Kokkene på kjøkkenet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-gyoza.jpg", alt: "Kokk som anretter gyoza", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-plating.jpg", alt: "Kokk som anretter varmrett", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-menykort.jpg", alt: "Menykort for selskapsmenyen på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-sliders.jpg", alt: "Sliders og småretter under smakingen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-bord.jpg", alt: "Rettene servert på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/gastro-smaking-lokalet.jpg", alt: "Gjestene til bords under menysmakingen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       {
         kunTittel: true, tittel: "Innhold og drift", span: "1 / -1",
         avsnitt: "Fra smakingen ble det også laget innhold til Gastros egne kanaler. Filmene er klippet for Instagram og publisert på profilen."
@@ -1120,8 +1148,8 @@ const CASER = [
     kicker: "Scala Eiendom",
     leveranse: "Visuell profil og kundeklubb",
     periode: "2026",
-    bilde: "assets/byst-emblem-gronn.png",
-    topp: "assets/byst-senteret.jpg",
+    bilde: "/assets/byst-emblem-gronn.png",
+    topp: "/assets/byst-senteret.jpg",
     intro: "Bystasjonen i Sandnes fikk en ny visuell profil. Navnet er satt i Playfair Display, og i tillegg finnes et rundt emblem med B-en i midten og «Bystasjonen Sandnes» satt i bue rundt.",
     introTillegg: "Profilen er samlet i en ID-manual med logovarianter, fargepalett og typografi, og ført videre ut i kundeklubben i appen.",
     fakta: [
@@ -1131,25 +1159,25 @@ const CASER = [
       { label: "Periode", verdi: "2026" }
     ],
     blokker: [
-      { src: "assets/byst-senteret.jpg", alt: "Bystasjonen sett fra gaten og innvendig i senteret", span: "1 / -1", ratio: "16 / 9", pos: "center", tekst: "" },
+      { src: "/assets/byst-senteret.jpg", alt: "Bystasjonen sett fra gaten og innvendig i senteret", span: "1 / -1", ratio: "16 / 9", pos: "center", tekst: "" },
       {
         kunTittel: true, tittel: "Profilen", span: "1 / -1",
         avsnitt: "Tre farger holder profilen: en mørk grønn som bunnfarge, en lys grønn til flater og en varm beige som aksent, i tillegg til en 30 % tint. Playfair Display brukes til navn, titler og sitater, Barlow til all informasjon."
       },
-      { src: "assets/byst-id.jpg", alt: "ID-manualen med logo, fargepalett, typografi og eksempler", span: "1 / -1", ratio: "16 / 9", fit: "contain", bakgrunn: "#ffffff", tekst: "Oppslag fra ID-manualen." },
-      { src: "assets/byst-logo-beige.png", alt: "Logoen i beige på mørk grønn", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#082e33", polstring: "clamp(26px,4vw,54px)", tekst: "" },
-      { src: "assets/byst-logo-gronn.png", alt: "Logoen i mørk grønn på lys grønn", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#d3ead6", polstring: "clamp(26px,4vw,54px)", tekst: "" },
-      { src: "assets/byst-emblem-gull.png", alt: "Emblemet med B-en og navnet i bue", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#082e33", polstring: "clamp(18px,2.6vw,34px)", tekst: "" },
+      { src: "/assets/byst-id.jpg", alt: "ID-manualen med logo, fargepalett, typografi og eksempler", span: "1 / -1", ratio: "16 / 9", fit: "contain", bakgrunn: "#ffffff", tekst: "Oppslag fra ID-manualen." },
+      { src: "/assets/byst-logo-beige.png", alt: "Logoen i beige på mørk grønn", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#082e33", polstring: "clamp(26px,4vw,54px)", tekst: "" },
+      { src: "/assets/byst-logo-gronn.png", alt: "Logoen i mørk grønn på lys grønn", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#d3ead6", polstring: "clamp(26px,4vw,54px)", tekst: "" },
+      { src: "/assets/byst-emblem-gull.png", alt: "Emblemet med B-en og navnet i bue", span: "auto", ratio: "16 / 9", fit: "contain", pos: "center", bakgrunn: "#082e33", polstring: "clamp(18px,2.6vw,34px)", tekst: "" },
       {
         kunTittel: true, tittel: "Kundeklubben", span: "1 / -1",
         avsnitt: "Kundeklubben ligger i appen: medlemstilbud, faste fordeler, nyheter, bonusprogram og medlemsbevis. Menyen står på mørk grønn med emblemet øverst, og tilbudene ligger som kort med bilde og rabatt."
       },
-      { src: "assets/byst-app.jpg", alt: "App-skjermer fra kundeklubben", span: "1 / -1", ratio: "16 / 9", fit: "contain", bakgrunn: "#f1ece2", tekst: "Splash, hjem, meny og medlemstilbud." },
+      { src: "/assets/byst-app.jpg", alt: "App-skjermer fra kundeklubben", span: "1 / -1", ratio: "16 / 9", fit: "contain", bakgrunn: "#f1ece2", tekst: "Splash, hjem, meny og medlemstilbud." },
       {
         kunTittel: true, tittel: "Byfest i Sandnes", span: "1 / -1",
         avsnitt: "Film til sosiale medier, satt opp i profilen og tilpasset feed-format."
       },
-      { video: "assets/byst-byfest.mp4", alt: "Byfest Sandnes", span: "auto", ratio: "4 / 5", fit: "contain", bakgrunn: "#082e33", tekst: "Byfest Sandnes, 1080 × 1350." }
+      { video: "/assets/byst-byfest.mp4", alt: "Byfest Sandnes", span: "auto", ratio: "4 / 5", fit: "contain", bakgrunn: "#082e33", tekst: "Byfest Sandnes, 1080 × 1350." }
     ]
   },
   {
@@ -1159,7 +1187,7 @@ const CASER = [
     kicker: "Bryn Senter",
     leveranse: "Damenes Aften med Katrine Sørland",
     periode: "2026",
-    bilde: "assets/bryn-katrine-2.jpg",
+    bilde: "/assets/bryn-katrine-2.jpg",
     kortPos: "50% 5%",
     toppPos: "50% 18%",
     intro: "Damenes Aften på Bryn Senter med Katrine Sørland. Senteret ble fylt med store papirblomster, og Katrine gikk gjennom vårens plukk sammen med senterleder Sasha.",
@@ -1170,16 +1198,16 @@ const CASER = [
       { label: "Periode", verdi: "2026" }
     ],
     blokker: [
-      { src: "assets/bryn-katrine-2.jpg", alt: "Katrine Sørland foran papirblomstene i senteret", span: "1 / -1", ratio: "16 / 9", pos: "50% 18%", tekst: "", overlayKicker: "Bryn Senter · Scala Eiendom", overlayTittel: "Damenes Aften med Katrine Sørland" },
+      { src: "/assets/bryn-katrine-2.jpg", alt: "Katrine Sørland foran papirblomstene i senteret", span: "1 / -1", ratio: "16 / 9", pos: "50% 18%", tekst: "", overlayKicker: "Bryn Senter · Scala Eiendom", overlayTittel: "Damenes Aften med Katrine Sørland" },
       { vimeoPar: ["1225942401", "1225943828", "1225946628"], alt: "Filmer fra Damenes Aften", span: "1 / -1", ratio: "12 / 7", tekst: "Filmen fra arrangementet, Kathrines favoritter og 1080 × 1920-versjonen." },
 
       {
         kunTittel: true, tittel: "Foto", span: "1 / -1",
         avsnitt: "Bildene er tatt i senteret, foran papirblomstene som sto som kulisse gjennom hele kampanjen."
       },
-      { src: "assets/bryn-katrine-1.jpg", alt: "Katrine Sørland foran papirblomstene", span: "auto", ratio: "4 / 5", pos: "50% 30%", tekst: "" },
-      { src: "assets/bryn-katrine-4.jpg", alt: "Fra Damenes Aften på Bryn Senter", span: "auto", ratio: "4 / 5", pos: "center", tekst: "" },
-      { src: "assets/bryn-katrine-3.jpg", alt: "Katrine Sørland og senterleder Sasha", span: "auto", ratio: "4 / 5", pos: "center", tekst: "Katrine Sørland og senterleder Sasha." },
+      { src: "/assets/bryn-katrine-1.jpg", alt: "Katrine Sørland foran papirblomstene", span: "auto", ratio: "4 / 5", pos: "50% 30%", tekst: "" },
+      { src: "/assets/bryn-katrine-4.jpg", alt: "Fra Damenes Aften på Bryn Senter", span: "auto", ratio: "4 / 5", pos: "center", tekst: "" },
+      { src: "/assets/bryn-katrine-3.jpg", alt: "Katrine Sørland og senterleder Sasha", span: "auto", ratio: "4 / 5", pos: "center", tekst: "Katrine Sørland og senterleder Sasha." },
       {
         kunTittel: true, tittel: "På Instagram", span: "1 / -1",
         avsnitt: "Filmene ble publisert på senterets egen Instagram-profil."
@@ -1194,7 +1222,7 @@ const CASER = [
     kicker: "Ni år som Art Director",
     leveranse: "Designsystem, kampanjer, maler og produksjon",
     periode: "2016 – 2025",
-    bilde: "assets/citycon-jul-3.png",
+    bilde: "/assets/citycon-jul-3.png",
     toppPos: "50% 58%",
     intro: "Citycon eier og driver kjøpesentre i Norden. I ni år jobbet jeg med dem som Art Director, med ansvar for designsystemet, kampanjene, malverket og produksjonen ut til sentrene i Norge og Norden.",
     introTillegg: "Ni år lar seg ikke vise i sin helhet. Her er noen av favorittene: to kampanjer bygget fra grunnen av, og profilarbeidet for Trekanten i Asker.",
@@ -1206,45 +1234,45 @@ const CASER = [
       { label: "Periode", verdi: "2016 – 2025" }
     ],
     blokker: [
-      { vimeo: "1225927299", span: "1 / -1", ratio: "16 / 9", tekst: "", overlayKicker: "Citycon · Kjøpesentre i Norden", overlayTittel: "Ni år med kampanjer, maler og produksjon" },
+      { vimeo: "1225927299", alt: "Film fra kampanjene for Citycon", span: "1 / -1", ratio: "16 / 9", tekst: "", overlayKicker: "Citycon · Kjøpesentre i Norden", overlayTittel: "Ni år med kampanjer, maler og produksjon" },
       {
         kunTittel: true, tittel: "Julekampanje", span: "1 / -1",
         avsnitt: "Julen på sentrene, med figurer laget av dorull, pyntet pepperkakehus og et tre kledd i hjemmelagde pynt. Motivene ble fotografert både som rene produktbilder på rødt og som situasjonsbilder der de blir laget."
       },
-      { src: "assets/citycon-jul-3.png", alt: "Figurene på rød sokkel", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-jul-2.png", alt: "Pepperkakehus på rød sokkel", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-jul-4.png", alt: "Juletre med hjemmelaget pynt", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-jul-6.png", alt: "Barn som lager julefigurer", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-jul-5.png", alt: "Barn som pynter en figur", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-jul-7.png", alt: "Voksen som pynter en figur", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-jul-8.png", alt: "Barn som pynter pepperkakehuset", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-jul-9.png", alt: "Pepperkakehuset pyntes ferdig", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-jul-plakater.png", alt: "Tre plakater fra julekampanjen", span: "1 / -1", ratio: "1954 / 913", pos: "center", tekst: "Plakater med snakkeboble og signaturen «Fordi det er jul»." },
-      { src: "assets/citycon-jul-materiell.png", alt: "Materiellpakken for julen", span: "1 / -1", ratio: "2047 / 1150", pos: "center", tekst: "Materiellpakken sentrene fikk: plakater, åpningstider, program og gavekort." },
-      { src: "assets/citycon-jul-nett.png", alt: "Kampanjen på senternettsidene", span: "1 / -1", ratio: "1704 / 1000", pos: "center", tekst: "Samme kampanje på senternettsidene." },
+      { src: "/assets/citycon-jul-3.png", alt: "Figurene på rød sokkel", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-2.png", alt: "Pepperkakehus på rød sokkel", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-4.png", alt: "Juletre med hjemmelaget pynt", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-6.png", alt: "Barn som lager julefigurer", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-5.png", alt: "Barn som pynter en figur", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-7.png", alt: "Voksen som pynter en figur", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-8.png", alt: "Barn som pynter pepperkakehuset", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-9.png", alt: "Pepperkakehuset pyntes ferdig", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-jul-plakater.png", alt: "Tre plakater fra julekampanjen", span: "1 / -1", ratio: "1954 / 913", pos: "center", tekst: "Plakater med snakkeboble og signaturen «Fordi det er jul»." },
+      { src: "/assets/citycon-jul-materiell.png", alt: "Materiellpakken for julen", span: "1 / -1", ratio: "2047 / 1150", pos: "center", tekst: "Materiellpakken sentrene fikk: plakater, åpningstider, program og gavekort." },
+      { src: "/assets/citycon-jul-nett.png", alt: "Kampanjen på senternettsidene", span: "1 / -1", ratio: "1704 / 1000", pos: "center", tekst: "Samme kampanje på senternettsidene." },
       {
         kunTittel: true, tittel: "Julen året før", span: "1 / -1",
         avsnitt: "En tidligere julekampanje med samme oppbygning: barn i grønt mot rødt, «er rett rundt hjørnet» som gjennomgående linje, og en materiellpakke sentrene kunne sette sine egne datoer og tilbud inn i."
       },
-      { src: "assets/citycon-jul-tidligere.png", alt: "Materiellpakken for den tidligere julekampanjen", span: "1 / -1", ratio: "2035 / 1134", pos: "center", tekst: "" },
-      { video: "assets/citycon-jul-tidligere.mp4", alt: "Animert innlegg fra julekampanjen", span: "auto", ratio: "1 / 1", tekst: "Animert innlegg til senternes kanaler." },
+      { src: "/assets/citycon-jul-tidligere.png", alt: "Materiellpakken for den tidligere julekampanjen", span: "1 / -1", ratio: "2035 / 1134", pos: "center", tekst: "" },
+      { video: "/assets/citycon-jul-tidligere.mp4", alt: "Animert innlegg fra julekampanjen", span: "auto", ratio: "1 / 1", tekst: "Animert innlegg til senternes kanaler." },
       {
         kunTittel: true, tittel: "Trekanten", span: "1 / -1",
         avsnitt: "Profilarbeid for Trekanten i Asker. Trekanten i navnet er selve merket, og formen går igjen i flatene: som logo over bilder, som fargede trekanter i egne arrangementer som Askerdagen."
       },
-      { src: "assets/citycon-trekanten-1.png", alt: "Trekanten-logoen over bilde av avokado", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-trekanten-2.png", alt: "Askerdagen-logoen over bilde av tre barn", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-trekanten-3.png", alt: "Askerdagen-logoen på lys bakgrunn", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-trekanten-1.png", alt: "Trekanten-logoen over bilde av avokado", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-trekanten-2.png", alt: "Askerdagen-logoen over bilde av tre barn", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-trekanten-3.png", alt: "Askerdagen-logoen på lys bakgrunn", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       {
         kunTittel: true, tittel: "Grønnere dager", span: "1 / -1",
         avsnitt: "Kampanje for gjenbruksdagene på sentrene. Alt er bygget som stillbilder i studio: grønne kasser, sydd og reparert, lopper og planter, satt sammen til motiver som kunne resirkuleres videre til nye flater og nye sentre."
       },
-      { src: "assets/citycon-gronnere-2.png", alt: "Stilleben med planter, kanne og redskaper", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-gronnere-3.png", alt: "Stilleben med symaskin, bamse og sytråd", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-gronnere-4.png", alt: "Stilleben med sykkel, bamse og kleshenger", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/citycon-gd-plakat-diy.png", alt: "Plakat: Velkommen til DIY-verksted", span: "auto", ratio: "1 / 1.414", pos: "center", tekst: "" },
-      { src: "assets/citycon-gd-plakat-byttedag.png", alt: "Plakat: Bli med på byttedag", span: "auto", ratio: "1 / 1.414", pos: "center", tekst: "" },
-      { src: "assets/citycon-gd-plakat-plante.png", alt: "Plakat: Vi inviterer til plante-verksted", span: "auto", ratio: "1 / 1.414", pos: "center", tekst: "" }
+      { src: "/assets/citycon-gronnere-2.png", alt: "Stilleben med planter, kanne og redskaper", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gronnere-3.png", alt: "Stilleben med symaskin, bamse og sytråd", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gronnere-4.png", alt: "Stilleben med sykkel, bamse og kleshenger", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gd-plakat-diy.png", alt: "Plakat: Velkommen til DIY-verksted", span: "auto", ratio: "1 / 1.414", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gd-plakat-byttedag.png", alt: "Plakat: Bli med på byttedag", span: "auto", ratio: "1 / 1.414", pos: "center", tekst: "" },
+      { src: "/assets/citycon-gd-plakat-plante.png", alt: "Plakat: Vi inviterer til plante-verksted", span: "auto", ratio: "1 / 1.414", pos: "center", tekst: "" }
     ]
   },
   {
@@ -1254,9 +1282,9 @@ const CASER = [
     kicker: "Emballasje",
     leveranse: "Design av etiketten",
     periode: "2026",
-    bilde: "assets/pals-eng.jpg",
-    topp: "assets/pals-amanda-1.jpg",
-    kortDelt: ["assets/pals-pose-kvadrat.jpg", "assets/pals-eng.jpg"],
+    bilde: "/assets/pals-eng.jpg",
+    topp: "/assets/pals-amanda-1.jpg",
+    kortDelt: ["/assets/pals-pose-kvadrat.jpg", "/assets/pals-eng.jpg"],
     intro: "Pals Kaffe har brent en høstkaffe for Amanda Iversen Orlich, en venninne av oss som gikk bort alt for tidlig. Kaffen er et samarbeid med Nadia, brennemester hos Pals og en god venninne av meg. Etiketten er designet av Eilin, Amanda og Nadia.",
     introTillegg: "Bildet på etiketten er Amandas eget, og «takk» er hennes egen håndskrift, hentet fra notatene hennes på Instagram. Kaffen er en vasket Guatemala, mellombrent, og 20 kroner fra hver pose går til Kreftforeningen.",
     fakta: [
@@ -1267,9 +1295,9 @@ const CASER = [
     ],
     blokker: [
       { bilder: [
-          { src: "assets/pals-eng.jpg", pos: "50% 58%" },
-          { src: "assets/pals-pose-kvadrat.jpg", pos: "center", fit: "contain", bakgrunn: "#bdd8eb" },
-          { src: "assets/pals-amanda-1.jpg", pos: "center" }
+          { src: "/assets/pals-eng.jpg", pos: "50% 58%" },
+          { src: "/assets/pals-pose-kvadrat.jpg", pos: "center", fit: "contain", bakgrunn: "#bdd8eb" },
+          { src: "/assets/pals-amanda-1.jpg", pos: "center" }
         ], alt: "Høstkaffen holdt opp i en blomstereng i solnedgang", span: "1 / -1", ratio: "16 / 9", pos: "50% 58%", tekst: "", overlayKicker: "Pals Kaffe · Høstkaffe", overlayTittel: "Inspirert av Amanda" },
       { kunTittel: true, tittel: "Etiketten", span: "1 / -1", lenke: "https://palskaffe.no/hostkaffe-inspirert-av-amanda/", lenkeTekst: "Historien bak, hos Pals" },
       {
@@ -1279,9 +1307,9 @@ const CASER = [
           { tekst: "Bestill kaffe her", url: "mailto:nadia.durdova@palskaffe.no" }
         ]
       },
-      { src: "assets/pals-amanda-1.jpg", alt: "Kaffekanne holdt opp mot himmelen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "Foto: Amanda Iversen Orlich" },
-      { src: "assets/pals-pose-kvadrat.jpg", alt: "Høstkaffe-posen fra Pals Kaffe", span: "auto", ratio: "1 / 1", pos: "center", bakgrunn: "#bdd8eb", tekst: "" },
-      { src: "assets/pals-amanda-2.jpg", alt: "To som klemmer i en eng", span: "auto", ratio: "1 / 1", pos: "center", tekst: "Foto: Amanda Iversen Orlich" }
+      { src: "/assets/pals-amanda-1.jpg", alt: "Kaffekanne holdt opp mot himmelen", span: "auto", ratio: "1 / 1", pos: "center", tekst: "Foto: Amanda Iversen Orlich" },
+      { src: "/assets/pals-pose-kvadrat.jpg", alt: "Høstkaffe-posen fra Pals Kaffe", span: "auto", ratio: "1 / 1", pos: "center", bakgrunn: "#bdd8eb", tekst: "" },
+      { src: "/assets/pals-amanda-2.jpg", alt: "To som klemmer i en eng", span: "auto", ratio: "1 / 1", pos: "center", tekst: "Foto: Amanda Iversen Orlich" }
     ]
   },
   {
@@ -1291,7 +1319,7 @@ const CASER = [
     kicker: "Interaktivt magasin",
     leveranse: "Interaktivt magasin, nettside, e-postmal, tekst, design og foto",
     periode: "2025 –",
-    bilde: "assets/cc-skilt.jpg",
+    bilde: "/assets/cc-skilt.jpg",
     intro: "Construction City på Ulven samler bygg-, anleggs- og eiendomsbransjen under ett tak: 103 000 kvadratmeter, rundt 4 500 arbeidsplasser og en næringsklynge med nærmere 90 medlemmer. Destinasjon er det interaktive magasinet som viser hva huset tilbyr leietakere, klyngemedlemmer og gjester.",
     introTillegg: "Magasinet er bygget som en destinasjonsguide, ikke en brosjyre. Leseren velger kategori i toppen – restauranter og servering, møterom og arrangement, møtemat, trening og fasiliteter, foodcourt og kaffebarer – og navigerer videre derfra. Jeg har skrevet alle tekstene selv og tatt mange av bildene.",
     fakta: [
@@ -1301,7 +1329,7 @@ const CASER = [
       { label: "Periode", verdi: "2025 –" }
     ],
     blokker: [
-      { src: "assets/cc-skilt.jpg", alt: "Construction City-skiltet i atriet", span: "1 / -1", ratio: "16 / 9", pos: "50% 50%", tekst: "", overlayKicker: "Construction City · Ulven", overlayTittel: "En destinasjon for hele arbeidsdagen" },
+      { src: "/assets/cc-skilt.jpg", alt: "Construction City-skiltet i atriet", span: "1 / -1", ratio: "16 / 9", pos: "50% 50%", tekst: "", overlayKicker: "Construction City · Ulven", overlayTittel: "En destinasjon for hele arbeidsdagen" },
       {
         kunTittel: true, tittel: "Nettside og e-postmal", span: "1 / -1", lenke: "https://bergumkreativ.github.io/Destinasjon_CC/", lenkeTekst: "Se nettsiden",
         avsnitt: "Magasinet finnes også som nettside med samme inndeling, slik at innholdet kan deles, oppdateres og lenkes til direkte. E-postmalen sender det ut til leietakere og klyngemedlemmer, med lenker rett inn i de enkelte kategoriene."
@@ -1317,23 +1345,23 @@ const CASER = [
         kunTittel: true, tittel: "Menymaler i Canva", span: "1 / -1",
         avsnitt: "Menyene til Høyden Restaurant er satt opp som Canva-maler kunden redigerer selv. Oppsettet ligger fast – logo, typografi, inndeling i retter, allergener og pris – slik at de bare bytter innhold når menyen skifter."
       },
-      { src: "assets/cc-meny-host.jpg", alt: "Høstmeny, Høyden Restaurant", span: "auto", ratio: "1 / 1.414", fit: "contain", bakgrunn: "#efebe3", tekst: "Høstmeny, restaurant." },
-      { src: "assets/cc-meny-sommer.jpg", alt: "Sommermeny, selskap", span: "auto", ratio: "1 / 1.414", fit: "contain", bakgrunn: "#efebe3", tekst: "Sommermeny, selskap." },
-      { src: "assets/cc-meny-grill.jpg", alt: "Grillmeny", span: "auto", ratio: "1 / 1.414", fit: "contain", bakgrunn: "#efebe3", tekst: "Grillmeny." },
+      { src: "/assets/cc-meny-host.jpg", alt: "Høstmeny, Høyden Restaurant", span: "auto", ratio: "1 / 1.414", fit: "contain", bakgrunn: "#efebe3", tekst: "Høstmeny, restaurant." },
+      { src: "/assets/cc-meny-sommer.jpg", alt: "Sommermeny, selskap", span: "auto", ratio: "1 / 1.414", fit: "contain", bakgrunn: "#efebe3", tekst: "Sommermeny, selskap." },
+      { src: "/assets/cc-meny-grill.jpg", alt: "Grillmeny", span: "auto", ratio: "1 / 1.414", fit: "contain", bakgrunn: "#efebe3", tekst: "Grillmeny." },
       {
         kunTittel: true, tittel: "Foto", span: "1 / -1",
         avsnitt: "Et utvalg av bildene jeg har tatt i huset, på tvers av restaurantene, møteplassene og fasilitetene."
       },
-      { src: "assets/cc-glass.jpg", alt: "Glassrekke over baren på Høyden", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/cc-hoyden-meny.jpg", alt: "Menyen på bordet i Høyden Restaurant", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/cc-takterrasse.jpg", alt: "Takterrassen med pledd og blomster", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/cc-buffet.jpg", alt: "Buffet med møtemat", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/cc-buffet-dj.jpg", alt: "Arrangement med buffet og DJ", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/cc-garderobe.jpg", alt: "Garderoben ved treningssenteret", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/cc-lounge.jpg", alt: "Loungen sett gjennom skillevegg", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/cc-resepsjon.jpg", alt: "Resepsjonen i atriet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/cc-centralen.jpg", alt: "Centralen Café", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/cc-hoyden-skilt.jpg", alt: "Høyden-skiltet på den gule veggen", span: "auto", ratio: "1 / 1", pos: "40% 50%", tekst: "" }
+      { src: "/assets/cc-glass.jpg", alt: "Glassrekke over baren på Høyden", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-hoyden-meny.jpg", alt: "Menyen på bordet i Høyden Restaurant", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-takterrasse.jpg", alt: "Takterrassen med pledd og blomster", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-buffet.jpg", alt: "Buffet med møtemat", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-buffet-dj.jpg", alt: "Arrangement med buffet og DJ", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-garderobe.jpg", alt: "Garderoben ved treningssenteret", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-lounge.jpg", alt: "Loungen sett gjennom skillevegg", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-resepsjon.jpg", alt: "Resepsjonen i atriet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-centralen.jpg", alt: "Centralen Café", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/cc-hoyden-skilt.jpg", alt: "Høyden-skiltet på den gule veggen", span: "auto", ratio: "1 / 1", pos: "40% 50%", tekst: "" }
     ]
   },
   {
@@ -1343,7 +1371,7 @@ const CASER = [
     kicker: "Etikettdesign",
     leveranse: "Etikettdesign for to alkoholfrie drikker",
     periode: "2025",
-    bilde: "assets/cc-drikker.jpg",
+    bilde: "/assets/cc-drikker.jpg",
     intro: "To alkoholfrie signaturdrikker til Høyden Restaurant og Construction City: City Cider, en alkoholfri cider, og Eple + Mynte, en frisk epledrikk. Jeg har designet etikettene til begge.",
     introTillegg: "Etikettene bygger på husets egen identitet – prikkene fra logoen, det dempede fargespekteret og en enkel typografi. Frukten er tegnet i samme formspråk som prikkene, slik at de to flaskene leses som et par uten å bli like.",
     fakta: [
@@ -1353,7 +1381,7 @@ const CASER = [
       { label: "Periode", verdi: "2025" }
     ],
     blokker: [
-      { src: "assets/cc-drikker.jpg", alt: "City Cider og Eple + Mynte med etikettene", span: "1 / -1", ratio: "16 / 9", pos: "50% 50%", tekst: "" },
+      { src: "/assets/cc-drikker.jpg", alt: "City Cider og Eple + Mynte med etikettene", span: "1 / -1", ratio: "16 / 9", pos: "50% 50%", tekst: "" },
       {
         kunTittel: true, tittel: "De to drikkene", span: "1 / -1",
         avsnitt: "City Cider er den alkoholfrie cideren, med C-en fra Construction City som hovedmotiv og smaksnotatene tørr, syrlig og eikepreget nederst på etiketten. Eple + Mynte er den friske epledrikken, med eplene og mynteblader i husets grønne og uten tilsatt sukker."
@@ -1367,7 +1395,7 @@ const CASER = [
     kicker: "Design og merkevarebygging",
     leveranse: "Design og merkevarebygging",
     periode: "2020 –",
-    bilde: "assets/lostacos-truck.jpg",
+    bilde: "/assets/lostacos-truck.jpg",
     intro: "Jeg har jobbet med Los Tacos siden 2020, gjennom Via Agency. Los Tacos styrer mye av markedsføringen selv – designsystem, illustrasjoner, merch, plakater og menyer er laget av meg. Kjeden vokser, og uttrykket må kunne rulles ut på nye steder uten å bli tynt.",
     introTillegg: "Vi startet med å videreutvikle fargepaletten – inspirert av fargene i maten og den autentiske taco-opplevelsen. Sterke kontraster, tydelige fonter og et rått, ufiltrert uttrykk gir merket energi og personlighet. Den visuelle identiteten ble designet for å skille seg ut i gatebildet, og samtidig være fleksibel nok til å brukes i digitale kampanjer, trykk og merch.",
     fakta: [
@@ -1376,46 +1404,46 @@ const CASER = [
       { label: "Periode", verdi: "2020 –" }
     ],
     blokker: [
-      { src: "assets/lostacos-truck.jpg", alt: "Foodtrucken på festival", span: "1 / -1", ratio: "16 / 9", pos: "50% 60%", tekst: "", overlayKicker: "Los Tacos · Via Agency", overlayTittel: "Et brand som skaper liv uansett hvor det dukker opp" },
+      { src: "/assets/lostacos-truck.jpg", alt: "Foodtrucken på festival", span: "1 / -1", ratio: "16 / 9", pos: "50% 60%", tekst: "", overlayKicker: "Los Tacos · Via Agency", overlayTittel: "Et brand som skaper liv uansett hvor det dukker opp" },
       {
         kunTittel: true, tittel: "Det fysiske møter det digitale", span: "1 / -1",
         avsnitt: "En sentral del av arbeidet var å skape et sømløst samspill mellom det fysiske og digitale universet. Fra farger og tone of voice i sosiale medier – til meny-design, foodtruck-branding og festivalopplevelser. Alt henger sammen og bygger én tydelig historie: Du vet umiddelbart når du står foran en Los Tacos-opplevelse."
       },
-      { src: "assets/lostacos-apning-akerbrygge.jpg", alt: "Folk utenfor restauranten på åpningsdagen", span: "auto", ratio: "1 / 1", pos: "50% 55%", tekst: "" },
-      { src: "assets/lostacos-ill-emballasje.jpg", alt: "Illustrert mønster på pose, kopp og gavekort", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-gjengen.jpg", alt: "Gjengen på Los Tacos-sitteputer på brygga", span: "auto", ratio: "1 / 1", pos: "50% 55%", tekst: "" },
-      { src: "assets/lostacos-afterwork.jpg", alt: "Afterwork-meny på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-nattapent.jpg", alt: "Nattåpent-menyen på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-combodeal.jpg", alt: "Combo deals-bordmeny", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-apning-akerbrygge.jpg", alt: "Folk utenfor restauranten på åpningsdagen", span: "auto", ratio: "1 / 1", pos: "50% 55%", tekst: "" },
+      { src: "/assets/lostacos-ill-emballasje.jpg", alt: "Illustrert mønster på pose, kopp og gavekort", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-gjengen.jpg", alt: "Gjengen på Los Tacos-sitteputer på brygga", span: "auto", ratio: "1 / 1", pos: "50% 55%", tekst: "" },
+      { src: "/assets/lostacos-afterwork.jpg", alt: "Afterwork-meny på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-nattapent.jpg", alt: "Nattåpent-menyen på bordet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-combodeal.jpg", alt: "Combo deals-bordmeny", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       {
         kunTittel: true, tittel: "Åpningskampanjer", span: "1 / -1",
         avsnitt: "For nye åpninger utviklet vi en serie kampanjer som bygget forventning og engasjement i forkant av lansering. Vi kombinerte lokal markedsføring, humor og konkurranser i sosiale medier – og sørget for høy synlighet gjennom lekne videoer, reels og giveaways. Resultatet snakker for seg selv, fulle restauranter på åpningsdagene!"
       },
-      { src: "assets/lostacos-dooh.jpg", alt: "Grand opening Bjørvika på digital skjerm", span: "span 2", ratio: "6 / 5", pos: "58% 50%", tekst: "" },
-      { video: "assets/lostacos-bjorvika.mp4", alt: "Åpningsfilm for Bjørvika", span: "auto", ratio: "9 / 16", tekst: "" },
+      { src: "/assets/lostacos-dooh.jpg", alt: "Grand opening Bjørvika på digital skjerm", span: "span 2", ratio: "6 / 5", pos: "58% 50%", tekst: "" },
+      { video: "/assets/lostacos-bjorvika.mp4", alt: "Åpningsfilm for Bjørvika", span: "auto", ratio: "9 / 16", tekst: "" },
       {
         kunTittel: true, tittel: "Foodtrucks og festivaler", span: "1 / -1",
         avsnitt: "Foodtrucken og festivalteltene ble en forlengelse av merkevaren – mobile arenaer for synlighet og opplevelse. Her skulle Los Tacos ta plass – bokstavelig talt. Sterke farger, store fonter og humoristiske budskap gjorde at folk stoppet opp, tok bilder og delte opplevelsen videre. Resultatet: Et brand som skaper liv uansett hvor det dukker opp."
       },
-      { src: "assets/lostacos-festival.jpg", alt: "Food truck og telt med kø", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-lykkehjul.jpg", alt: "Barn foran lykkehjulet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-merch.jpg", alt: "Merch på stativ", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-gaveposer.jpg", alt: "Gymposer med «Feed me tacos and tell me I'm pretty»", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-tskjorter.jpg", alt: "T-skjorter med «Taste my taco» foran foodtrucken", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-landstreff.jpg", alt: "Landstreff Stavanger", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-nc-truck.jpg", alt: "Køen ved foodtrucken på Norway Cup", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-festival-gjester.jpg", alt: "Gjester med nachos foran foodtrucken", span: "auto", ratio: "1 / 1", pos: "50% 40%", tekst: "" },
-      { src: "assets/lostacos-ill-truck.jpg", alt: "Illustrert foodtruck, burrito, bowl og taco", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-festival.jpg", alt: "Food truck og telt med kø", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-lykkehjul.jpg", alt: "Barn foran lykkehjulet", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-merch.jpg", alt: "Merch på stativ", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-gaveposer.jpg", alt: "Gymposer med «Feed me tacos and tell me I'm pretty»", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-tskjorter.jpg", alt: "T-skjorter med «Taste my taco» foran foodtrucken", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-landstreff.jpg", alt: "Landstreff Stavanger", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-nc-truck.jpg", alt: "Køen ved foodtrucken på Norway Cup", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-festival-gjester.jpg", alt: "Gjester med nachos foran foodtrucken", span: "auto", ratio: "1 / 1", pos: "50% 40%", tekst: "" },
+      { src: "/assets/lostacos-ill-truck.jpg", alt: "Illustrert foodtruck, burrito, bowl og taco", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
       {
         kunTittel: true, tittel: "Julekampanjer", span: "1 / -1",
         avsnitt: "Selv i høytiden skal det være lett å kjenne igjen Los Tacos. Julekampanjene lekte med merkevarens uttrykk, men beholdt det urbane og lekne. Vi utviklet gavekort, trykkmateriell og digitale flater som holdt på det gjenkjennelige formspråket – med et dryss av jul."
       },
-      { src: "assets/lostacos-julestromper.jpg", alt: "Julestrømper med Los Tacos-mønster", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-kalender.jpg", alt: "Sjokoladekalender med Tac-ho-ho-ho", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-gavekort.jpg", alt: "Gavekort foran juletre", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-strompe-bar.jpg", alt: "Julestrømpe hengt opp i baren", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-vinterland.jpg", alt: "Los Tacos-boden på Jul i vinterland", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/lostacos-ill-jul.jpg", alt: "Illustrert julestrømpe og gavekort", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
+      { src: "/assets/lostacos-julestromper.jpg", alt: "Julestrømper med Los Tacos-mønster", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-kalender.jpg", alt: "Sjokoladekalender med Tac-ho-ho-ho", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-gavekort.jpg", alt: "Gavekort foran juletre", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-strompe-bar.jpg", alt: "Julestrømpe hengt opp i baren", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-vinterland.jpg", alt: "Los Tacos-boden på Jul i vinterland", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/lostacos-ill-jul.jpg", alt: "Illustrert julestrømpe og gavekort", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
     ]
   },
   {
@@ -1426,7 +1454,7 @@ const CASER = [
     leveranse: "Designsystem, kundeklubbprofil, materiell til siste ledd og maler",
     periode: "2025",
     dekkGronn: true,
-    topp: "assets/obos-cover.png",
+    topp: "/assets/obos-cover.png",
     toppFit: "contain",
     toppBg: "#efe9de",
     intro: "Lambertseter, Manglerud og Tveita fikk nye kundeklubber. Hvert senter har sitt eget navn, sin egen farge og sitt eget nabolag – Mitt Lambertseter, Manglerud Senter Fordelsklubb og Tveita Venn – men alle tre er bygget på det samme designsystemet, med eget emblem per senter. Mesteparten av jobben ligger i siste ledd: plakater, gulvfolie, senterskjermer, story og karusell, nyhetsbrev og QR- og SMS-koder som tar folk inn i appen. Alt finnes som maler i Canva, slik at sentrene selv lager materiell videre.",
@@ -1449,19 +1477,19 @@ const CASER = [
       { navn: "QR- og SMS-kode", format: "Nedlasting av appen" }
     ],
     karusell: [
-      { src: "assets/obos-sl-manglerud-plakat.png", alt: "Plakater, Manglerud Senter", tekst: "Manglerud: plakat 50×70 med månedens utvalgte tilbud, og A4 til enkelttilbud." },
-      { src: "assets/obos-sl-manglerud-gulvfolie.png", alt: "Gulvfolie, Manglerud Senter", tekst: "Gulvfolie Ø 60 cm ved inngangen, med QR-kode og SMS-kode: send MS til 2242." },
-      { src: "assets/obos-sl-manglerud-some.png", alt: "Karusell og story, Manglerud Senter", tekst: "Facebook-karusell og story, med de samme tilbudsmalene som plakatene." },
-      { src: "assets/obos-sl-lambertseter-plakat.png", alt: "Plakater, Mitt Lambertseter", tekst: "Lambertseter har en egen A4 til arrangementer, i tillegg til tilbudsplakatene." },
-      { src: "assets/obos-sl-lambertseter-gulvfolie.png", alt: "Gulvfolie, Mitt Lambertseter", tekst: "Gulvfolie i Lambertseters sort-hvite drakt." },
-      { src: "assets/obos-sl-tveita-plakat.png", alt: "Plakater, Tveita Venn", tekst: "Tveita, med «Månedens beste kupp» som gjennomgående grep." },
-      { src: "assets/obos-sl-tveita-some.png", alt: "Karusell og story, Tveita Venn", tekst: "Story og karusell for Tveita Venn." }
+      { src: "/assets/obos-sl-manglerud-plakat.png", alt: "Plakater, Manglerud Senter", tekst: "Manglerud: plakat 50×70 med månedens utvalgte tilbud, og A4 til enkelttilbud." },
+      { src: "/assets/obos-sl-manglerud-gulvfolie.png", alt: "Gulvfolie, Manglerud Senter", tekst: "Gulvfolie Ø 60 cm ved inngangen, med QR-kode og SMS-kode: send MS til 2242." },
+      { src: "/assets/obos-sl-manglerud-some.png", alt: "Karusell og story, Manglerud Senter", tekst: "Facebook-karusell og story, med de samme tilbudsmalene som plakatene." },
+      { src: "/assets/obos-sl-lambertseter-plakat.png", alt: "Plakater, Mitt Lambertseter", tekst: "Lambertseter har en egen A4 til arrangementer, i tillegg til tilbudsplakatene." },
+      { src: "/assets/obos-sl-lambertseter-gulvfolie.png", alt: "Gulvfolie, Mitt Lambertseter", tekst: "Gulvfolie i Lambertseters sort-hvite drakt." },
+      { src: "/assets/obos-sl-tveita-plakat.png", alt: "Plakater, Tveita Venn", tekst: "Tveita, med «Månedens beste kupp» som gjennomgående grep." },
+      { src: "/assets/obos-sl-tveita-some.png", alt: "Karusell og story, Tveita Venn", tekst: "Story og karusell for Tveita Venn." }
     ],
     blokker: [
-      { video: "assets/obos-manglerud-skjerm.mp4", alt: "Senterskjerm, Manglerud", span: "auto", ratio: "9 / 16", tekst: "Senterskjermene i sentrene, med samme oppbygning og hvert senters egen farge." },
-      { video: "assets/obos-lambertseter-skjerm.mp4", alt: "Senterskjerm, Lambertseter", span: "auto", ratio: "9 / 16", tekst: "Lambertseter." },
-      { video: "assets/obos-tveita-skjerm.mp4", alt: "Senterskjerm, Tveita", span: "auto", ratio: "9 / 16", tekst: "Tveita." },
-      { src: "assets/obos-maler-manglerud.png", alt: "Appen, Manglerud Senter Fordelsklubb", span: "auto", ratio: "4 / 5", pos: "center", tekst: "Alt materiellet peker inn i appen, som er der tilbudene og medlemsfordelene ligger." }
+      { video: "/assets/obos-manglerud-skjerm.mp4", alt: "Senterskjerm, Manglerud", span: "auto", ratio: "9 / 16", tekst: "Senterskjermene i sentrene, med samme oppbygning og hvert senters egen farge." },
+      { video: "/assets/obos-lambertseter-skjerm.mp4", alt: "Senterskjerm, Lambertseter", span: "auto", ratio: "9 / 16", tekst: "Lambertseter." },
+      { video: "/assets/obos-tveita-skjerm.mp4", alt: "Senterskjerm, Tveita", span: "auto", ratio: "9 / 16", tekst: "Tveita." },
+      { src: "/assets/obos-maler-manglerud.png", alt: "Appen, Manglerud Senter Fordelsklubb", span: "auto", ratio: "4 / 5", pos: "center", tekst: "Alt materiellet peker inn i appen, som er der tilbudene og medlemsfordelene ligger." }
     ]
   },
   {
@@ -1471,7 +1499,7 @@ const CASER = [
     kicker: "Nettside og profil",
     leveranse: "Nettside, foto og profil",
     periode: "2026",
-    bilde: "assets/blas-hero.jpg",
+    bilde: "/assets/blas-hero.jpg",
     kortPos: "50% 92%",
     toppPos: "50% 76%",
     kortOverlayKicker: "Lokal sikkerhet",
@@ -1485,25 +1513,25 @@ const CASER = [
       { label: "Periode", verdi: "2026" }
     ],
     blokker: [
-      { src: "assets/blas-gjengen.jpg", alt: "Gjengen i B-Lås med bilene utenfor butikken i Ytre Enebakk", span: "1 / -1", ratio: "16 / 9", pos: "50% 46%", gulStrek: true, tekst: "", overlayKicker: "B-Lås AS · Ytre Enebakk", overlayTittel: "Lokal sikkerhet med motor" },
+      { src: "/assets/blas-gjengen.jpg", alt: "Gjengen i B-Lås med bilene utenfor butikken i Ytre Enebakk", span: "1 / -1", ratio: "16 / 9", pos: "50% 46%", gulStrek: true, tekst: "", overlayKicker: "B-Lås AS · Ytre Enebakk", overlayTittel: "Lokal sikkerhet med motor" },
       { kunTittel: true, tittel: "Nettsiden", span: "1 / -1", lenke: "https://b-las.no", lenkeTekst: "b-las.no" },
-      { ramme: "blas-nettside/index.html", rammeBredde: 1440, rammeHoyde: 4200, rammeRull: true, alt: "B-Lås nettside", span: "1 / -1", ratio: "16 / 10", tekst: "" },
+      { ramme: "/blas-nettside/index.html", rammeBredde: 1440, rammeHoyde: 4200, rammeRull: true, alt: "B-Lås nettside", span: "1 / -1", ratio: "16 / 10", tekst: "" },
       { kunTittel: true, tittel: "Sosiale medier", span: "1 / -1" },
-      { video: "assets/blas-animasjon-feed.mp4", alt: "Animert innlegg til feed", span: "auto", ratio: "1 / 1", tekst: "" },
-      { ramme: "blas-nettside/Feed-mockup.dc.html", rammeBredde: 470, rammeHoyde: 600, alt: "Instagram-feed", span: "auto", ratio: "47 / 60", tekst: "" }
+      { video: "/assets/blas-animasjon-feed.mp4", alt: "Animert innlegg til feed", span: "auto", ratio: "1 / 1", tekst: "" },
+      { ramme: "/blas-nettside/Feed-mockup.dc.html", rammeBredde: 470, rammeHoyde: 600, alt: "Instagram-feed", span: "auto", ratio: "47 / 60", tekst: "" }
     ],
     kampanje: {
       portretter: [
-        { src: "assets/blas-innlegg-ingar.png", alt: "Innlegg med Ingar" },
-        { src: "assets/blas-innlegg-runar.png", alt: "Innlegg med Runar" },
-        { src: "assets/blas-innlegg-robin.png", alt: "Innlegg med Robin" },
-        { src: "assets/blas-innlegg-remi.png", alt: "Innlegg med Remi" }
+        { src: "/assets/blas-innlegg-ingar.png", alt: "Innlegg med Ingar" },
+        { src: "/assets/blas-innlegg-runar.png", alt: "Innlegg med Runar" },
+        { src: "/assets/blas-innlegg-robin.png", alt: "Innlegg med Robin" },
+        { src: "/assets/blas-innlegg-remi.png", alt: "Innlegg med Remi" }
       ],
       bilder: [
-        { src: "assets/blas-bilene.jpg", alt: "Bilparken utenfor butikken", pos: "50% 50%" },
-        { src: "assets/blas-nokkelsliping.jpg", alt: "Nøkkelkutting i verkstedet", pos: "50% 55%" },
-        { src: "assets/blas-disken.jpg", alt: "Tre av gjengen bak disken i butikken", pos: "50% 48%" },
-        { src: "assets/blas-nokkelemner.jpg", alt: "Montør ved bilen", pos: "50% 50%" }
+        { src: "/assets/blas-bilene.jpg", alt: "Bilparken utenfor butikken", pos: "50% 50%" },
+        { src: "/assets/blas-nokkelsliping.jpg", alt: "Nøkkelkutting i verkstedet", pos: "50% 55%" },
+        { src: "/assets/blas-disken.jpg", alt: "Tre av gjengen bak disken i butikken", pos: "50% 48%" },
+        { src: "/assets/blas-nokkelemner.jpg", alt: "Montør ved bilen", pos: "50% 50%" }
       ]
     }
   },
@@ -1524,29 +1552,29 @@ const CASER = [
       { label: "Periode", verdi: "2023 – 2026" }
     ],
     blokker: [
-      { vimeo: "1225891119", alt: "INTRO2", span: "1 / -1", ratio: "16 / 9", tekst: "", overlayKicker: "Citycon og Scala Eiendom · Via Agency", overlayTittel: "Ett opptak – 20 sentre" },
+      { vimeo: "1225891119", alt: "Introfilm: ett opptak brukt for 20 sentre", span: "1 / -1", ratio: "16 / 9", tekst: "", overlayKicker: "Citycon og Scala Eiendom · Via Agency", overlayTittel: "Ett opptak – 20 sentre" },
       {
         kunTittel: true, tittel: "Video og film", span: "1 / -1",
         avsnitt: "Fellesmaler som klippes etter butikkmiksen på det enkelte senteret. Samme opptak, ulik sammensetning, og senterets egen logo til slutt."
       },
-      { vimeo: "1225889178", alt: "Innhold_reels", span: "1 / -1", ratio: "25 / 9", tekst: "" },
+      { vimeo: "1225889178", alt: "Eksempler på ferdige reels", span: "1 / -1", ratio: "25 / 9", tekst: "" },
       {
         kunTittel: true, tittel: "Ferdige reels", span: "1 / -1",
         avsnitt: "Eksempler på hvordan malen ser ut når den er klippet og satt opp for et enkelt senter."
       },
-      { video: "assets/innhold-paaske-bryn.mp4", alt: "Påskekampanje for Bryn Senter", span: "auto", ratio: "9 / 16", tekst: "Påske, Bryn Senter." },
-      { video: "assets/innhold-valentines-vaerstetorvet.mp4", alt: "Valentines-kampanje for Værstetorvet", span: "auto", ratio: "9 / 16", tekst: "Valentines, Værstetorvet." },
+      { video: "/assets/innhold-paaske-bryn.mp4", alt: "Påskekampanje for Bryn Senter", span: "auto", ratio: "9 / 16", tekst: "Påske, Bryn Senter." },
+      { video: "/assets/innhold-valentines-vaerstetorvet.mp4", alt: "Valentines-kampanje for Værstetorvet", span: "auto", ratio: "9 / 16", tekst: "Valentines, Værstetorvet." },
       { vimeo: "1225894804", alt: "UGC-reel for Herkules Senter", span: "auto", ratio: "9 / 16", tekst: "UGC-reel, Herkules Senter." },
       {
         kunTittel: true, tittel: "Julekampanje, Citycon", span: "1 / -1",
         avsnitt: "Gaveguide og partyvesken, klippet i flere varianter etter hvem de skal treffe og hvilke butikker senteret har. Alle videoene leder inn til nettsiden med utvalgte produkter."
       },
-      { video: "assets/innhold-jul-gaveguide-familien.mp4", alt: "Gaveguide for familien", span: "auto", ratio: "9 / 16", tekst: "Gaveguide, familien." },
-      { video: "assets/innhold-jul-gaveguide-trend.mp4", alt: "Gaveguide, trend dame", span: "auto", ratio: "9 / 16", tekst: "Gaveguide, trend." },
-      { video: "assets/innhold-jul-partyvesken.mp4", alt: "Partyvesken", span: "auto", ratio: "9 / 16", tekst: "Partyvesken." },
-      { src: "assets/innhold-jul-1.jpg", alt: "Innpakning med sløyfe og gavelapp", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/innhold-jul-2.jpg", alt: "Gaveeske med skjønnhetsprodukter", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
-      { src: "assets/innhold-jul-3.jpg", alt: "Gavepose med Pokémon-kort", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
+      { video: "/assets/innhold-jul-gaveguide-familien.mp4", alt: "Gaveguide for familien", span: "auto", ratio: "9 / 16", tekst: "Gaveguide, familien." },
+      { video: "/assets/innhold-jul-gaveguide-trend.mp4", alt: "Gaveguide, trend dame", span: "auto", ratio: "9 / 16", tekst: "Gaveguide, trend." },
+      { video: "/assets/innhold-jul-partyvesken.mp4", alt: "Partyvesken", span: "auto", ratio: "9 / 16", tekst: "Partyvesken." },
+      { src: "/assets/innhold-jul-1.jpg", alt: "Innpakning med sløyfe og gavelapp", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/innhold-jul-2.jpg", alt: "Gaveeske med skjønnhetsprodukter", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" },
+      { src: "/assets/innhold-jul-3.jpg", alt: "Gavepose med Pokémon-kort", span: "auto", ratio: "1 / 1", pos: "center", tekst: "" }
     ]
   }
 ];
@@ -1558,27 +1586,27 @@ const AREAL_FOR = 4200;
 const hoyde = (ratio, areal) => Math.round(Math.sqrt(areal / ratio));
 
 const LOGOER_NA = [
-  { navn: "Compass Group", src: "assets/logo-compass.png", h: hoyde(2.55, AREAL_NA) },
-  { navn: "Construction City", src: "assets/logo-construction-city.png", h: hoyde(2.70, AREAL_NA) },
-  { navn: "Gastro Catering", src: "assets/logo-gastro.png", h: hoyde(2.34, AREAL_NA) },
-  { navn: "Søtt + Salt", src: "assets/logo-sott-salt.png", h: hoyde(5.82, AREAL_NA) },
-  { navn: "B-Lås", src: "assets/logo-b-las.svg", h: hoyde(2.37, AREAL_NA) },
-  { navn: "Via Agency", src: "assets/logo-via.png", h: hoyde(1.00, AREAL_NA) },
-  { navn: "Los Tacos", src: "assets/logo-los-tacos.png", h: hoyde(5.49, AREAL_NA) },
-  { navn: "INC Works", src: "assets/kunde-inc-works.png", h: hoyde(1.74, AREAL_NA) },
-  { navn: "OBOS Kjøpesenter", undernavn: "Kjøpesenter", src: "assets/kunde-obos.png", h: hoyde(4.57, AREAL_NA) },
-  { navn: "OBOS Eiendom", undernavn: "Eiendom", src: "assets/kunde-obos.png", h: hoyde(4.57, AREAL_NA) },
-  { navn: "Scala Eiendom", src: "assets/logo-scala.png", h: hoyde(3.12, AREAL_NA) },
-  { navn: "Bystasjonen", src: "assets/byst-logo-svart.png", h: hoyde(5.04, AREAL_NA) },
-  { navn: "Kongssenteret", src: "assets/logo-kongssenteret.png", h: hoyde(4.27, AREAL_NA) }
+  { navn: "Compass Group", src: "/assets/logo-compass.png", h: hoyde(2.55, AREAL_NA) },
+  { navn: "Construction City", src: "/assets/logo-construction-city.png", h: hoyde(2.70, AREAL_NA) },
+  { navn: "Gastro Catering", src: "/assets/logo-gastro.png", h: hoyde(2.34, AREAL_NA) },
+  { navn: "Søtt + Salt", src: "/assets/logo-sott-salt.png", h: hoyde(5.82, AREAL_NA) },
+  { navn: "B-Lås", src: "/assets/logo-b-las.svg", h: hoyde(2.37, AREAL_NA) },
+  { navn: "Via Agency", src: "/assets/logo-via.png", h: hoyde(1.00, AREAL_NA) },
+  { navn: "Los Tacos", src: "/assets/logo-los-tacos.png", h: hoyde(5.49, AREAL_NA) },
+  { navn: "INC Works", src: "/assets/kunde-inc-works.png", h: hoyde(1.74, AREAL_NA) },
+  { navn: "OBOS Kjøpesenter", undernavn: "Kjøpesenter", src: "/assets/kunde-obos.png", h: hoyde(4.57, AREAL_NA) },
+  { navn: "OBOS Eiendom", undernavn: "Eiendom", src: "/assets/kunde-obos.png", h: hoyde(4.57, AREAL_NA) },
+  { navn: "Scala Eiendom", src: "/assets/logo-scala.png", h: hoyde(3.12, AREAL_NA) },
+  { navn: "Bystasjonen", src: "/assets/byst-logo-svart.png", h: hoyde(5.04, AREAL_NA) },
+  { navn: "Kongssenteret", src: "/assets/logo-kongssenteret.png", h: hoyde(4.27, AREAL_NA) }
 ];
 
 const LOGOER_FOR = [
-  { navn: "Citycon", src: "assets/logo-citycon.png", h: hoyde(4.39, AREAL_FOR) },
-  { navn: "Varner", src: "assets/logo-varner.png", h: hoyde(6.53, AREAL_FOR) },
-  { navn: "Vita", src: "assets/logo-vita.png", h: hoyde(2.14, AREAL_FOR) },
-  { navn: "Nille", src: "assets/logo-nille-utstanset.png", h: hoyde(1.86, AREAL_FOR) },
-  { navn: "Egmont", src: "assets/logo-egmont.png", h: hoyde(7.10, AREAL_FOR) }
+  { navn: "Citycon", src: "/assets/logo-citycon.png", h: hoyde(4.39, AREAL_FOR) },
+  { navn: "Varner", src: "/assets/logo-varner.png", h: hoyde(6.53, AREAL_FOR) },
+  { navn: "Vita", src: "/assets/logo-vita.png", h: hoyde(2.14, AREAL_FOR) },
+  { navn: "Nille", src: "/assets/logo-nille-utstanset.png", h: hoyde(1.86, AREAL_FOR) },
+  { navn: "Egmont", src: "/assets/logo-egmont.png", h: hoyde(7.10, AREAL_FOR) }
 ];
 
 const TIDLIGERE_UTEN_LOGO = ["Destinasjon Sandvika", "CC Vest", "Xhibition", "Kløverhuset", "Abilica", "DOGA", "Volcom Europe", "Voice Gruppen"];
@@ -1605,8 +1633,18 @@ const SIDER = [
   { label: "Kontakt", page: "kontakt" }
 ];
 
+const BK_STATISK = typeof window !== "undefined" && typeof window.BK_ROUTE === "string";
+function bkStartRute() {
+  if (!BK_STATISK) return { page: "hjem", slug: null };
+  const d = window.BK_ROUTE.replace(/^\/|\/$/g, "").split("/");
+  if (!d[0]) return { page: "hjem", slug: null };
+  if (d[0] === "jobber" && d[1]) return { page: "case", slug: d[1] };
+  return { page: d[0], slug: null };
+}
+const BK_START = bkStartRute();
+
 class Component extends DCLogic {
-  state = { page: "hjem", slug: null, tag: null, kIdx: 0, sideIdx: 0, navn: "", epost: "", melding: "", sendt: false,
+  state = { page: BK_START.page, slug: BK_START.slug, tag: null, kIdx: 0, sideIdx: 0, navn: "", epost: "", melding: "", sendt: false,
     magIdx: 0, magVis: 1, magX: "50%", magY: "91%", magRing: 0.4, magRingVis: 0,
     film: {} };
 
@@ -1623,7 +1661,7 @@ class Component extends DCLogic {
         { n: "14", x: "23.6%", y: "97.4%" },
         { n: "15", x: "91%", y: "11.2%" }
       ],
-      mappe: "assets/gastro-meny/"
+      mappe: "/assets/gastro-meny/"
     },
     "gastro-selskap": {
       ratio: "709 / 1142",
@@ -1641,7 +1679,7 @@ class Component extends DCLogic {
         { n: "13", x: "76.2%", y: "97.3%" },
         { n: "14", x: "83.6%", y: "11.2%" }
       ],
-      mappe: "assets/gastro-selskap/"
+      mappe: "/assets/gastro-selskap/"
     },
     "gastro-ph": {
       ratio: "709 / 1142",
@@ -1656,7 +1694,7 @@ class Component extends DCLogic {
         { n: "16", x: "91.8%", y: "13.1%" },
         { n: "17", x: "7.8%", y: "13.1%" }
       ],
-      mappe: "assets/gastro-ph/"
+      mappe: "/assets/gastro-ph/"
     },
     "gastro-uio": {
       ratio: "1413 / 1142",
@@ -1669,7 +1707,7 @@ class Component extends DCLogic {
         { n: "03", x: "55.3%", y: "13.3%" },
         { n: "06", x: "10%", y: "13.3%" }
       ],
-      mappe: "assets/gastro-uio/"
+      mappe: "/assets/gastro-uio/"
     }
   };
 
@@ -1774,7 +1812,7 @@ class Component extends DCLogic {
         { style: { position: "relative", height: "100%", maxWidth: "100%", aspectRatio: def.ratio, flex: "0 0 auto" } },
         React.createElement("img", {
           src: def.mappe + "side-" + side.n + ".jpg",
-          alt: "Menyside",
+          alt: "Side fra menyen",
           style: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "contain", display: "block", background: def.bg || "#ffffff", opacity: st.vis, transition: "opacity 260ms ease" }
         }),
         st.kjorer ? React.createElement(
@@ -1806,11 +1844,11 @@ class Component extends DCLogic {
   };
 
   magSider = [
-    { src: "assets/mag/side-02.jpg", x: "12%", y: "91%" },
-    { src: "assets/mag/side-05.jpg", x: "30%", y: "91%" },
-    { src: "assets/mag/side-09.jpg", x: "50%", y: "91%" },
-    { src: "assets/mag/side-13.jpg", x: "69%", y: "91%" },
-    { src: "assets/mag/side-17.jpg", x: "87%", y: "91%" }
+    { src: "/assets/mag/side-02.jpg", x: "12%", y: "91%" },
+    { src: "/assets/mag/side-05.jpg", x: "30%", y: "91%" },
+    { src: "/assets/mag/side-09.jpg", x: "50%", y: "91%" },
+    { src: "/assets/mag/side-13.jpg", x: "69%", y: "91%" },
+    { src: "/assets/mag/side-17.jpg", x: "87%", y: "91%" }
   ];
 
   magT = {};
@@ -1831,7 +1869,7 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this.maalRammer();
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && !BK_STATISK) {
       const r = this.ruteFraHash();
       if (r && (r.page !== this.state.page || r.slug !== this.state.slug)) {
         this.setState({ page: r.page, slug: r.slug });
@@ -1839,6 +1877,8 @@ class Component extends DCLogic {
         window.location.replace("#/");
       }
       window.addEventListener("hashchange", this.hashEndret);
+    }
+    if (typeof window !== "undefined") {
       window.addEventListener("resize", this.maalRammer);
       this.magSider.forEach((s) => { const bilde = new window.Image(); bilde.src = s.src; });
       this.magKjor();
@@ -1900,8 +1940,10 @@ class Component extends DCLogic {
     this.setState({ tag: t });
   };
 
-  hashFor = (page, slug) =>
-    page === "case" && slug ? "#/jobber/" + slug : (page === "hjem" ? "#/" : "#/" + page);
+  hashFor = (page, slug) => {
+    const p = BK_STATISK ? "/" : "#/";
+    return page === "case" && slug ? p + "jobber/" + slug : (page === "hjem" ? p : p + page);
+  };
 
   ruteFraHash = () => {
     if (typeof window === "undefined") return null;
@@ -1923,6 +1965,7 @@ class Component extends DCLogic {
   };
 
   gaTil = (page, slug) => (e) => {
+    if (BK_STATISK) return;
     if (e && e.preventDefault) e.preventDefault();
     this.setState({ page: page, slug: slug || null, kIdx: 0 });
     if (typeof window !== "undefined") {
@@ -1950,7 +1993,7 @@ class Component extends DCLogic {
 
     const medGo = CASER.map((c) => Object.assign({}, c, {
       go: this.gaTil("case", c.slug),
-      href: "#/jobber/" + c.slug,
+      href: this.hashFor("case", c.slug),
       bilde: c.dekkGronn ? null : (c.bilde || null),
       kortVideoEl: c.kortVimeo
         ? React.createElement(
@@ -2003,9 +2046,9 @@ class Component extends DCLogic {
       dekkGronn: !!c.dekkGronn,
       emblemer: c.dekkGronn
         ? [
-            { src: "assets/obos-neg-lambertseter.png", delay: "0s", bredde: "34%" },
-            { src: "assets/obos-neg-manglerud.png", delay: "3s", bredde: "29%" },
-            { src: "assets/obos-neg-tveita.png", delay: "6s", bredde: "33%" }
+            { src: "/assets/obos-neg-lambertseter.png", delay: "0s", bredde: "34%" },
+            { src: "/assets/obos-neg-manglerud.png", delay: "3s", bredde: "29%" },
+            { src: "/assets/obos-neg-tveita.png", delay: "6s", bredde: "33%" }
           ]
         : [],
       tagger: c.tagger || []
@@ -2155,12 +2198,12 @@ class Component extends DCLogic {
       goJobber: this.gaTil("jobber"),
       goTjenester: this.gaTil("tjenester"),
       goKontakt: this.gaTil("kontakt"),
-      hjemHref: "#/",
-      jobberHref: "#/jobber",
-      tjenesterHref: "#/tjenester",
-      kontaktHref: "#/kontakt",
+      hjemHref: this.hashFor("hjem"),
+      jobberHref: this.hashFor("jobber"),
+      tjenesterHref: this.hashFor("tjenester"),
+      kontaktHref: this.hashFor("kontakt"),
       goNeste: neste ? this.gaTil("case", neste.slug) : this.gaTil("jobber"),
-      nesteHref: neste ? "#/jobber/" + neste.slug : "#/jobber",
+      nesteHref: neste ? this.hashFor("case", neste.slug) : this.hashFor("jobber"),
       nesteTittel: neste ? neste.tittel : "Alle jobber",
 
       isHome: page === "hjem",
@@ -2169,6 +2212,7 @@ class Component extends DCLogic {
       isOm: page === "om",
       isKontakt: page === "kontakt",
       isCase: page === "case" && !!aktiv,
+      isIkkeFunnet: page === "404",
 
       tjenester: TJENESTER,
       arbeidsform: ARBEIDSFORM,
