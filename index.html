@@ -3,6 +3,41 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+(function () {
+  var GA = 'G-MGFP5K6RY6', KEY = 'bk-samtykke';
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  var valg = null;
+  try { valg = localStorage.getItem(KEY); } catch (e) {}
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: valg === 'ja' ? 'granted' : 'denied' });
+  gtag('js', new Date());
+  gtag('config', GA, { anonymize_ip: true });
+  var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA;
+  document.head.appendChild(s);
+  function lagre(v) {
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+    gtag('consent', 'update', { analytics_storage: v === 'ja' ? 'granted' : 'denied' });
+    var b = document.getElementById('bk-samtykke'); if (b) b.remove();
+  }
+  function vis() {
+    if (document.getElementById('bk-samtykke')) return;
+    var b = document.createElement('div');
+    b.id = 'bk-samtykke';
+    b.setAttribute('role', 'dialog');
+    b.setAttribute('aria-label', 'Informasjonskapsler');
+    b.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:460px;margin-left:auto;background:#17181a;color:#d5d6d0;padding:20px 22px;font:15px/1.55 "Hanken Grotesk",system-ui,sans-serif;box-shadow:0 18px 40px rgba(0,0,0,0.25);display:flex;flex-direction:column;gap:16px;';
+    b.innerHTML = '<p style="margin:0">Jeg bruker Google Analytics for å se hvordan siden brukes. Er det greit?</p>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+      '<button type="button" data-v="ja" style="font:inherit;cursor:pointer;border:0;background:#f7f4ee;color:#17181a;padding:10px 18px;min-height:44px">Godta</button>' +
+      '<button type="button" data-v="nei" style="font:inherit;cursor:pointer;border:1px solid #5c5f59;background:transparent;color:#d5d6d0;padding:10px 18px;min-height:44px">Avslå</button></div>';
+    b.addEventListener('click', function (e) { var v = e.target.getAttribute && e.target.getAttribute('data-v'); if (v) lagre(v); });
+    document.body.appendChild(b);
+  }
+  window.bkSamtykke = vis;
+  if (!valg) { if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', vis); else vis(); }
+})();
+</script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -852,7 +887,10 @@
       <a href="mailto:eilin@eilinbergum.com" style="font-size: 15px; color: #d5d6d0;" style-hover="color: #ffffff;">eilin@eilinbergum.com</a>
       <a href="https://www.eilinbergum.com" style="font-size: 15px; color: #d5d6d0;" style-hover="color: #ffffff;">eilinbergum.com</a>
     </div>
-    <p style="margin: 0; font-size: 14px; color: #777873;">© 2026 Bergum Kreativ</p>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <p style="margin: 0; font-size: 14px; color: #777873;">© 2026 Bergum Kreativ</p>
+      <a href="#" onClick="{{ visSamtykke }}" style="font-size: 14px; color: #a9aaa4;" style-hover="color: #ffffff;">Informasjonskapsler</a>
+    </div>
   </div>
 </footer>
 
@@ -2209,6 +2247,7 @@ class Component extends DCLogic {
       setEpost: (e) => this.setState({ epost: e.target.value }),
       setMelding: (e) => this.setState({ melding: e.target.value }),
       sendSkjema: this.sendSkjema,
+      visSamtykke: (e) => { e.preventDefault(); if (window.bkSamtykke) window.bkSamtykke(); },
       nullstillSkjema: (e) => {
         e.preventDefault();
         this.setState({ sendt: false, navn: "", epost: "", melding: "" });
